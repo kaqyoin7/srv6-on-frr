@@ -15,6 +15,9 @@ AREA_RANGES = [
     (45, 59),
 ]
 BOUNDARY_RINGS = {14, 15, 29, 30, 44, 45}
+BACKBONE_NODE_IN_RING = 0
+BACKBONE_RING_START = 14
+BACKBONE_RING_END = 45
 
 
 def get_area_id(ring_idx):
@@ -28,6 +31,23 @@ def get_area_id(ring_idx):
 def get_is_type(ring_idx):
     """Boundary rings are L1/L2, everything else is L1-only."""
     return "level-1-2" if ring_idx in BOUNDARY_RINGS else "level-1"
+
+
+def get_node_role(ring_idx, node_idx):
+    """
+    Classify nodes for the minimal L2 backbone.
+
+    - boundary-backbone: L1/L2 nodes that connect an area to the L2 backbone
+    - transit-backbone: L2-only nodes that keep the backbone contiguous
+    - area: regular L1 nodes
+    """
+    if node_idx != BACKBONE_NODE_IN_RING:
+        return "area"
+    if ring_idx in BOUNDARY_RINGS:
+        return "boundary-backbone"
+    if BACKBONE_RING_START < ring_idx < BACKBONE_RING_END:
+        return "transit-backbone"
+    return "area"
 
 
 def get_ring_summary_prefix(ring_idx):
@@ -89,6 +109,7 @@ def generate_1200node_topology():
                 "node_in_ring": node_idx,
                 "area_id": area_id,
                 "is_type": is_type,
+                "node_role": get_node_role(ring_idx, node_idx),
                 "srv6_locator": srv6_locator,
                 "srv6_prefix": srv6_prefix,
                 "isis_net": isis_net,
@@ -152,6 +173,11 @@ def generate_1200node_topology():
         ],
         "area_summaries": build_area_summaries(),
         "boundary_rings": sorted(BOUNDARY_RINGS),
+        "backbone": {
+            "node_in_ring": BACKBONE_NODE_IN_RING,
+            "ring_start": BACKBONE_RING_START,
+            "ring_end": BACKBONE_RING_END,
+        },
         "nodes": nodes,
         "links": links,
     }
@@ -175,10 +201,20 @@ def save_topology(topology, filename="topology_1200nodes.json"):
     inter = sum(1 for link in topology["links"] if link["type"] == "inter-ring")
     l1l2 = sum(1 for node in topology["nodes"] if node["is_type"] == "level-1-2")
     l1 = sum(1 for node in topology["nodes"] if node["is_type"] == "level-1")
+    backbone_boundary = sum(
+        1 for node in topology["nodes"] if node["node_role"] == "boundary-backbone"
+    )
+    backbone_transit = sum(
+        1 for node in topology["nodes"] if node["node_role"] == "transit-backbone"
+    )
     print(f"Intra-ring links : {intra}")
     print(f"Inter-ring links : {inter}  (open, ring59<->ring0 disconnected)")
     print(f"L1 nodes         : {l1}")
     print(f"L1/L2 nodes      : {l1l2}  (boundary rings: {topology['boundary_rings']})")
+    print(
+        f"Backbone nodes   : {backbone_boundary + backbone_transit}  "
+        f"(boundary={backbone_boundary}, transit={backbone_transit})"
+    )
 
     print("\nArea breakdown:")
     for area in topology["area_ranges"]:
@@ -199,7 +235,8 @@ def save_topology(topology, filename="topology_1200nodes.json"):
             node = topology["nodes"][i]
             print(
                 f"  {node['name']:10s}: area={node['area_id']}  "
-                f"is_type={node['is_type']:12s}  locator={node['srv6_locator']}"
+                f"is_type={node['is_type']:12s}  role={node['node_role']:17s}  "
+                f"locator={node['srv6_locator']}"
             )
 
 

@@ -45,6 +45,40 @@ class MultiAreaFRRConfigGenerator:
         self.node_interfaces = self._build_interface_map()
         print("  Interface map built")
 
+    def _is_backbone_vertical_link(self, node1, node2):
+        """Return True for the single-node-per-ring L2 backbone chain."""
+        n1 = self.nodes_by_name[node1]
+        n2 = self.nodes_by_name[node2]
+        if n1["node_in_ring"] != 0 or n2["node_in_ring"] != 0:
+            return False
+        if abs(n1["ring"] - n2["ring"]) != 1:
+            return False
+        return 14 <= min(n1["ring"], n2["ring"]) and max(n1["ring"], n2["ring"]) <= 45
+
+    def _classify_interface(self, local_node, peer_node, link):
+        """
+        Decide whether ISIS should run on a link and at which level.
+
+        Design:
+        - regular intra-area links are L1
+        - the n0 column from ring14 to ring45 is the only L2 backbone
+        - non-backbone cross-area links do not run ISIS
+        - transit L2-only nodes do not participate in area L1
+        """
+        local_role = local_node.get("node_role", "area")
+        cross_area = local_node["area_id"] != peer_node["area_id"]
+
+        if self._is_backbone_vertical_link(local_node["name"], peer_node["name"]):
+            return True, "level-2-only"
+
+        if cross_area:
+            return False, None
+
+        if local_role == "transit-backbone":
+            return False, None
+
+        return True, "level-1"
+
     def _build_interface_map(self):
         """Build interface metadata for every node."""
         interface_map = {node["name"]: [] for node in self.topology["nodes"]}
@@ -59,9 +93,11 @@ class MultiAreaFRRConfigGenerator:
             ip1 = subnet.replace("::/64", "::1/64")
             ip2 = subnet.replace("::/64", "::2/64")
 
-            node1_area = self.nodes_by_name[node1]["area_id"]
-            node2_area = self.nodes_by_name[node2]["area_id"]
-            cross_area = node1_area != node2_area
+            node1_data = self.nodes_by_name[node1]
+            node2_data = self.nodes_by_name[node2]
+            node1_enabled, node1_circuit = self._classify_interface(node1_data, node2_data, link)
+            node2_enabled, node2_circuit = self._classify_interface(node2_data, node1_data, link)
+            cross_area = node1_data["area_id"] != node2_data["area_id"]
 
             interface_map[node1].append({
                 "name": iface1,
@@ -69,7 +105,8 @@ class MultiAreaFRRConfigGenerator:
                 "ipv6": ip1,
                 "link_type": link["type"],
                 "cross_area": cross_area,
-                "circuit_type": "level-2-only" if cross_area else "level-1",
+                "isis_enabled": node1_enabled,
+                "circuit_type": node1_circuit,
             })
             interface_map[node2].append({
                 "name": iface2,
@@ -77,7 +114,8 @@ class MultiAreaFRRConfigGenerator:
                 "ipv6": ip2,
                 "link_type": link["type"],
                 "cross_area": cross_area,
-                "circuit_type": "level-2-only" if cross_area else "level-1",
+                "isis_enabled": node2_enabled,
+                "circuit_type": node2_circuit,
             })
 
         return interface_map
@@ -86,7 +124,7 @@ class MultiAreaFRRConfigGenerator:
         """Return static summary routes and L2 redistribution for boundary nodes."""
         area_id = node["area_id"]
         summary_info = self.area_summaries.get(area_id)
-        if node.get("is_type") != "level-1-2" or not summary_info:
+        if node.get("node_role") != "boundary-backbone" or not summary_info:
             return "", ""
 
         table_id = SUMMARY_TABLE_BASE + area_id
@@ -103,14 +141,21 @@ class MultiAreaFRRConfigGenerator:
         isis_net = node["isis_net"]
         srv6_locator = node["srv6_locator"]
         interfaces = self.node_interfaces[node_name]
-        is_type = node.get("is_type", "level-1")
+        node_role = node.get("node_role", "area")
+        if node_role == "boundary-backbone":
+            is_type = "level-1-2"
+        elif node_role == "transit-backbone":
+            is_type = "level-2-only"
+        else:
+            is_type = "level-1"
         static_routes, l2_redistribute = self.get_area_summary_config(node)
+        loopback_circuit = "level-2-only" if is_type == "level-2-only" else "level-1"
 
         config = f"""!
 ! FRR configuration for {node_name}
-! IS-IS area: {node.get('area_id', '?')}  is-type: {is_type}
+! IS-IS area: {node.get('area_id', '?')}  is-type: {is_type}  role: {node_role}
 !
-frr version 9.1
+frr version 10.5.1
 frr defaults traditional
 hostname {node_name}
 log file /var/log/frr/frr.log
@@ -123,33 +168,36 @@ interface lo
  ipv6 address {srv6_locator}
  ipv6 router isis SRv6
  isis passive
- isis circuit-type level-1
+ isis circuit-type {loopback_circuit}
 !
 """
 
         for iface in interfaces:
             config += f"""interface {iface['name']}
  ipv6 address {iface['ipv6']}
- ipv6 router isis SRv6
+"""
+            if iface["isis_enabled"]:
+                config += f""" ipv6 router isis SRv6
  isis circuit-type {iface['circuit_type']}
  isis network point-to-point
  isis hello-interval 3
  isis hello-multiplier 3
-!
+"""
+            config += """!
 """
 
         if static_routes:
             config += f"{static_routes}!\n"
 
-        attached_send = " attached-bit send\n" if is_type == "level-1-2" else ""
+        attached_recv = " attached-bit receive\n" if is_type != "level-2-only" else ""
+        attached_send = " attached-bit send\n" if node_role == "boundary-backbone" else ""
 
         config += f"""router isis SRv6
  net {isis_net}
  is-type {is_type}
  metric-style wide
  topology ipv6-unicast
- attached-bit receive
-{attached_send}{l2_redistribute} log-adjacency-changes
+{attached_recv}{attached_send}{l2_redistribute} log-adjacency-changes
 !
 line vty
 !
