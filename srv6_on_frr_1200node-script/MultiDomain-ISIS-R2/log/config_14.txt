@@ -1,0 +1,48 @@
+Configuration:
+!
+frr version 10.5.1
+frr defaults traditional
+!
+interface lo
+ description SRv6 Locator Interface
+ ipv6 router isis SRv6
+ isis circuit-type level-1
+ isis passive
+exit
+!
+interface r14n0-r13n0
+ ipv6 router isis SRv6
+ isis circuit-type level-1
+ isis hello-multiplier 3
+ isis network point-to-point
+exit
+!
+interface r14n0-r14n1
+ ipv6 router isis SRv6
+ isis circuit-type level-1
+ isis hello-multiplier 3
+ isis network point-to-point
+exit
+!
+interface r14n0-r14n9
+ ipv6 router isis SRv6
+ isis circuit-type level-1
+ isis hello-multiplier 3
+ isis network point-to-point
+exit
+!
+interface r14n0-r15n0
+ ipv6 router isis SRv6
+ isis circuit-type level-2-only
+ isis hello-multiplier 3
+ isis network point-to-point
+exit
+!
+router isis SRv6
+ net 49.0001.0000.000e.0000.00
+ redistribute ipv6 table 2001 level-2
+ topology ipv6-unicast
+ log-adjacency-changes
+exit
+!
+end

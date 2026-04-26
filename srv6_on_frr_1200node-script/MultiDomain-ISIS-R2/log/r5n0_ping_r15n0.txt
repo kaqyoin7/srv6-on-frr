@@ -1,0 +1,15 @@
+root@r5n0:/# traceroute fc00:10::1
+traceroute to fc00:10::1 (fc00:10::1), 30 hops max, 80 byte packets
+ 1  fc00:9000:5::2 (fc00:9000:5::2)  0.186 ms  0.026 ms  0.056 ms
+ 2  fc00:9000:6::2 (fc00:9000:6::2)  0.128 ms  0.018 ms  0.017 ms
+ 3  fc00:9000:7::2 (fc00:9000:7::2)  0.181 ms  0.023 ms  0.032 ms
+ 4  fc00:9000:8::2 (fc00:9000:8::2)  0.113 ms  0.026 ms  0.022 ms
+ 5  fc00:9000:9::2 (fc00:9000:9::2)  0.110 ms  0.027 ms  0.023 ms
+ 6  fc00:9000:a::2 (fc00:9000:a::2)  0.107 ms  0.317 ms  0.053 ms
+ 7  fc00:9000:b::2 (fc00:9000:b::2)  0.171 ms  0.049 ms  0.044 ms
+ 8  fc00:9000:c::2 (fc00:9000:c::2)  0.129 ms  0.072 ms  0.052 ms
+ 9  fc00:9000:d::2 (fc00:9000:d::2)  0.116 ms !N  0.056 ms !N  0.053 ms !N
+
+root@r5n0:/# ping fc00:10::1
+PING fc00:10::1(fc00:10::1) 56 data bytes
+From fc00:9000:d::2 icmp_seq=1 Destination unreachable: No route

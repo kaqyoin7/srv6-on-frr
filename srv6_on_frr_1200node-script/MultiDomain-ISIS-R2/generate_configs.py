@@ -1,0 +1,246 @@
+#!/usr/bin/env python3
+"""
+Generate FRR configs for the 1200-node multi-area SRv6 topology.
+
+Design goals:
+- keep node-internal visibility scoped to a single IS-IS L1 area
+- keep cross-area links in the L2 backbone only
+- advertise only area summaries into L2
+- let L1 routers use the attached-bit default route for remote-area reachability
+"""
+
+import json
+import sys
+from pathlib import Path
+
+
+SUMMARY_TABLE_BASE = 2000
+
+
+class MultiAreaFRRConfigGenerator:
+    def __init__(self, topology_file):
+        print(f"Loading topology from {topology_file}...")
+        with open(topology_file, "r") as f:
+            self.topology = json.load(f)
+
+        self.nodes_by_name = {node["name"]: node for node in self.topology["nodes"]}
+        self.area_summaries = {
+            area["area_id"]: area for area in self.topology.get("area_summaries", [])
+        }
+
+        print(f"  Nodes : {len(self.topology['nodes'])}")
+        print(f"  Links : {len(self.topology['links'])}")
+
+        if "area_ranges" in self.topology:
+            print("  IS-IS areas:")
+            for area in self.topology["area_ranges"]:
+                print(
+                    f"    Area {area['area_id']}: "
+                    f"ring{area['ring_start']} ~ ring{area['ring_end']}"
+                )
+        if "boundary_rings" in self.topology:
+            print(f"  Boundary rings (L1/L2): {self.topology['boundary_rings']}")
+
+        print("Building interface map...")
+        self.node_interfaces = self._build_interface_map()
+        print("  Interface map built")
+
+    def _build_interface_map(self):
+        """Build interface metadata for every node."""
+        interface_map = {node["name"]: [] for node in self.topology["nodes"]}
+
+        for link in self.topology["links"]:
+            node1 = link["node1"]
+            node2 = link["node2"]
+            subnet = link["subnet"]
+
+            iface1 = f"{node1}-{node2}"
+            iface2 = f"{node2}-{node1}"
+            ip1 = subnet.replace("::/64", "::1/64")
+            ip2 = subnet.replace("::/64", "::2/64")
+
+            node1_area = self.nodes_by_name[node1]["area_id"]
+            node2_area = self.nodes_by_name[node2]["area_id"]
+            cross_area = node1_area != node2_area
+
+            interface_map[node1].append({
+                "name": iface1,
+                "peer": node2,
+                "ipv6": ip1,
+                "link_type": link["type"],
+                "cross_area": cross_area,
+                "circuit_type": "level-2-only" if cross_area else "level-1",
+            })
+            interface_map[node2].append({
+                "name": iface2,
+                "peer": node1,
+                "ipv6": ip2,
+                "link_type": link["type"],
+                "cross_area": cross_area,
+                "circuit_type": "level-2-only" if cross_area else "level-1",
+            })
+
+        return interface_map
+
+    def get_area_summary_config(self, node):
+        """Return static summary routes and L2 redistribution for boundary nodes."""
+        area_id = node["area_id"]
+        summary_info = self.area_summaries.get(area_id)
+        if node.get("is_type") != "level-1-2" or not summary_info:
+            return "", ""
+
+        table_id = SUMMARY_TABLE_BASE + area_id
+        static_routes = []
+        for prefix in summary_info["summary_prefixes"]:
+            static_routes.append(f"ipv6 route {prefix} Null0 table {table_id}")
+
+        redistribute = f" redistribute ipv6 table {table_id} level-2\n"
+        return "\n".join(static_routes) + "\n", redistribute
+
+    def generate_frr_conf(self, node):
+        """Generate FRR config for a single node."""
+        node_name = node["name"]
+        isis_net = node["isis_net"]
+        srv6_locator = node["srv6_locator"]
+        interfaces = self.node_interfaces[node_name]
+        is_type = node.get("is_type", "level-1")
+        static_routes, l2_redistribute = self.get_area_summary_config(node)
+
+        config = f"""!
+! FRR configuration for {node_name}
+! IS-IS area: {node.get('area_id', '?')}  is-type: {is_type}
+!
+frr version 9.1
+frr defaults traditional
+hostname {node_name}
+log file /var/log/frr/frr.log
+service integrated-vtysh-config
+!
+ipv6 forwarding
+!
+interface lo
+ description SRv6 Locator Interface
+ ipv6 address {srv6_locator}
+ ipv6 router isis SRv6
+ isis passive
+ isis circuit-type level-1
+!
+"""
+
+        for iface in interfaces:
+            config += f"""interface {iface['name']}
+ ipv6 address {iface['ipv6']}
+ ipv6 router isis SRv6
+ isis circuit-type {iface['circuit_type']}
+ isis network point-to-point
+ isis hello-interval 3
+ isis hello-multiplier 3
+!
+"""
+
+        if static_routes:
+            config += f"{static_routes}!\n"
+
+        attached_send = " attached-bit send\n" if is_type == "level-1-2" else ""
+
+        config += f"""router isis SRv6
+ net {isis_net}
+ is-type {is_type}
+ metric-style wide
+ topology ipv6-unicast
+ attached-bit receive
+{attached_send}{l2_redistribute} log-adjacency-changes
+!
+line vty
+!
+end
+"""
+        return config
+
+    def generate_daemons_conf(self):
+        return """zebra=yes
+isisd=yes
+staticd=yes
+bgpd=no
+ospfd=no
+ospf6d=no
+ripd=no
+ripngd=no
+pimd=no
+ldpd=no
+nhrpd=no
+eigrpd=no
+babeld=no
+sharpd=no
+pbrd=no
+bfdd=no
+fabricd=no
+vrrpd=no
+zebra_options=" -s 90000000"
+isisd_options=" -A ::1"
+"""
+
+    def generate_all(self, output_dir="configs"):
+        output_path = Path(output_dir)
+        output_path.mkdir(exist_ok=True)
+
+        total_nodes = len(self.topology["nodes"])
+        l1l2_count = sum(
+            1 for node in self.topology["nodes"] if node.get("is_type") == "level-1-2"
+        )
+        l1_count = total_nodes - l1l2_count
+
+        print("\n" + "=" * 60)
+        print(f"Generating FRR configurations for {total_nodes} nodes...")
+        print(f"  L1 nodes    : {l1_count}")
+        print(f"  L1/L2 nodes : {l1l2_count}")
+        print("=" * 60)
+
+        batch_size = 20
+        for i, node in enumerate(self.topology["nodes"], 1):
+            config = self.generate_frr_conf(node)
+            config_file = output_path / f"frr-{node['name']}.conf"
+
+            with open(config_file, "w") as f:
+                f.write(config)
+
+            if i % batch_size == 0 or i == total_nodes:
+                percent = (i / total_nodes) * 100
+                print(
+                    f"  Progress: {i}/{total_nodes} ({percent:.1f}%)"
+                    f" - Last: {node['name']} [{node.get('is_type', '?')}]"
+                )
+
+        with open(output_path / "daemons", "w") as f:
+            f.write(self.generate_daemons_conf())
+
+        print("\n" + "=" * 60)
+        print(f"Generated {total_nodes} node configurations -> {output_dir}/")
+        print("=" * 60)
+
+
+if __name__ == "__main__":
+    if len(sys.argv) != 2:
+        print("Usage: python3 generate_configs.py <topology.json>")
+        print("\nExample:")
+        print("  python3 generate_configs.py topology_1200nodes.json")
+        sys.exit(1)
+
+    topology_file = sys.argv[1]
+
+    if not Path(topology_file).exists():
+        print(f"Error: Topology file '{topology_file}' not found!")
+        sys.exit(1)
+
+    try:
+        generator = MultiAreaFRRConfigGenerator(topology_file)
+        generator.generate_all()
+        print("\nConfiguration generation completed!")
+        print("\nNext step:")
+        print(f"  sudo python3 deploy_5Network.py {topology_file}")
+    except Exception as e:
+        print(f"\nError: {e}")
+        import traceback
+
+        traceback.print_exc()
+        sys.exit(1)
