@@ -59,18 +59,32 @@ def get_ring_summary_prefix(ring_idx):
     return ipaddress.IPv6Network(f"fc00:{ring_idx:04x}::/43")
 
 
+def get_inter_ring_summary_prefix(ring_idx):
+    """
+    Return a summary prefix that covers all inter-ring /64 link subnets for one ring.
+
+    Inter-ring links use fc00:9000:<ring>:<node>::/64 and node IDs span 0x0000-0x0013.
+    A /59 covers fourth-hextet values 0x0000-0x001f.
+    """
+    return ipaddress.IPv6Network(f"fc00:9000:{ring_idx:04x}::/59")
+
+
 def build_area_summaries():
     """Build collapsed IPv6 summaries for every area."""
     summaries = []
     for area_id, (start, end) in enumerate(AREA_RANGES, start=1):
         ring_prefixes = [get_ring_summary_prefix(ring) for ring in range(start, end + 1)]
-        collapsed = list(ipaddress.collapse_addresses(ring_prefixes))
+        inter_ring_prefixes = [
+            get_inter_ring_summary_prefix(ring) for ring in range(start, end + 1)
+        ]
+        collapsed = list(ipaddress.collapse_addresses(ring_prefixes + inter_ring_prefixes))
         summaries.append({
             "area_id": area_id,
             "ring_start": start,
             "ring_end": end,
             "summary_prefixes": [str(prefix) for prefix in collapsed],
             "ring_summary_prefixes": [str(prefix) for prefix in ring_prefixes],
+            "inter_ring_summary_prefixes": [str(prefix) for prefix in inter_ring_prefixes],
         })
     return summaries
 

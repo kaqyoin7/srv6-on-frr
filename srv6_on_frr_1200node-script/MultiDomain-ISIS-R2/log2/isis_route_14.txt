@@ -1,0 +1,2269 @@
+Area SRv6:
+IS-IS paths to level-1 routers that speak IPv6
+ Vertex              Type          Metric  Next-Hop  Interface    Parent    
+ ---------------------------------------------------------------------------
+ r14n0                                                                      
+ fc00:e::1/128       IP6 internal  0                              r14n0(4)  
+ fc00:e:0:1::/64     IP6 internal  0                              r14n0(4)  
+ fc00:e:9::/64       IP6 internal  0                              r14n0(4)  
+ fc00:9000:d::/64    IP6 internal  0                              r14n0(4)  
+ fc00:9000:e::/64    IP6 internal  0                              r14n0(4)  
+ r14n1               TE-IS         10      r14n1     r14n0-r14n1  r14n0(4)  
+ r14n9               TE-IS         10      r14n9     r14n0-r14n9  r14n0(4)  
+ r13n0               TE-IS         10      r13n0     r14n0-r13n0  r14n0(4)  
+ r14n2               TE-IS         20      r14n1     r14n0-r14n1  r14n1(4)  
+ r13n1               TE-IS         20      r14n1     r14n0-r14n1  r14n1(4)  
+                                           r13n0     r14n0-r13n0  r13n0(4)  
+ r14n8               TE-IS         20      r14n9     r14n0-r14n9  r14n9(4)  
+ r13n9               TE-IS         20      r14n9     r14n0-r14n9  r14n9(4)  
+                                           r13n0     r14n0-r13n0  r13n0(4)  
+ r12n0               TE-IS         20      r13n0     r14n0-r13n0  r13n0(4)  
+ fc00:e:1::1/128     IP6 internal  20      r14n1     r14n0-r14n1  r14n1(4)  
+ fc00:e:1:2::/64     IP6 internal  20      r14n1     r14n0-r14n1  r14n1(4)  
+ fc00:9000:d:1::/64  IP6 internal  20      r14n1     r14n0-r14n1  r14n1(4)  
+ fc00:e:9::1/128     IP6 internal  20      r14n9     r14n0-r14n9  r14n9(4)  
+ fc00:e:8:9::/64     IP6 internal  20      r14n9     r14n0-r14n9  r14n9(4)  
+ fc00:9000:d:9::/64  IP6 internal  20      r14n9     r14n0-r14n9  r14n9(4)  
+ fc00:d::1/128       IP6 internal  20      r13n0     r14n0-r13n0  r13n0(4)  
+ fc00:d:0:1::/64     IP6 internal  20      r13n0     r14n0-r13n0  r13n0(4)  
+ fc00:d:9::/64       IP6 internal  20      r13n0     r14n0-r13n0  r13n0(4)  
+ fc00:9000:c::/64    IP6 internal  20      r13n0     r14n0-r13n0  r13n0(4)  
+ r14n3               TE-IS         30      r14n1     r14n0-r14n1  r14n2(4)  
+ r13n2               TE-IS         30      r14n1     r14n0-r14n1  r14n2(4)  
+                                           r13n0     r14n0-r13n0  r13n1(4)  
+ r12n1               TE-IS         30      r14n1     r14n0-r14n1  r13n1(4)  
+                                           r13n0     r14n0-r13n0  r12n0(4)  
+ r14n7               TE-IS         30      r14n9     r14n0-r14n9  r14n8(4)  
+ r13n8               TE-IS         30      r14n9     r14n0-r14n9  r14n8(4)  
+                                           r13n0     r14n0-r13n0  r13n9(4)  
+ r12n9               TE-IS         30      r14n9     r14n0-r14n9  r13n9(4)  
+                                           r13n0     r14n0-r13n0  r12n0(4)  
+ r11n0               TE-IS         30      r13n0     r14n0-r13n0  r12n0(4)  
+ fc00:e:2::1/128     IP6 internal  30      r14n1     r14n0-r14n1  r14n2(4)  
+ fc00:e:2:3::/64     IP6 internal  30      r14n1     r14n0-r14n1  r14n2(4)  
+ fc00:9000:d:2::/64  IP6 internal  30      r14n1     r14n0-r14n1  r14n2(4)  
+ fc00:d:1::1/128     IP6 internal  30      r14n1     r14n0-r14n1  r13n1(4)  
+                                           r13n0     r14n0-r13n0  r13n1(4)  
+ fc00:d:1:2::/64     IP6 internal  30      r14n1     r14n0-r14n1  r13n1(4)  
+                                           r13n0     r14n0-r13n0  r13n1(4)  
+ fc00:9000:c:1::/64  IP6 internal  30      r14n1     r14n0-r14n1  r13n1(4)  
+                                           r13n0     r14n0-r13n0  r13n1(4)  
+ fc00:e:8::1/128     IP6 internal  30      r14n9     r14n0-r14n9  r14n8(4)  
+ fc00:e:7:8::/64     IP6 internal  30      r14n9     r14n0-r14n9  r14n8(4)  
+ fc00:9000:d:8::/64  IP6 internal  30      r14n9     r14n0-r14n9  r14n8(4)  
+ fc00:d:9::1/128     IP6 internal  30      r14n9     r14n0-r14n9  r13n9(4)  
+                                           r13n0     r14n0-r13n0  r13n9(4)  
+ fc00:d:8:9::/64     IP6 internal  30      r14n9     r14n0-r14n9  r13n9(4)  
+                                           r13n0     r14n0-r13n0  r13n9(4)  
+ fc00:9000:c:9::/64  IP6 internal  30      r14n9     r14n0-r14n9  r13n9(4)  
+                                           r13n0     r14n0-r13n0  r13n9(4)  
+ fc00:c::1/128       IP6 internal  30      r13n0     r14n0-r13n0  r12n0(4)  
+ fc00:c:0:1::/64     IP6 internal  30      r13n0     r14n0-r13n0  r12n0(4)  
+ fc00:c:9::/64       IP6 internal  30      r13n0     r14n0-r13n0  r12n0(4)  
+ fc00:9000:b::/64    IP6 internal  30      r13n0     r14n0-r13n0  r12n0(4)  
+ r14n4               TE-IS         40      r14n1     r14n0-r14n1  r14n3(4)  
+ r13n3               TE-IS         40      r14n1     r14n0-r14n1  r14n3(4)  
+                                           r13n0     r14n0-r13n0  r13n2(4)  
+ r12n2               TE-IS         40      r14n1     r14n0-r14n1  r13n2(4)  
+                                           r13n0     r14n0-r13n0  r12n1(4)  
+ r11n1               TE-IS         40      r14n1     r14n0-r14n1  r12n1(4)  
+                                           r13n0     r14n0-r13n0  r11n0(4)  
+ r14n6               TE-IS         40      r14n9     r14n0-r14n9  r14n7(4)  
+ r13n7               TE-IS         40      r14n9     r14n0-r14n9  r14n7(4)  
+                                           r13n0     r14n0-r13n0  r13n8(4)  
+ r12n8               TE-IS         40      r14n9     r14n0-r14n9  r13n8(4)  
+                                           r13n0     r14n0-r13n0  r12n9(4)  
+ r11n9               TE-IS         40      r14n9     r14n0-r14n9  r12n9(4)  
+                                           r13n0     r14n0-r13n0  r11n0(4)  
+ r10n0               TE-IS         40      r13n0     r14n0-r13n0  r11n0(4)  
+ fc00:e:3::1/128     IP6 internal  40      r14n1     r14n0-r14n1  r14n3(4)  
+ fc00:e:3:4::/64     IP6 internal  40      r14n1     r14n0-r14n1  r14n3(4)  
+ fc00:9000:d:3::/64  IP6 internal  40      r14n1     r14n0-r14n1  r14n3(4)  
+ fc00:d:2::1/128     IP6 internal  40      r14n1     r14n0-r14n1  r13n2(4)  
+                                           r13n0     r14n0-r13n0  r13n2(4)  
+ fc00:d:2:3::/64     IP6 internal  40      r14n1     r14n0-r14n1  r13n2(4)  
+                                           r13n0     r14n0-r13n0  r13n2(4)  
+ fc00:9000:c:2::/64  IP6 internal  40      r14n1     r14n0-r14n1  r13n2(4)  
+                                           r13n0     r14n0-r13n0  r13n2(4)  
+ fc00:c:1::1/128     IP6 internal  40      r14n1     r14n0-r14n1  r12n1(4)  
+                                           r13n0     r14n0-r13n0  r12n1(4)  
+ fc00:c:1:2::/64     IP6 internal  40      r14n1     r14n0-r14n1  r12n1(4)  
+                                           r13n0     r14n0-r13n0  r12n1(4)  
+ fc00:9000:b:1::/64  IP6 internal  40      r14n1     r14n0-r14n1  r12n1(4)  
+                                           r13n0     r14n0-r13n0  r12n1(4)  
+ fc00:e:7::1/128     IP6 internal  40      r14n9     r14n0-r14n9  r14n7(4)  
+ fc00:e:6:7::/64     IP6 internal  40      r14n9     r14n0-r14n9  r14n7(4)  
+ fc00:9000:d:7::/64  IP6 internal  40      r14n9     r14n0-r14n9  r14n7(4)  
+ fc00:d:8::1/128     IP6 internal  40      r14n9     r14n0-r14n9  r13n8(4)  
+                                           r13n0     r14n0-r13n0  r13n8(4)  
+ fc00:d:7:8::/64     IP6 internal  40      r14n9     r14n0-r14n9  r13n8(4)  
+                                           r13n0     r14n0-r13n0  r13n8(4)  
+ fc00:9000:c:8::/64  IP6 internal  40      r14n9     r14n0-r14n9  r13n8(4)  
+                                           r13n0     r14n0-r13n0  r13n8(4)  
+ fc00:c:9::1/128     IP6 internal  40      r14n9     r14n0-r14n9  r12n9(4)  
+                                           r13n0     r14n0-r13n0  r12n9(4)  
+ fc00:c:8:9::/64     IP6 internal  40      r14n9     r14n0-r14n9  r12n9(4)  
+                                           r13n0     r14n0-r13n0  r12n9(4)  
+ fc00:9000:b:9::/64  IP6 internal  40      r14n9     r14n0-r14n9  r12n9(4)  
+                                           r13n0     r14n0-r13n0  r12n9(4)  
+ fc00:b::1/128       IP6 internal  40      r13n0     r14n0-r13n0  r11n0(4)  
+ fc00:b:0:1::/64     IP6 internal  40      r13n0     r14n0-r13n0  r11n0(4)  
+ fc00:b:9::/64       IP6 internal  40      r13n0     r14n0-r13n0  r11n0(4)  
+ fc00:9000:a::/64    IP6 internal  40      r13n0     r14n0-r13n0  r11n0(4)  
+ r14n5               TE-IS         50      r14n1     r14n0-r14n1  r14n4(4)  
+                                           r14n9     r14n0-r14n9  r14n6(4)  
+ r13n4               TE-IS         50      r14n1     r14n0-r14n1  r14n4(4)  
+                                           r13n0     r14n0-r13n0  r13n3(4)  
+ r12n3               TE-IS         50      r14n1     r14n0-r14n1  r13n3(4)  
+                                           r13n0     r14n0-r13n0  r12n2(4)  
+ r11n2               TE-IS         50      r14n1     r14n0-r14n1  r12n2(4)  
+                                           r13n0     r14n0-r13n0  r11n1(4)  
+ r10n1               TE-IS         50      r14n1     r14n0-r14n1  r11n1(4)  
+                                           r13n0     r14n0-r13n0  r10n0(4)  
+ r13n6               TE-IS         50      r14n9     r14n0-r14n9  r14n6(4)  
+                                           r13n0     r14n0-r13n0  r13n7(4)  
+ r12n7               TE-IS         50      r14n9     r14n0-r14n9  r13n7(4)  
+                                           r13n0     r14n0-r13n0  r12n8(4)  
+ r11n8               TE-IS         50      r14n9     r14n0-r14n9  r12n8(4)  
+                                           r13n0     r14n0-r13n0  r11n9(4)  
+ r10n9               TE-IS         50      r14n9     r14n0-r14n9  r11n9(4)  
+                                           r13n0     r14n0-r13n0  r10n0(4)  
+ r9n0                TE-IS         50      r13n0     r14n0-r13n0  r10n0(4)  
+ fc00:e:4::1/128     IP6 internal  50      r14n1     r14n0-r14n1  r14n4(4)  
+ fc00:e:4:5::/64     IP6 internal  50      r14n1     r14n0-r14n1  r14n4(4)  
+ fc00:9000:d:4::/64  IP6 internal  50      r14n1     r14n0-r14n1  r14n4(4)  
+ fc00:d:3::1/128     IP6 internal  50      r14n1     r14n0-r14n1  r13n3(4)  
+                                           r13n0     r14n0-r13n0  r13n3(4)  
+ fc00:d:3:4::/64     IP6 internal  50      r14n1     r14n0-r14n1  r13n3(4)  
+                                           r13n0     r14n0-r13n0  r13n3(4)  
+ fc00:9000:c:3::/64  IP6 internal  50      r14n1     r14n0-r14n1  r13n3(4)  
+                                           r13n0     r14n0-r13n0  r13n3(4)  
+ fc00:c:2::1/128     IP6 internal  50      r14n1     r14n0-r14n1  r12n2(4)  
+                                           r13n0     r14n0-r13n0  r12n2(4)  
+ fc00:c:2:3::/64     IP6 internal  50      r14n1     r14n0-r14n1  r12n2(4)  
+                                           r13n0     r14n0-r13n0  r12n2(4)  
+ fc00:9000:b:2::/64  IP6 internal  50      r14n1     r14n0-r14n1  r12n2(4)  
+                                           r13n0     r14n0-r13n0  r12n2(4)  
+ fc00:b:1::1/128     IP6 internal  50      r14n1     r14n0-r14n1  r11n1(4)  
+                                           r13n0     r14n0-r13n0  r11n1(4)  
+ fc00:b:1:2::/64     IP6 internal  50      r14n1     r14n0-r14n1  r11n1(4)  
+                                           r13n0     r14n0-r13n0  r11n1(4)  
+ fc00:9000:a:1::/64  IP6 internal  50      r14n1     r14n0-r14n1  r11n1(4)  
+                                           r13n0     r14n0-r13n0  r11n1(4)  
+ fc00:e:6::1/128     IP6 internal  50      r14n9     r14n0-r14n9  r14n6(4)  
+ fc00:e:5:6::/64     IP6 internal  50      r14n9     r14n0-r14n9  r14n6(4)  
+ fc00:9000:d:6::/64  IP6 internal  50      r14n9     r14n0-r14n9  r14n6(4)  
+ fc00:d:7::1/128     IP6 internal  50      r14n9     r14n0-r14n9  r13n7(4)  
+                                           r13n0     r14n0-r13n0  r13n7(4)  
+ fc00:d:6:7::/64     IP6 internal  50      r14n9     r14n0-r14n9  r13n7(4)  
+                                           r13n0     r14n0-r13n0  r13n7(4)  
+ fc00:9000:c:7::/64  IP6 internal  50      r14n9     r14n0-r14n9  r13n7(4)  
+                                           r13n0     r14n0-r13n0  r13n7(4)  
+ fc00:c:8::1/128     IP6 internal  50      r14n9     r14n0-r14n9  r12n8(4)  
+                                           r13n0     r14n0-r13n0  r12n8(4)  
+ fc00:c:7:8::/64     IP6 internal  50      r14n9     r14n0-r14n9  r12n8(4)  
+                                           r13n0     r14n0-r13n0  r12n8(4)  
+ fc00:9000:b:8::/64  IP6 internal  50      r14n9     r14n0-r14n9  r12n8(4)  
+                                           r13n0     r14n0-r13n0  r12n8(4)  
+ fc00:b:9::1/128     IP6 internal  50      r14n9     r14n0-r14n9  r11n9(4)  
+                                           r13n0     r14n0-r13n0  r11n9(4)  
+ fc00:b:8:9::/64     IP6 internal  50      r14n9     r14n0-r14n9  r11n9(4)  
+                                           r13n0     r14n0-r13n0  r11n9(4)  
+ fc00:9000:a:9::/64  IP6 internal  50      r14n9     r14n0-r14n9  r11n9(4)  
+                                           r13n0     r14n0-r13n0  r11n9(4)  
+ fc00:a::1/128       IP6 internal  50      r13n0     r14n0-r13n0  r10n0(4)  
+ fc00:a:0:1::/64     IP6 internal  50      r13n0     r14n0-r13n0  r10n0(4)  
+ fc00:a:9::/64       IP6 internal  50      r13n0     r14n0-r13n0  r10n0(4)  
+ fc00:9000:9::/64    IP6 internal  50      r13n0     r14n0-r13n0  r10n0(4)  
+ r13n5               TE-IS         60      r14n1     r14n0-r14n1  r14n5(4)  
+                                           r14n9     r14n0-r14n9  r13n4(4)  
+                                           r13n0     r14n0-r13n0  r13n6(4)  
+ r12n4               TE-IS         60      r14n1     r14n0-r14n1  r13n4(4)  
+                                           r13n0     r14n0-r13n0  r12n3(4)  
+ r11n3               TE-IS         60      r14n1     r14n0-r14n1  r12n3(4)  
+                                           r13n0     r14n0-r13n0  r11n2(4)  
+ r10n2               TE-IS         60      r14n1     r14n0-r14n1  r11n2(4)  
+                                           r13n0     r14n0-r13n0  r10n1(4)  
+ r9n1                TE-IS         60      r14n1     r14n0-r14n1  r10n1(4)  
+                                           r13n0     r14n0-r13n0  r9n0(4)   
+ r12n6               TE-IS         60      r14n9     r14n0-r14n9  r13n6(4)  
+                                           r13n0     r14n0-r13n0  r12n7(4)  
+ r11n7               TE-IS         60      r14n9     r14n0-r14n9  r12n7(4)  
+                                           r13n0     r14n0-r13n0  r11n8(4)  
+ r10n8               TE-IS         60      r14n9     r14n0-r14n9  r11n8(4)  
+                                           r13n0     r14n0-r13n0  r10n9(4)  
+ r9n9                TE-IS         60      r14n9     r14n0-r14n9  r10n9(4)  
+                                           r13n0     r14n0-r13n0  r9n0(4)   
+ r8n0                TE-IS         60      r13n0     r14n0-r13n0  r9n0(4)   
+ fc00:e:5::1/128     IP6 internal  60      r14n1     r14n0-r14n1  r14n5(4)  
+                                           r14n9     r14n0-r14n9  r14n5(4)  
+ fc00:9000:d:5::/64  IP6 internal  60      r14n1     r14n0-r14n1  r14n5(4)  
+                                           r14n9     r14n0-r14n9  r14n5(4)  
+ fc00:d:4::1/128     IP6 internal  60      r14n1     r14n0-r14n1  r13n4(4)  
+                                           r13n0     r14n0-r13n0  r13n4(4)  
+ fc00:d:4:5::/64     IP6 internal  60      r14n1     r14n0-r14n1  r13n4(4)  
+                                           r13n0     r14n0-r13n0  r13n4(4)  
+ fc00:9000:c:4::/64  IP6 internal  60      r14n1     r14n0-r14n1  r13n4(4)  
+                                           r13n0     r14n0-r13n0  r13n4(4)  
+ fc00:c:3::1/128     IP6 internal  60      r14n1     r14n0-r14n1  r12n3(4)  
+                                           r13n0     r14n0-r13n0  r12n3(4)  
+ fc00:c:3:4::/64     IP6 internal  60      r14n1     r14n0-r14n1  r12n3(4)  
+                                           r13n0     r14n0-r13n0  r12n3(4)  
+ fc00:9000:b:3::/64  IP6 internal  60      r14n1     r14n0-r14n1  r12n3(4)  
+                                           r13n0     r14n0-r13n0  r12n3(4)  
+ fc00:b:2::1/128     IP6 internal  60      r14n1     r14n0-r14n1  r11n2(4)  
+                                           r13n0     r14n0-r13n0  r11n2(4)  
+ fc00:b:2:3::/64     IP6 internal  60      r14n1     r14n0-r14n1  r11n2(4)  
+                                           r13n0     r14n0-r13n0  r11n2(4)  
+ fc00:9000:a:2::/64  IP6 internal  60      r14n1     r14n0-r14n1  r11n2(4)  
+                                           r13n0     r14n0-r13n0  r11n2(4)  
+ fc00:a:1::1/128     IP6 internal  60      r14n1     r14n0-r14n1  r10n1(4)  
+                                           r13n0     r14n0-r13n0  r10n1(4)  
+ fc00:a:1:2::/64     IP6 internal  60      r14n1     r14n0-r14n1  r10n1(4)  
+                                           r13n0     r14n0-r13n0  r10n1(4)  
+ fc00:9000:9:1::/64  IP6 internal  60      r14n1     r14n0-r14n1  r10n1(4)  
+                                           r13n0     r14n0-r13n0  r10n1(4)  
+ fc00:d:6::1/128     IP6 internal  60      r14n9     r14n0-r14n9  r13n6(4)  
+                                           r13n0     r14n0-r13n0  r13n6(4)  
+ fc00:d:5:6::/64     IP6 internal  60      r14n9     r14n0-r14n9  r13n6(4)  
+                                           r13n0     r14n0-r13n0  r13n6(4)  
+ fc00:9000:c:6::/64  IP6 internal  60      r14n9     r14n0-r14n9  r13n6(4)  
+                                           r13n0     r14n0-r13n0  r13n6(4)  
+ fc00:c:7::1/128     IP6 internal  60      r14n9     r14n0-r14n9  r12n7(4)  
+                                           r13n0     r14n0-r13n0  r12n7(4)  
+ fc00:c:6:7::/64     IP6 internal  60      r14n9     r14n0-r14n9  r12n7(4)  
+                                           r13n0     r14n0-r13n0  r12n7(4)  
+ fc00:9000:b:7::/64  IP6 internal  60      r14n9     r14n0-r14n9  r12n7(4)  
+                                           r13n0     r14n0-r13n0  r12n7(4)  
+ fc00:b:8::1/128     IP6 internal  60      r14n9     r14n0-r14n9  r11n8(4)  
+                                           r13n0     r14n0-r13n0  r11n8(4)  
+ fc00:b:7:8::/64     IP6 internal  60      r14n9     r14n0-r14n9  r11n8(4)  
+                                           r13n0     r14n0-r13n0  r11n8(4)  
+ fc00:9000:a:8::/64  IP6 internal  60      r14n9     r14n0-r14n9  r11n8(4)  
+                                           r13n0     r14n0-r13n0  r11n8(4)  
+ fc00:a:9::1/128     IP6 internal  60      r14n9     r14n0-r14n9  r10n9(4)  
+                                           r13n0     r14n0-r13n0  r10n9(4)  
+ fc00:a:8:9::/64     IP6 internal  60      r14n9     r14n0-r14n9  r10n9(4)  
+                                           r13n0     r14n0-r13n0  r10n9(4)  
+ fc00:9000:9:9::/64  IP6 internal  60      r14n9     r14n0-r14n9  r10n9(4)  
+                                           r13n0     r14n0-r13n0  r10n9(4)  
+ fc00:9::1/128       IP6 internal  60      r13n0     r14n0-r13n0  r9n0(4)   
+ fc00:9:0:1::/64     IP6 internal  60      r13n0     r14n0-r13n0  r9n0(4)   
+ fc00:9:9::/64       IP6 internal  60      r13n0     r14n0-r13n0  r9n0(4)   
+ fc00:9000:8::/64    IP6 internal  60      r13n0     r14n0-r13n0  r9n0(4)   
+ r12n5               TE-IS         70      r14n1     r14n0-r14n1  r13n5(4)  
+                                           r14n9     r14n0-r14n9  r12n4(4)  
+                                           r13n0     r14n0-r13n0  r12n6(4)  
+ r11n4               TE-IS         70      r14n1     r14n0-r14n1  r12n4(4)  
+                                           r13n0     r14n0-r13n0  r11n3(4)  
+ r10n3               TE-IS         70      r14n1     r14n0-r14n1  r11n3(4)  
+                                           r13n0     r14n0-r13n0  r10n2(4)  
+ r9n2                TE-IS         70      r14n1     r14n0-r14n1  r10n2(4)  
+                                           r13n0     r14n0-r13n0  r9n1(4)   
+ r8n1                TE-IS         70      r14n1     r14n0-r14n1  r9n1(4)   
+                                           r13n0     r14n0-r13n0  r8n0(4)   
+ r11n6               TE-IS         70      r14n9     r14n0-r14n9  r12n6(4)  
+                                           r13n0     r14n0-r13n0  r11n7(4)  
+ r10n7               TE-IS         70      r14n9     r14n0-r14n9  r11n7(4)  
+                                           r13n0     r14n0-r13n0  r10n8(4)  
+ r9n8                TE-IS         70      r14n9     r14n0-r14n9  r10n8(4)  
+                                           r13n0     r14n0-r13n0  r9n9(4)   
+ r8n9                TE-IS         70      r14n9     r14n0-r14n9  r9n9(4)   
+                                           r13n0     r14n0-r13n0  r8n0(4)   
+ r7n0                TE-IS         70      r13n0     r14n0-r13n0  r8n0(4)   
+ fc00:d:5::1/128     IP6 internal  70      r14n1     r14n0-r14n1  r13n5(4)  
+                                           r14n9     r14n0-r14n9  r13n5(4)  
+                                           r13n0     r14n0-r13n0  r13n5(4)  
+ fc00:9000:c:5::/64  IP6 internal  70      r14n1     r14n0-r14n1  r13n5(4)  
+                                           r14n9     r14n0-r14n9  r13n5(4)  
+                                           r13n0     r14n0-r13n0  r13n5(4)  
+ fc00:c:4::1/128     IP6 internal  70      r14n1     r14n0-r14n1  r12n4(4)  
+                                           r13n0     r14n0-r13n0  r12n4(4)  
+ fc00:c:4:5::/64     IP6 internal  70      r14n1     r14n0-r14n1  r12n4(4)  
+                                           r13n0     r14n0-r13n0  r12n4(4)  
+ fc00:9000:b:4::/64  IP6 internal  70      r14n1     r14n0-r14n1  r12n4(4)  
+                                           r13n0     r14n0-r13n0  r12n4(4)  
+ fc00:b:3::1/128     IP6 internal  70      r14n1     r14n0-r14n1  r11n3(4)  
+                                           r13n0     r14n0-r13n0  r11n3(4)  
+ fc00:b:3:4::/64     IP6 internal  70      r14n1     r14n0-r14n1  r11n3(4)  
+                                           r13n0     r14n0-r13n0  r11n3(4)  
+ fc00:9000:a:3::/64  IP6 internal  70      r14n1     r14n0-r14n1  r11n3(4)  
+                                           r13n0     r14n0-r13n0  r11n3(4)  
+ fc00:a:2::1/128     IP6 internal  70      r14n1     r14n0-r14n1  r10n2(4)  
+                                           r13n0     r14n0-r13n0  r10n2(4)  
+ fc00:a:2:3::/64     IP6 internal  70      r14n1     r14n0-r14n1  r10n2(4)  
+                                           r13n0     r14n0-r13n0  r10n2(4)  
+ fc00:9000:9:2::/64  IP6 internal  70      r14n1     r14n0-r14n1  r10n2(4)  
+                                           r13n0     r14n0-r13n0  r10n2(4)  
+ fc00:9:1::1/128     IP6 internal  70      r14n1     r14n0-r14n1  r9n1(4)   
+                                           r13n0     r14n0-r13n0  r9n1(4)   
+ fc00:9:1:2::/64     IP6 internal  70      r14n1     r14n0-r14n1  r9n1(4)   
+                                           r13n0     r14n0-r13n0  r9n1(4)   
+ fc00:9000:8:1::/64  IP6 internal  70      r14n1     r14n0-r14n1  r9n1(4)   
+                                           r13n0     r14n0-r13n0  r9n1(4)   
+ fc00:c:6::1/128     IP6 internal  70      r14n9     r14n0-r14n9  r12n6(4)  
+                                           r13n0     r14n0-r13n0  r12n6(4)  
+ fc00:c:5:6::/64     IP6 internal  70      r14n9     r14n0-r14n9  r12n6(4)  
+                                           r13n0     r14n0-r13n0  r12n6(4)  
+ fc00:9000:b:6::/64  IP6 internal  70      r14n9     r14n0-r14n9  r12n6(4)  
+                                           r13n0     r14n0-r13n0  r12n6(4)  
+ fc00:b:7::1/128     IP6 internal  70      r14n9     r14n0-r14n9  r11n7(4)  
+                                           r13n0     r14n0-r13n0  r11n7(4)  
+ fc00:b:6:7::/64     IP6 internal  70      r14n9     r14n0-r14n9  r11n7(4)  
+                                           r13n0     r14n0-r13n0  r11n7(4)  
+ fc00:9000:a:7::/64  IP6 internal  70      r14n9     r14n0-r14n9  r11n7(4)  
+                                           r13n0     r14n0-r13n0  r11n7(4)  
+ fc00:a:8::1/128     IP6 internal  70      r14n9     r14n0-r14n9  r10n8(4)  
+                                           r13n0     r14n0-r13n0  r10n8(4)  
+ fc00:a:7:8::/64     IP6 internal  70      r14n9     r14n0-r14n9  r10n8(4)  
+                                           r13n0     r14n0-r13n0  r10n8(4)  
+ fc00:9000:9:8::/64  IP6 internal  70      r14n9     r14n0-r14n9  r10n8(4)  
+                                           r13n0     r14n0-r13n0  r10n8(4)  
+ fc00:9:9::1/128     IP6 internal  70      r14n9     r14n0-r14n9  r9n9(4)   
+                                           r13n0     r14n0-r13n0  r9n9(4)   
+ fc00:9:8:9::/64     IP6 internal  70      r14n9     r14n0-r14n9  r9n9(4)   
+                                           r13n0     r14n0-r13n0  r9n9(4)   
+ fc00:9000:8:9::/64  IP6 internal  70      r14n9     r14n0-r14n9  r9n9(4)   
+                                           r13n0     r14n0-r13n0  r9n9(4)   
+ fc00:8::1/128       IP6 internal  70      r13n0     r14n0-r13n0  r8n0(4)   
+ fc00:8:0:1::/64     IP6 internal  70      r13n0     r14n0-r13n0  r8n0(4)   
+ fc00:8:9::/64       IP6 internal  70      r13n0     r14n0-r13n0  r8n0(4)   
+ fc00:9000:7::/64    IP6 internal  70      r13n0     r14n0-r13n0  r8n0(4)   
+ r11n5               TE-IS         80      r14n1     r14n0-r14n1  r12n5(4)  
+                                           r14n9     r14n0-r14n9  r11n4(4)  
+                                           r13n0     r14n0-r13n0  r11n6(4)  
+ r10n4               TE-IS         80      r14n1     r14n0-r14n1  r11n4(4)  
+                                           r13n0     r14n0-r13n0  r10n3(4)  
+ r9n3                TE-IS         80      r14n1     r14n0-r14n1  r10n3(4)  
+                                           r13n0     r14n0-r13n0  r9n2(4)   
+ r8n2                TE-IS         80      r14n1     r14n0-r14n1  r9n2(4)   
+                                           r13n0     r14n0-r13n0  r8n1(4)   
+ r7n1                TE-IS         80      r14n1     r14n0-r14n1  r8n1(4)   
+                                           r13n0     r14n0-r13n0  r7n0(4)   
+ r10n6               TE-IS         80      r14n9     r14n0-r14n9  r11n6(4)  
+                                           r13n0     r14n0-r13n0  r10n7(4)  
+ r9n7                TE-IS         80      r14n9     r14n0-r14n9  r10n7(4)  
+                                           r13n0     r14n0-r13n0  r9n8(4)   
+ r8n8                TE-IS         80      r14n9     r14n0-r14n9  r9n8(4)   
+                                           r13n0     r14n0-r13n0  r8n9(4)   
+ r7n9                TE-IS         80      r14n9     r14n0-r14n9  r8n9(4)   
+                                           r13n0     r14n0-r13n0  r7n0(4)   
+ r6n0                TE-IS         80      r13n0     r14n0-r13n0  r7n0(4)   
+ fc00:c:5::1/128     IP6 internal  80      r14n1     r14n0-r14n1  r12n5(4)  
+                                           r14n9     r14n0-r14n9  r12n5(4)  
+                                           r13n0     r14n0-r13n0  r12n5(4)  
+ fc00:9000:b:5::/64  IP6 internal  80      r14n1     r14n0-r14n1  r12n5(4)  
+                                           r14n9     r14n0-r14n9  r12n5(4)  
+                                           r13n0     r14n0-r13n0  r12n5(4)  
+ fc00:b:4::1/128     IP6 internal  80      r14n1     r14n0-r14n1  r11n4(4)  
+                                           r13n0     r14n0-r13n0  r11n4(4)  
+ fc00:b:4:5::/64     IP6 internal  80      r14n1     r14n0-r14n1  r11n4(4)  
+                                           r13n0     r14n0-r13n0  r11n4(4)  
+ fc00:9000:a:4::/64  IP6 internal  80      r14n1     r14n0-r14n1  r11n4(4)  
+                                           r13n0     r14n0-r13n0  r11n4(4)  
+ fc00:a:3::1/128     IP6 internal  80      r14n1     r14n0-r14n1  r10n3(4)  
+                                           r13n0     r14n0-r13n0  r10n3(4)  
+ fc00:a:3:4::/64     IP6 internal  80      r14n1     r14n0-r14n1  r10n3(4)  
+                                           r13n0     r14n0-r13n0  r10n3(4)  
+ fc00:9000:9:3::/64  IP6 internal  80      r14n1     r14n0-r14n1  r10n3(4)  
+                                           r13n0     r14n0-r13n0  r10n3(4)  
+ fc00:9:2::1/128     IP6 internal  80      r14n1     r14n0-r14n1  r9n2(4)   
+                                           r13n0     r14n0-r13n0  r9n2(4)   
+ fc00:9:2:3::/64     IP6 internal  80      r14n1     r14n0-r14n1  r9n2(4)   
+                                           r13n0     r14n0-r13n0  r9n2(4)   
+ fc00:9000:8:2::/64  IP6 internal  80      r14n1     r14n0-r14n1  r9n2(4)   
+                                           r13n0     r14n0-r13n0  r9n2(4)   
+ fc00:8:1::1/128     IP6 internal  80      r14n1     r14n0-r14n1  r8n1(4)   
+                                           r13n0     r14n0-r13n0  r8n1(4)   
+ fc00:8:1:2::/64     IP6 internal  80      r14n1     r14n0-r14n1  r8n1(4)   
+                                           r13n0     r14n0-r13n0  r8n1(4)   
+ fc00:9000:7:1::/64  IP6 internal  80      r14n1     r14n0-r14n1  r8n1(4)   
+                                           r13n0     r14n0-r13n0  r8n1(4)   
+ fc00:b:6::1/128     IP6 internal  80      r14n9     r14n0-r14n9  r11n6(4)  
+                                           r13n0     r14n0-r13n0  r11n6(4)  
+ fc00:b:5:6::/64     IP6 internal  80      r14n9     r14n0-r14n9  r11n6(4)  
+                                           r13n0     r14n0-r13n0  r11n6(4)  
+ fc00:9000:a:6::/64  IP6 internal  80      r14n9     r14n0-r14n9  r11n6(4)  
+                                           r13n0     r14n0-r13n0  r11n6(4)  
+ fc00:a:7::1/128     IP6 internal  80      r14n9     r14n0-r14n9  r10n7(4)  
+                                           r13n0     r14n0-r13n0  r10n7(4)  
+ fc00:a:6:7::/64     IP6 internal  80      r14n9     r14n0-r14n9  r10n7(4)  
+                                           r13n0     r14n0-r13n0  r10n7(4)  
+ fc00:9000:9:7::/64  IP6 internal  80      r14n9     r14n0-r14n9  r10n7(4)  
+                                           r13n0     r14n0-r13n0  r10n7(4)  
+ fc00:9:8::1/128     IP6 internal  80      r14n9     r14n0-r14n9  r9n8(4)   
+                                           r13n0     r14n0-r13n0  r9n8(4)   
+ fc00:9:7:8::/64     IP6 internal  80      r14n9     r14n0-r14n9  r9n8(4)   
+                                           r13n0     r14n0-r13n0  r9n8(4)   
+ fc00:9000:8:8::/64  IP6 internal  80      r14n9     r14n0-r14n9  r9n8(4)   
+                                           r13n0     r14n0-r13n0  r9n8(4)   
+ fc00:8:9::1/128     IP6 internal  80      r14n9     r14n0-r14n9  r8n9(4)   
+                                           r13n0     r14n0-r13n0  r8n9(4)   
+ fc00:8:8:9::/64     IP6 internal  80      r14n9     r14n0-r14n9  r8n9(4)   
+                                           r13n0     r14n0-r13n0  r8n9(4)   
+ fc00:9000:7:9::/64  IP6 internal  80      r14n9     r14n0-r14n9  r8n9(4)   
+                                           r13n0     r14n0-r13n0  r8n9(4)   
+ fc00:7::1/128       IP6 internal  80      r13n0     r14n0-r13n0  r7n0(4)   
+ fc00:7:0:1::/64     IP6 internal  80      r13n0     r14n0-r13n0  r7n0(4)   
+ fc00:7:9::/64       IP6 internal  80      r13n0     r14n0-r13n0  r7n0(4)   
+ fc00:9000:6::/64    IP6 internal  80      r13n0     r14n0-r13n0  r7n0(4)   
+ r10n5               TE-IS         90      r14n1     r14n0-r14n1  r11n5(4)  
+                                           r14n9     r14n0-r14n9  r10n4(4)  
+                                           r13n0     r14n0-r13n0  r10n6(4)  
+ r9n4                TE-IS         90      r14n1     r14n0-r14n1  r10n4(4)  
+                                           r13n0     r14n0-r13n0  r9n3(4)   
+ r8n3                TE-IS         90      r14n1     r14n0-r14n1  r9n3(4)   
+                                           r13n0     r14n0-r13n0  r8n2(4)   
+ r7n2                TE-IS         90      r14n1     r14n0-r14n1  r8n2(4)   
+                                           r13n0     r14n0-r13n0  r7n1(4)   
+ r6n1                TE-IS         90      r14n1     r14n0-r14n1  r7n1(4)   
+                                           r13n0     r14n0-r13n0  r6n0(4)   
+ r9n6                TE-IS         90      r14n9     r14n0-r14n9  r10n6(4)  
+                                           r13n0     r14n0-r13n0  r9n7(4)   
+ r8n7                TE-IS         90      r14n9     r14n0-r14n9  r9n7(4)   
+                                           r13n0     r14n0-r13n0  r8n8(4)   
+ r7n8                TE-IS         90      r14n9     r14n0-r14n9  r8n8(4)   
+                                           r13n0     r14n0-r13n0  r7n9(4)   
+ r6n9                TE-IS         90      r14n9     r14n0-r14n9  r7n9(4)   
+                                           r13n0     r14n0-r13n0  r6n0(4)   
+ r5n0                TE-IS         90      r13n0     r14n0-r13n0  r6n0(4)   
+ fc00:b:5::1/128     IP6 internal  90      r14n1     r14n0-r14n1  r11n5(4)  
+                                           r14n9     r14n0-r14n9  r11n5(4)  
+                                           r13n0     r14n0-r13n0  r11n5(4)  
+ fc00:9000:a:5::/64  IP6 internal  90      r14n1     r14n0-r14n1  r11n5(4)  
+                                           r14n9     r14n0-r14n9  r11n5(4)  
+                                           r13n0     r14n0-r13n0  r11n5(4)  
+ fc00:a:4::1/128     IP6 internal  90      r14n1     r14n0-r14n1  r10n4(4)  
+                                           r13n0     r14n0-r13n0  r10n4(4)  
+ fc00:a:4:5::/64     IP6 internal  90      r14n1     r14n0-r14n1  r10n4(4)  
+                                           r13n0     r14n0-r13n0  r10n4(4)  
+ fc00:9000:9:4::/64  IP6 internal  90      r14n1     r14n0-r14n1  r10n4(4)  
+                                           r13n0     r14n0-r13n0  r10n4(4)  
+ fc00:9:3::1/128     IP6 internal  90      r14n1     r14n0-r14n1  r9n3(4)   
+                                           r13n0     r14n0-r13n0  r9n3(4)   
+ fc00:9:3:4::/64     IP6 internal  90      r14n1     r14n0-r14n1  r9n3(4)   
+                                           r13n0     r14n0-r13n0  r9n3(4)   
+ fc00:9000:8:3::/64  IP6 internal  90      r14n1     r14n0-r14n1  r9n3(4)   
+                                           r13n0     r14n0-r13n0  r9n3(4)   
+ fc00:8:2::1/128     IP6 internal  90      r14n1     r14n0-r14n1  r8n2(4)   
+                                           r13n0     r14n0-r13n0  r8n2(4)   
+ fc00:8:2:3::/64     IP6 internal  90      r14n1     r14n0-r14n1  r8n2(4)   
+                                           r13n0     r14n0-r13n0  r8n2(4)   
+ fc00:9000:7:2::/64  IP6 internal  90      r14n1     r14n0-r14n1  r8n2(4)   
+                                           r13n0     r14n0-r13n0  r8n2(4)   
+ fc00:7:1::1/128     IP6 internal  90      r14n1     r14n0-r14n1  r7n1(4)   
+                                           r13n0     r14n0-r13n0  r7n1(4)   
+ fc00:7:1:2::/64     IP6 internal  90      r14n1     r14n0-r14n1  r7n1(4)   
+                                           r13n0     r14n0-r13n0  r7n1(4)   
+ fc00:9000:6:1::/64  IP6 internal  90      r14n1     r14n0-r14n1  r7n1(4)   
+                                           r13n0     r14n0-r13n0  r7n1(4)   
+ fc00:a:6::1/128     IP6 internal  90      r14n9     r14n0-r14n9  r10n6(4)  
+                                           r13n0     r14n0-r13n0  r10n6(4)  
+ fc00:a:5:6::/64     IP6 internal  90      r14n9     r14n0-r14n9  r10n6(4)  
+                                           r13n0     r14n0-r13n0  r10n6(4)  
+ fc00:9000:9:6::/64  IP6 internal  90      r14n9     r14n0-r14n9  r10n6(4)  
+                                           r13n0     r14n0-r13n0  r10n6(4)  
+ fc00:9:7::1/128     IP6 internal  90      r14n9     r14n0-r14n9  r9n7(4)   
+                                           r13n0     r14n0-r13n0  r9n7(4)   
+ fc00:9:6:7::/64     IP6 internal  90      r14n9     r14n0-r14n9  r9n7(4)   
+                                           r13n0     r14n0-r13n0  r9n7(4)   
+ fc00:9000:8:7::/64  IP6 internal  90      r14n9     r14n0-r14n9  r9n7(4)   
+                                           r13n0     r14n0-r13n0  r9n7(4)   
+ fc00:8:8::1/128     IP6 internal  90      r14n9     r14n0-r14n9  r8n8(4)   
+                                           r13n0     r14n0-r13n0  r8n8(4)   
+ fc00:8:7:8::/64     IP6 internal  90      r14n9     r14n0-r14n9  r8n8(4)   
+                                           r13n0     r14n0-r13n0  r8n8(4)   
+ fc00:9000:7:8::/64  IP6 internal  90      r14n9     r14n0-r14n9  r8n8(4)   
+                                           r13n0     r14n0-r13n0  r8n8(4)   
+ fc00:7:9::1/128     IP6 internal  90      r14n9     r14n0-r14n9  r7n9(4)   
+                                           r13n0     r14n0-r13n0  r7n9(4)   
+ fc00:7:8:9::/64     IP6 internal  90      r14n9     r14n0-r14n9  r7n9(4)   
+                                           r13n0     r14n0-r13n0  r7n9(4)   
+ fc00:9000:6:9::/64  IP6 internal  90      r14n9     r14n0-r14n9  r7n9(4)   
+                                           r13n0     r14n0-r13n0  r7n9(4)   
+ fc00:6::1/128       IP6 internal  90      r13n0     r14n0-r13n0  r6n0(4)   
+ fc00:6:0:1::/64     IP6 internal  90      r13n0     r14n0-r13n0  r6n0(4)   
+ fc00:6:9::/64       IP6 internal  90      r13n0     r14n0-r13n0  r6n0(4)   
+ fc00:9000:5::/64    IP6 internal  90      r13n0     r14n0-r13n0  r6n0(4)   
+ r9n5                TE-IS         100     r14n1     r14n0-r14n1  r10n5(4)  
+                                           r14n9     r14n0-r14n9  r9n4(4)   
+                                           r13n0     r14n0-r13n0  r9n6(4)   
+ r8n4                TE-IS         100     r14n1     r14n0-r14n1  r9n4(4)   
+                                           r13n0     r14n0-r13n0  r8n3(4)   
+ r7n3                TE-IS         100     r14n1     r14n0-r14n1  r8n3(4)   
+                                           r13n0     r14n0-r13n0  r7n2(4)   
+ r6n2                TE-IS         100     r14n1     r14n0-r14n1  r7n2(4)   
+                                           r13n0     r14n0-r13n0  r6n1(4)   
+ r5n1                TE-IS         100     r14n1     r14n0-r14n1  r6n1(4)   
+                                           r13n0     r14n0-r13n0  r5n0(4)   
+ r8n6                TE-IS         100     r14n9     r14n0-r14n9  r9n6(4)   
+                                           r13n0     r14n0-r13n0  r8n7(4)   
+ r7n7                TE-IS         100     r14n9     r14n0-r14n9  r8n7(4)   
+                                           r13n0     r14n0-r13n0  r7n8(4)   
+ r6n8                TE-IS         100     r14n9     r14n0-r14n9  r7n8(4)   
+                                           r13n0     r14n0-r13n0  r6n9(4)   
+ r5n9                TE-IS         100     r14n9     r14n0-r14n9  r6n9(4)   
+                                           r13n0     r14n0-r13n0  r5n0(4)   
+ r4n0                TE-IS         100     r13n0     r14n0-r13n0  r5n0(4)   
+ fc00:a:5::1/128     IP6 internal  100     r14n1     r14n0-r14n1  r10n5(4)  
+                                           r14n9     r14n0-r14n9  r10n5(4)  
+                                           r13n0     r14n0-r13n0  r10n5(4)  
+ fc00:9000:9:5::/64  IP6 internal  100     r14n1     r14n0-r14n1  r10n5(4)  
+                                           r14n9     r14n0-r14n9  r10n5(4)  
+                                           r13n0     r14n0-r13n0  r10n5(4)  
+ fc00:9:4::1/128     IP6 internal  100     r14n1     r14n0-r14n1  r9n4(4)   
+                                           r13n0     r14n0-r13n0  r9n4(4)   
+ fc00:9:4:5::/64     IP6 internal  100     r14n1     r14n0-r14n1  r9n4(4)   
+                                           r13n0     r14n0-r13n0  r9n4(4)   
+ fc00:9000:8:4::/64  IP6 internal  100     r14n1     r14n0-r14n1  r9n4(4)   
+                                           r13n0     r14n0-r13n0  r9n4(4)   
+ fc00:8:3::1/128     IP6 internal  100     r14n1     r14n0-r14n1  r8n3(4)   
+                                           r13n0     r14n0-r13n0  r8n3(4)   
+ fc00:8:3:4::/64     IP6 internal  100     r14n1     r14n0-r14n1  r8n3(4)   
+                                           r13n0     r14n0-r13n0  r8n3(4)   
+ fc00:9000:7:3::/64  IP6 internal  100     r14n1     r14n0-r14n1  r8n3(4)   
+                                           r13n0     r14n0-r13n0  r8n3(4)   
+ fc00:7:2::1/128     IP6 internal  100     r14n1     r14n0-r14n1  r7n2(4)   
+                                           r13n0     r14n0-r13n0  r7n2(4)   
+ fc00:7:2:3::/64     IP6 internal  100     r14n1     r14n0-r14n1  r7n2(4)   
+                                           r13n0     r14n0-r13n0  r7n2(4)   
+ fc00:9000:6:2::/64  IP6 internal  100     r14n1     r14n0-r14n1  r7n2(4)   
+                                           r13n0     r14n0-r13n0  r7n2(4)   
+ fc00:6:1::1/128     IP6 internal  100     r14n1     r14n0-r14n1  r6n1(4)   
+                                           r13n0     r14n0-r13n0  r6n1(4)   
+ fc00:6:1:2::/64     IP6 internal  100     r14n1     r14n0-r14n1  r6n1(4)   
+                                           r13n0     r14n0-r13n0  r6n1(4)   
+ fc00:9000:5:1::/64  IP6 internal  100     r14n1     r14n0-r14n1  r6n1(4)   
+                                           r13n0     r14n0-r13n0  r6n1(4)   
+ fc00:9:6::1/128     IP6 internal  100     r14n9     r14n0-r14n9  r9n6(4)   
+                                           r13n0     r14n0-r13n0  r9n6(4)   
+ fc00:9:5:6::/64     IP6 internal  100     r14n9     r14n0-r14n9  r9n6(4)   
+                                           r13n0     r14n0-r13n0  r9n6(4)   
+ fc00:9000:8:6::/64  IP6 internal  100     r14n9     r14n0-r14n9  r9n6(4)   
+                                           r13n0     r14n0-r13n0  r9n6(4)   
+ fc00:8:7::1/128     IP6 internal  100     r14n9     r14n0-r14n9  r8n7(4)   
+                                           r13n0     r14n0-r13n0  r8n7(4)   
+ fc00:8:6:7::/64     IP6 internal  100     r14n9     r14n0-r14n9  r8n7(4)   
+                                           r13n0     r14n0-r13n0  r8n7(4)   
+ fc00:9000:7:7::/64  IP6 internal  100     r14n9     r14n0-r14n9  r8n7(4)   
+                                           r13n0     r14n0-r13n0  r8n7(4)   
+ fc00:7:8::1/128     IP6 internal  100     r14n9     r14n0-r14n9  r7n8(4)   
+                                           r13n0     r14n0-r13n0  r7n8(4)   
+ fc00:7:7:8::/64     IP6 internal  100     r14n9     r14n0-r14n9  r7n8(4)   
+                                           r13n0     r14n0-r13n0  r7n8(4)   
+ fc00:9000:6:8::/64  IP6 internal  100     r14n9     r14n0-r14n9  r7n8(4)   
+                                           r13n0     r14n0-r13n0  r7n8(4)   
+ fc00:6:9::1/128     IP6 internal  100     r14n9     r14n0-r14n9  r6n9(4)   
+                                           r13n0     r14n0-r13n0  r6n9(4)   
+ fc00:6:8:9::/64     IP6 internal  100     r14n9     r14n0-r14n9  r6n9(4)   
+                                           r13n0     r14n0-r13n0  r6n9(4)   
+ fc00:9000:5:9::/64  IP6 internal  100     r14n9     r14n0-r14n9  r6n9(4)   
+                                           r13n0     r14n0-r13n0  r6n9(4)   
+ fc00:5::1/128       IP6 internal  100     r13n0     r14n0-r13n0  r5n0(4)   
+ fc00:5:0:1::/64     IP6 internal  100     r13n0     r14n0-r13n0  r5n0(4)   
+ fc00:5:9::/64       IP6 internal  100     r13n0     r14n0-r13n0  r5n0(4)   
+ fc00:9000:4::/64    IP6 internal  100     r13n0     r14n0-r13n0  r5n0(4)   
+ r8n5                TE-IS         110     r14n1     r14n0-r14n1  r9n5(4)   
+                                           r14n9     r14n0-r14n9  r8n4(4)   
+                                           r13n0     r14n0-r13n0  r8n6(4)   
+ r7n4                TE-IS         110     r14n1     r14n0-r14n1  r8n4(4)   
+                                           r13n0     r14n0-r13n0  r7n3(4)   
+ r6n3                TE-IS         110     r14n1     r14n0-r14n1  r7n3(4)   
+                                           r13n0     r14n0-r13n0  r6n2(4)   
+ r5n2                TE-IS         110     r14n1     r14n0-r14n1  r6n2(4)   
+                                           r13n0     r14n0-r13n0  r5n1(4)   
+ r4n1                TE-IS         110     r14n1     r14n0-r14n1  r5n1(4)   
+                                           r13n0     r14n0-r13n0  r4n0(4)   
+ r7n6                TE-IS         110     r14n9     r14n0-r14n9  r8n6(4)   
+                                           r13n0     r14n0-r13n0  r7n7(4)   
+ r6n7                TE-IS         110     r14n9     r14n0-r14n9  r7n7(4)   
+                                           r13n0     r14n0-r13n0  r6n8(4)   
+ r5n8                TE-IS         110     r14n9     r14n0-r14n9  r6n8(4)   
+                                           r13n0     r14n0-r13n0  r5n9(4)   
+ r4n9                TE-IS         110     r14n9     r14n0-r14n9  r5n9(4)   
+                                           r13n0     r14n0-r13n0  r4n0(4)   
+ r3n0                TE-IS         110     r13n0     r14n0-r13n0  r4n0(4)   
+ fc00:9:5::1/128     IP6 internal  110     r14n1     r14n0-r14n1  r9n5(4)   
+                                           r14n9     r14n0-r14n9  r9n5(4)   
+                                           r13n0     r14n0-r13n0  r9n5(4)   
+ fc00:9000:8:5::/64  IP6 internal  110     r14n1     r14n0-r14n1  r9n5(4)   
+                                           r14n9     r14n0-r14n9  r9n5(4)   
+                                           r13n0     r14n0-r13n0  r9n5(4)   
+ fc00:8:4::1/128     IP6 internal  110     r14n1     r14n0-r14n1  r8n4(4)   
+                                           r13n0     r14n0-r13n0  r8n4(4)   
+ fc00:8:4:5::/64     IP6 internal  110     r14n1     r14n0-r14n1  r8n4(4)   
+                                           r13n0     r14n0-r13n0  r8n4(4)   
+ fc00:9000:7:4::/64  IP6 internal  110     r14n1     r14n0-r14n1  r8n4(4)   
+                                           r13n0     r14n0-r13n0  r8n4(4)   
+ fc00:7:3::1/128     IP6 internal  110     r14n1     r14n0-r14n1  r7n3(4)   
+                                           r13n0     r14n0-r13n0  r7n3(4)   
+ fc00:7:3:4::/64     IP6 internal  110     r14n1     r14n0-r14n1  r7n3(4)   
+                                           r13n0     r14n0-r13n0  r7n3(4)   
+ fc00:9000:6:3::/64  IP6 internal  110     r14n1     r14n0-r14n1  r7n3(4)   
+                                           r13n0     r14n0-r13n0  r7n3(4)   
+ fc00:6:2::1/128     IP6 internal  110     r14n1     r14n0-r14n1  r6n2(4)   
+                                           r13n0     r14n0-r13n0  r6n2(4)   
+ fc00:6:2:3::/64     IP6 internal  110     r14n1     r14n0-r14n1  r6n2(4)   
+                                           r13n0     r14n0-r13n0  r6n2(4)   
+ fc00:9000:5:2::/64  IP6 internal  110     r14n1     r14n0-r14n1  r6n2(4)   
+                                           r13n0     r14n0-r13n0  r6n2(4)   
+ fc00:5:1::1/128     IP6 internal  110     r14n1     r14n0-r14n1  r5n1(4)   
+                                           r13n0     r14n0-r13n0  r5n1(4)   
+ fc00:5:1:2::/64     IP6 internal  110     r14n1     r14n0-r14n1  r5n1(4)   
+                                           r13n0     r14n0-r13n0  r5n1(4)   
+ fc00:9000:4:1::/64  IP6 internal  110     r14n1     r14n0-r14n1  r5n1(4)   
+                                           r13n0     r14n0-r13n0  r5n1(4)   
+ fc00:8:6::1/128     IP6 internal  110     r14n9     r14n0-r14n9  r8n6(4)   
+                                           r13n0     r14n0-r13n0  r8n6(4)   
+ fc00:8:5:6::/64     IP6 internal  110     r14n9     r14n0-r14n9  r8n6(4)   
+                                           r13n0     r14n0-r13n0  r8n6(4)   
+ fc00:9000:7:6::/64  IP6 internal  110     r14n9     r14n0-r14n9  r8n6(4)   
+                                           r13n0     r14n0-r13n0  r8n6(4)   
+ fc00:7:7::1/128     IP6 internal  110     r14n9     r14n0-r14n9  r7n7(4)   
+                                           r13n0     r14n0-r13n0  r7n7(4)   
+ fc00:7:6:7::/64     IP6 internal  110     r14n9     r14n0-r14n9  r7n7(4)   
+                                           r13n0     r14n0-r13n0  r7n7(4)   
+ fc00:9000:6:7::/64  IP6 internal  110     r14n9     r14n0-r14n9  r7n7(4)   
+                                           r13n0     r14n0-r13n0  r7n7(4)   
+ fc00:6:8::1/128     IP6 internal  110     r14n9     r14n0-r14n9  r6n8(4)   
+                                           r13n0     r14n0-r13n0  r6n8(4)   
+ fc00:6:7:8::/64     IP6 internal  110     r14n9     r14n0-r14n9  r6n8(4)   
+                                           r13n0     r14n0-r13n0  r6n8(4)   
+ fc00:9000:5:8::/64  IP6 internal  110     r14n9     r14n0-r14n9  r6n8(4)   
+                                           r13n0     r14n0-r13n0  r6n8(4)   
+ fc00:5:9::1/128     IP6 internal  110     r14n9     r14n0-r14n9  r5n9(4)   
+                                           r13n0     r14n0-r13n0  r5n9(4)   
+ fc00:5:8:9::/64     IP6 internal  110     r14n9     r14n0-r14n9  r5n9(4)   
+                                           r13n0     r14n0-r13n0  r5n9(4)   
+ fc00:9000:4:9::/64  IP6 internal  110     r14n9     r14n0-r14n9  r5n9(4)   
+                                           r13n0     r14n0-r13n0  r5n9(4)   
+ fc00:4::1/128       IP6 internal  110     r13n0     r14n0-r13n0  r4n0(4)   
+ fc00:4:0:1::/64     IP6 internal  110     r13n0     r14n0-r13n0  r4n0(4)   
+ fc00:4:9::/64       IP6 internal  110     r13n0     r14n0-r13n0  r4n0(4)   
+ fc00:9000:3::/64    IP6 internal  110     r13n0     r14n0-r13n0  r4n0(4)   
+ r7n5                TE-IS         120     r14n1     r14n0-r14n1  r8n5(4)   
+                                           r14n9     r14n0-r14n9  r7n4(4)   
+                                           r13n0     r14n0-r13n0  r7n6(4)   
+ r6n4                TE-IS         120     r14n1     r14n0-r14n1  r7n4(4)   
+                                           r13n0     r14n0-r13n0  r6n3(4)   
+ r5n3                TE-IS         120     r14n1     r14n0-r14n1  r6n3(4)   
+                                           r13n0     r14n0-r13n0  r5n2(4)   
+ r4n2                TE-IS         120     r14n1     r14n0-r14n1  r5n2(4)   
+                                           r13n0     r14n0-r13n0  r4n1(4)   
+ r3n1                TE-IS         120     r14n1     r14n0-r14n1  r4n1(4)   
+                                           r13n0     r14n0-r13n0  r3n0(4)   
+ r6n6                TE-IS         120     r14n9     r14n0-r14n9  r7n6(4)   
+                                           r13n0     r14n0-r13n0  r6n7(4)   
+ r5n7                TE-IS         120     r14n9     r14n0-r14n9  r6n7(4)   
+                                           r13n0     r14n0-r13n0  r5n8(4)   
+ r4n8                TE-IS         120     r14n9     r14n0-r14n9  r5n8(4)   
+                                           r13n0     r14n0-r13n0  r4n9(4)   
+ r3n9                TE-IS         120     r14n9     r14n0-r14n9  r4n9(4)   
+                                           r13n0     r14n0-r13n0  r3n0(4)   
+ r2n0                TE-IS         120     r13n0     r14n0-r13n0  r3n0(4)   
+ fc00:8:5::1/128     IP6 internal  120     r14n1     r14n0-r14n1  r8n5(4)   
+                                           r14n9     r14n0-r14n9  r8n5(4)   
+                                           r13n0     r14n0-r13n0  r8n5(4)   
+ fc00:9000:7:5::/64  IP6 internal  120     r14n1     r14n0-r14n1  r8n5(4)   
+                                           r14n9     r14n0-r14n9  r8n5(4)   
+                                           r13n0     r14n0-r13n0  r8n5(4)   
+ fc00:7:4::1/128     IP6 internal  120     r14n1     r14n0-r14n1  r7n4(4)   
+                                           r13n0     r14n0-r13n0  r7n4(4)   
+ fc00:7:4:5::/64     IP6 internal  120     r14n1     r14n0-r14n1  r7n4(4)   
+                                           r13n0     r14n0-r13n0  r7n4(4)   
+ fc00:9000:6:4::/64  IP6 internal  120     r14n1     r14n0-r14n1  r7n4(4)   
+                                           r13n0     r14n0-r13n0  r7n4(4)   
+ fc00:6:3::1/128     IP6 internal  120     r14n1     r14n0-r14n1  r6n3(4)   
+                                           r13n0     r14n0-r13n0  r6n3(4)   
+ fc00:6:3:4::/64     IP6 internal  120     r14n1     r14n0-r14n1  r6n3(4)   
+                                           r13n0     r14n0-r13n0  r6n3(4)   
+ fc00:9000:5:3::/64  IP6 internal  120     r14n1     r14n0-r14n1  r6n3(4)   
+                                           r13n0     r14n0-r13n0  r6n3(4)   
+ fc00:5:2::1/128     IP6 internal  120     r14n1     r14n0-r14n1  r5n2(4)   
+                                           r13n0     r14n0-r13n0  r5n2(4)   
+ fc00:5:2:3::/64     IP6 internal  120     r14n1     r14n0-r14n1  r5n2(4)   
+                                           r13n0     r14n0-r13n0  r5n2(4)   
+ fc00:9000:4:2::/64  IP6 internal  120     r14n1     r14n0-r14n1  r5n2(4)   
+                                           r13n0     r14n0-r13n0  r5n2(4)   
+ fc00:4:1::1/128     IP6 internal  120     r14n1     r14n0-r14n1  r4n1(4)   
+                                           r13n0     r14n0-r13n0  r4n1(4)   
+ fc00:4:1:2::/64     IP6 internal  120     r14n1     r14n0-r14n1  r4n1(4)   
+                                           r13n0     r14n0-r13n0  r4n1(4)   
+ fc00:9000:3:1::/64  IP6 internal  120     r14n1     r14n0-r14n1  r4n1(4)   
+                                           r13n0     r14n0-r13n0  r4n1(4)   
+ fc00:7:6::1/128     IP6 internal  120     r14n9     r14n0-r14n9  r7n6(4)   
+                                           r13n0     r14n0-r13n0  r7n6(4)   
+ fc00:7:5:6::/64     IP6 internal  120     r14n9     r14n0-r14n9  r7n6(4)   
+                                           r13n0     r14n0-r13n0  r7n6(4)   
+ fc00:9000:6:6::/64  IP6 internal  120     r14n9     r14n0-r14n9  r7n6(4)   
+                                           r13n0     r14n0-r13n0  r7n6(4)   
+ fc00:6:7::1/128     IP6 internal  120     r14n9     r14n0-r14n9  r6n7(4)   
+                                           r13n0     r14n0-r13n0  r6n7(4)   
+ fc00:6:6:7::/64     IP6 internal  120     r14n9     r14n0-r14n9  r6n7(4)   
+                                           r13n0     r14n0-r13n0  r6n7(4)   
+ fc00:9000:5:7::/64  IP6 internal  120     r14n9     r14n0-r14n9  r6n7(4)   
+                                           r13n0     r14n0-r13n0  r6n7(4)   
+ fc00:5:8::1/128     IP6 internal  120     r14n9     r14n0-r14n9  r5n8(4)   
+                                           r13n0     r14n0-r13n0  r5n8(4)   
+ fc00:5:7:8::/64     IP6 internal  120     r14n9     r14n0-r14n9  r5n8(4)   
+                                           r13n0     r14n0-r13n0  r5n8(4)   
+ fc00:9000:4:8::/64  IP6 internal  120     r14n9     r14n0-r14n9  r5n8(4)   
+                                           r13n0     r14n0-r13n0  r5n8(4)   
+ fc00:4:9::1/128     IP6 internal  120     r14n9     r14n0-r14n9  r4n9(4)   
+                                           r13n0     r14n0-r13n0  r4n9(4)   
+ fc00:4:8:9::/64     IP6 internal  120     r14n9     r14n0-r14n9  r4n9(4)   
+                                           r13n0     r14n0-r13n0  r4n9(4)   
+ fc00:9000:3:9::/64  IP6 internal  120     r14n9     r14n0-r14n9  r4n9(4)   
+                                           r13n0     r14n0-r13n0  r4n9(4)   
+ fc00:3::1/128       IP6 internal  120     r13n0     r14n0-r13n0  r3n0(4)   
+ fc00:3:0:1::/64     IP6 internal  120     r13n0     r14n0-r13n0  r3n0(4)   
+ fc00:3:9::/64       IP6 internal  120     r13n0     r14n0-r13n0  r3n0(4)   
+ fc00:9000:2::/64    IP6 internal  120     r13n0     r14n0-r13n0  r3n0(4)   
+ r6n5                TE-IS         130     r14n1     r14n0-r14n1  r7n5(4)   
+                                           r14n9     r14n0-r14n9  r6n4(4)   
+                                           r13n0     r14n0-r13n0  r6n6(4)   
+ r5n4                TE-IS         130     r14n1     r14n0-r14n1  r6n4(4)   
+                                           r13n0     r14n0-r13n0  r5n3(4)   
+ r4n3                TE-IS         130     r14n1     r14n0-r14n1  r5n3(4)   
+                                           r13n0     r14n0-r13n0  r4n2(4)   
+ r3n2                TE-IS         130     r14n1     r14n0-r14n1  r4n2(4)   
+                                           r13n0     r14n0-r13n0  r3n1(4)   
+ r2n1                TE-IS         130     r14n1     r14n0-r14n1  r3n1(4)   
+                                           r13n0     r14n0-r13n0  r2n0(4)   
+ r5n6                TE-IS         130     r14n9     r14n0-r14n9  r6n6(4)   
+                                           r13n0     r14n0-r13n0  r5n7(4)   
+ r4n7                TE-IS         130     r14n9     r14n0-r14n9  r5n7(4)   
+                                           r13n0     r14n0-r13n0  r4n8(4)   
+ r3n8                TE-IS         130     r14n9     r14n0-r14n9  r4n8(4)   
+                                           r13n0     r14n0-r13n0  r3n9(4)   
+ r2n9                TE-IS         130     r14n9     r14n0-r14n9  r3n9(4)   
+                                           r13n0     r14n0-r13n0  r2n0(4)   
+ r1n0                TE-IS         130     r13n0     r14n0-r13n0  r2n0(4)   
+ fc00:7:5::1/128     IP6 internal  130     r14n1     r14n0-r14n1  r7n5(4)   
+                                           r14n9     r14n0-r14n9  r7n5(4)   
+                                           r13n0     r14n0-r13n0  r7n5(4)   
+ fc00:9000:6:5::/64  IP6 internal  130     r14n1     r14n0-r14n1  r7n5(4)   
+                                           r14n9     r14n0-r14n9  r7n5(4)   
+                                           r13n0     r14n0-r13n0  r7n5(4)   
+ fc00:6:4::1/128     IP6 internal  130     r14n1     r14n0-r14n1  r6n4(4)   
+                                           r13n0     r14n0-r13n0  r6n4(4)   
+ fc00:6:4:5::/64     IP6 internal  130     r14n1     r14n0-r14n1  r6n4(4)   
+                                           r13n0     r14n0-r13n0  r6n4(4)   
+ fc00:9000:5:4::/64  IP6 internal  130     r14n1     r14n0-r14n1  r6n4(4)   
+                                           r13n0     r14n0-r13n0  r6n4(4)   
+ fc00:5:3::1/128     IP6 internal  130     r14n1     r14n0-r14n1  r5n3(4)   
+                                           r13n0     r14n0-r13n0  r5n3(4)   
+ fc00:5:3:4::/64     IP6 internal  130     r14n1     r14n0-r14n1  r5n3(4)   
+                                           r13n0     r14n0-r13n0  r5n3(4)   
+ fc00:9000:4:3::/64  IP6 internal  130     r14n1     r14n0-r14n1  r5n3(4)   
+                                           r13n0     r14n0-r13n0  r5n3(4)   
+ fc00:4:2::1/128     IP6 internal  130     r14n1     r14n0-r14n1  r4n2(4)   
+                                           r13n0     r14n0-r13n0  r4n2(4)   
+ fc00:4:2:3::/64     IP6 internal  130     r14n1     r14n0-r14n1  r4n2(4)   
+                                           r13n0     r14n0-r13n0  r4n2(4)   
+ fc00:9000:3:2::/64  IP6 internal  130     r14n1     r14n0-r14n1  r4n2(4)   
+                                           r13n0     r14n0-r13n0  r4n2(4)   
+ fc00:3:1::1/128     IP6 internal  130     r14n1     r14n0-r14n1  r3n1(4)   
+                                           r13n0     r14n0-r13n0  r3n1(4)   
+ fc00:3:1:2::/64     IP6 internal  130     r14n1     r14n0-r14n1  r3n1(4)   
+                                           r13n0     r14n0-r13n0  r3n1(4)   
+ fc00:9000:2:1::/64  IP6 internal  130     r14n1     r14n0-r14n1  r3n1(4)   
+                                           r13n0     r14n0-r13n0  r3n1(4)   
+ fc00:6:6::1/128     IP6 internal  130     r14n9     r14n0-r14n9  r6n6(4)   
+                                           r13n0     r14n0-r13n0  r6n6(4)   
+ fc00:6:5:6::/64     IP6 internal  130     r14n9     r14n0-r14n9  r6n6(4)   
+                                           r13n0     r14n0-r13n0  r6n6(4)   
+ fc00:9000:5:6::/64  IP6 internal  130     r14n9     r14n0-r14n9  r6n6(4)   
+                                           r13n0     r14n0-r13n0  r6n6(4)   
+ fc00:5:7::1/128     IP6 internal  130     r14n9     r14n0-r14n9  r5n7(4)   
+                                           r13n0     r14n0-r13n0  r5n7(4)   
+ fc00:5:6:7::/64     IP6 internal  130     r14n9     r14n0-r14n9  r5n7(4)   
+                                           r13n0     r14n0-r13n0  r5n7(4)   
+ fc00:9000:4:7::/64  IP6 internal  130     r14n9     r14n0-r14n9  r5n7(4)   
+                                           r13n0     r14n0-r13n0  r5n7(4)   
+ fc00:4:8::1/128     IP6 internal  130     r14n9     r14n0-r14n9  r4n8(4)   
+                                           r13n0     r14n0-r13n0  r4n8(4)   
+ fc00:4:7:8::/64     IP6 internal  130     r14n9     r14n0-r14n9  r4n8(4)   
+                                           r13n0     r14n0-r13n0  r4n8(4)   
+ fc00:9000:3:8::/64  IP6 internal  130     r14n9     r14n0-r14n9  r4n8(4)   
+                                           r13n0     r14n0-r13n0  r4n8(4)   
+ fc00:3:9::1/128     IP6 internal  130     r14n9     r14n0-r14n9  r3n9(4)   
+                                           r13n0     r14n0-r13n0  r3n9(4)   
+ fc00:3:8:9::/64     IP6 internal  130     r14n9     r14n0-r14n9  r3n9(4)   
+                                           r13n0     r14n0-r13n0  r3n9(4)   
+ fc00:9000:2:9::/64  IP6 internal  130     r14n9     r14n0-r14n9  r3n9(4)   
+                                           r13n0     r14n0-r13n0  r3n9(4)   
+ fc00:2::1/128       IP6 internal  130     r13n0     r14n0-r13n0  r2n0(4)   
+ fc00:2:0:1::/64     IP6 internal  130     r13n0     r14n0-r13n0  r2n0(4)   
+ fc00:2:9::/64       IP6 internal  130     r13n0     r14n0-r13n0  r2n0(4)   
+ fc00:9000:1::/64    IP6 internal  130     r13n0     r14n0-r13n0  r2n0(4)   
+ r5n5                TE-IS         140     r14n1     r14n0-r14n1  r6n5(4)   
+                                           r14n9     r14n0-r14n9  r5n4(4)   
+                                           r13n0     r14n0-r13n0  r5n6(4)   
+ r4n4                TE-IS         140     r14n1     r14n0-r14n1  r5n4(4)   
+                                           r13n0     r14n0-r13n0  r4n3(4)   
+ r3n3                TE-IS         140     r14n1     r14n0-r14n1  r4n3(4)   
+                                           r13n0     r14n0-r13n0  r3n2(4)   
+ r2n2                TE-IS         140     r14n1     r14n0-r14n1  r3n2(4)   
+                                           r13n0     r14n0-r13n0  r2n1(4)   
+ r1n1                TE-IS         140     r14n1     r14n0-r14n1  r2n1(4)   
+                                           r13n0     r14n0-r13n0  r1n0(4)   
+ r4n6                TE-IS         140     r14n9     r14n0-r14n9  r5n6(4)   
+                                           r13n0     r14n0-r13n0  r4n7(4)   
+ r3n7                TE-IS         140     r14n9     r14n0-r14n9  r4n7(4)   
+                                           r13n0     r14n0-r13n0  r3n8(4)   
+ r2n8                TE-IS         140     r14n9     r14n0-r14n9  r3n8(4)   
+                                           r13n0     r14n0-r13n0  r2n9(4)   
+ r1n9                TE-IS         140     r14n9     r14n0-r14n9  r2n9(4)   
+                                           r13n0     r14n0-r13n0  r1n0(4)   
+ fc00:6:5::1/128     IP6 internal  140     r14n1     r14n0-r14n1  r6n5(4)   
+                                           r14n9     r14n0-r14n9  r6n5(4)   
+                                           r13n0     r14n0-r13n0  r6n5(4)   
+ fc00:9000:5:5::/64  IP6 internal  140     r14n1     r14n0-r14n1  r6n5(4)   
+                                           r14n9     r14n0-r14n9  r6n5(4)   
+                                           r13n0     r14n0-r13n0  r6n5(4)   
+ fc00:5:4::1/128     IP6 internal  140     r14n1     r14n0-r14n1  r5n4(4)   
+                                           r13n0     r14n0-r13n0  r5n4(4)   
+ fc00:5:4:5::/64     IP6 internal  140     r14n1     r14n0-r14n1  r5n4(4)   
+                                           r13n0     r14n0-r13n0  r5n4(4)   
+ fc00:9000:4:4::/64  IP6 internal  140     r14n1     r14n0-r14n1  r5n4(4)   
+                                           r13n0     r14n0-r13n0  r5n4(4)   
+ fc00:4:3::1/128     IP6 internal  140     r14n1     r14n0-r14n1  r4n3(4)   
+                                           r13n0     r14n0-r13n0  r4n3(4)   
+ fc00:4:3:4::/64     IP6 internal  140     r14n1     r14n0-r14n1  r4n3(4)   
+                                           r13n0     r14n0-r13n0  r4n3(4)   
+ fc00:9000:3:3::/64  IP6 internal  140     r14n1     r14n0-r14n1  r4n3(4)   
+                                           r13n0     r14n0-r13n0  r4n3(4)   
+ fc00:3:2::1/128     IP6 internal  140     r14n1     r14n0-r14n1  r3n2(4)   
+                                           r13n0     r14n0-r13n0  r3n2(4)   
+ fc00:3:2:3::/64     IP6 internal  140     r14n1     r14n0-r14n1  r3n2(4)   
+                                           r13n0     r14n0-r13n0  r3n2(4)   
+ fc00:9000:2:2::/64  IP6 internal  140     r14n1     r14n0-r14n1  r3n2(4)   
+                                           r13n0     r14n0-r13n0  r3n2(4)   
+ fc00:2:1::1/128     IP6 internal  140     r14n1     r14n0-r14n1  r2n1(4)   
+                                           r13n0     r14n0-r13n0  r2n1(4)   
+ fc00:2:1:2::/64     IP6 internal  140     r14n1     r14n0-r14n1  r2n1(4)   
+                                           r13n0     r14n0-r13n0  r2n1(4)   
+ fc00:9000:1:1::/64  IP6 internal  140     r14n1     r14n0-r14n1  r2n1(4)   
+                                           r13n0     r14n0-r13n0  r2n1(4)   
+ fc00:5:6::1/128     IP6 internal  140     r14n9     r14n0-r14n9  r5n6(4)   
+                                           r13n0     r14n0-r13n0  r5n6(4)   
+ fc00:5:5:6::/64     IP6 internal  140     r14n9     r14n0-r14n9  r5n6(4)   
+                                           r13n0     r14n0-r13n0  r5n6(4)   
+ fc00:9000:4:6::/64  IP6 internal  140     r14n9     r14n0-r14n9  r5n6(4)   
+                                           r13n0     r14n0-r13n0  r5n6(4)   
+ fc00:4:7::1/128     IP6 internal  140     r14n9     r14n0-r14n9  r4n7(4)   
+                                           r13n0     r14n0-r13n0  r4n7(4)   
+ fc00:4:6:7::/64     IP6 internal  140     r14n9     r14n0-r14n9  r4n7(4)   
+                                           r13n0     r14n0-r13n0  r4n7(4)   
+ fc00:9000:3:7::/64  IP6 internal  140     r14n9     r14n0-r14n9  r4n7(4)   
+                                           r13n0     r14n0-r13n0  r4n7(4)   
+ fc00:3:8::1/128     IP6 internal  140     r14n9     r14n0-r14n9  r3n8(4)   
+                                           r13n0     r14n0-r13n0  r3n8(4)   
+ fc00:3:7:8::/64     IP6 internal  140     r14n9     r14n0-r14n9  r3n8(4)   
+                                           r13n0     r14n0-r13n0  r3n8(4)   
+ fc00:9000:2:8::/64  IP6 internal  140     r14n9     r14n0-r14n9  r3n8(4)   
+                                           r13n0     r14n0-r13n0  r3n8(4)   
+ fc00:2:9::1/128     IP6 internal  140     r14n9     r14n0-r14n9  r2n9(4)   
+                                           r13n0     r14n0-r13n0  r2n9(4)   
+ fc00:2:8:9::/64     IP6 internal  140     r14n9     r14n0-r14n9  r2n9(4)   
+                                           r13n0     r14n0-r13n0  r2n9(4)   
+ fc00:9000:1:9::/64  IP6 internal  140     r14n9     r14n0-r14n9  r2n9(4)   
+                                           r13n0     r14n0-r13n0  r2n9(4)   
+ fc00:1::1/128       IP6 internal  140     r13n0     r14n0-r13n0  r1n0(4)   
+ fc00:1:0:1::/64     IP6 internal  140     r13n0     r14n0-r13n0  r1n0(4)   
+ fc00:1:9::/64       IP6 internal  140     r13n0     r14n0-r13n0  r1n0(4)   
+ fc00:9000::/64      IP6 internal  140     r13n0     r14n0-r13n0  r1n0(4)   
+ r4n5                TE-IS         150     r14n1     r14n0-r14n1  r5n5(4)   
+                                           r14n9     r14n0-r14n9  r4n4(4)   
+                                           r13n0     r14n0-r13n0  r4n6(4)   
+ r3n4                TE-IS         150     r14n1     r14n0-r14n1  r4n4(4)   
+                                           r13n0     r14n0-r13n0  r3n3(4)   
+ r2n3                TE-IS         150     r14n1     r14n0-r14n1  r3n3(4)   
+                                           r13n0     r14n0-r13n0  r2n2(4)   
+ r1n2                TE-IS         150     r14n1     r14n0-r14n1  r2n2(4)   
+                                           r13n0     r14n0-r13n0  r1n1(4)   
+ r0n1                TE-IS         150     r14n1     r14n0-r14n1  r1n1(4)   
+                                           r13n0     r14n0-r13n0  r1n1(4)   
+ r3n6                TE-IS         150     r14n9     r14n0-r14n9  r4n6(4)   
+                                           r13n0     r14n0-r13n0  r3n7(4)   
+ r2n7                TE-IS         150     r14n9     r14n0-r14n9  r3n7(4)   
+                                           r13n0     r14n0-r13n0  r2n8(4)   
+ r1n8                TE-IS         150     r14n9     r14n0-r14n9  r2n8(4)   
+                                           r13n0     r14n0-r13n0  r1n9(4)   
+ r0n9                TE-IS         150     r14n9     r14n0-r14n9  r1n9(4)   
+                                           r13n0     r14n0-r13n0  r1n9(4)   
+ fc00:5:5::1/128     IP6 internal  150     r14n1     r14n0-r14n1  r5n5(4)   
+                                           r14n9     r14n0-r14n9  r5n5(4)   
+                                           r13n0     r14n0-r13n0  r5n5(4)   
+ fc00:9000:4:5::/64  IP6 internal  150     r14n1     r14n0-r14n1  r5n5(4)   
+                                           r14n9     r14n0-r14n9  r5n5(4)   
+                                           r13n0     r14n0-r13n0  r5n5(4)   
+ fc00:4:4::1/128     IP6 internal  150     r14n1     r14n0-r14n1  r4n4(4)   
+                                           r13n0     r14n0-r13n0  r4n4(4)   
+ fc00:4:4:5::/64     IP6 internal  150     r14n1     r14n0-r14n1  r4n4(4)   
+                                           r13n0     r14n0-r13n0  r4n4(4)   
+ fc00:9000:3:4::/64  IP6 internal  150     r14n1     r14n0-r14n1  r4n4(4)   
+                                           r13n0     r14n0-r13n0  r4n4(4)   
+ fc00:3:3::1/128     IP6 internal  150     r14n1     r14n0-r14n1  r3n3(4)   
+                                           r13n0     r14n0-r13n0  r3n3(4)   
+ fc00:3:3:4::/64     IP6 internal  150     r14n1     r14n0-r14n1  r3n3(4)   
+                                           r13n0     r14n0-r13n0  r3n3(4)   
+ fc00:9000:2:3::/64  IP6 internal  150     r14n1     r14n0-r14n1  r3n3(4)   
+                                           r13n0     r14n0-r13n0  r3n3(4)   
+ fc00:2:2::1/128     IP6 internal  150     r14n1     r14n0-r14n1  r2n2(4)   
+                                           r13n0     r14n0-r13n0  r2n2(4)   
+ fc00:2:2:3::/64     IP6 internal  150     r14n1     r14n0-r14n1  r2n2(4)   
+                                           r13n0     r14n0-r13n0  r2n2(4)   
+ fc00:9000:1:2::/64  IP6 internal  150     r14n1     r14n0-r14n1  r2n2(4)   
+                                           r13n0     r14n0-r13n0  r2n2(4)   
+ fc00:1:1::1/128     IP6 internal  150     r14n1     r14n0-r14n1  r1n1(4)   
+                                           r13n0     r14n0-r13n0  r1n1(4)   
+ fc00:1:1:2::/64     IP6 internal  150     r14n1     r14n0-r14n1  r1n1(4)   
+                                           r13n0     r14n0-r13n0  r1n1(4)   
+ fc00:9000:0:1::/64  IP6 internal  150     r14n1     r14n0-r14n1  r1n1(4)   
+                                           r13n0     r14n0-r13n0  r1n1(4)   
+ fc00:4:6::1/128     IP6 internal  150     r14n9     r14n0-r14n9  r4n6(4)   
+                                           r13n0     r14n0-r13n0  r4n6(4)   
+ fc00:4:5:6::/64     IP6 internal  150     r14n9     r14n0-r14n9  r4n6(4)   
+                                           r13n0     r14n0-r13n0  r4n6(4)   
+ fc00:9000:3:6::/64  IP6 internal  150     r14n9     r14n0-r14n9  r4n6(4)   
+                                           r13n0     r14n0-r13n0  r4n6(4)   
+ fc00:3:7::1/128     IP6 internal  150     r14n9     r14n0-r14n9  r3n7(4)   
+                                           r13n0     r14n0-r13n0  r3n7(4)   
+ fc00:3:6:7::/64     IP6 internal  150     r14n9     r14n0-r14n9  r3n7(4)   
+                                           r13n0     r14n0-r13n0  r3n7(4)   
+ fc00:9000:2:7::/64  IP6 internal  150     r14n9     r14n0-r14n9  r3n7(4)   
+                                           r13n0     r14n0-r13n0  r3n7(4)   
+ fc00:2:8::1/128     IP6 internal  150     r14n9     r14n0-r14n9  r2n8(4)   
+                                           r13n0     r14n0-r13n0  r2n8(4)   
+ fc00:2:7:8::/64     IP6 internal  150     r14n9     r14n0-r14n9  r2n8(4)   
+                                           r13n0     r14n0-r13n0  r2n8(4)   
+ fc00:9000:1:8::/64  IP6 internal  150     r14n9     r14n0-r14n9  r2n8(4)   
+                                           r13n0     r14n0-r13n0  r2n8(4)   
+ fc00:1:9::1/128     IP6 internal  150     r14n9     r14n0-r14n9  r1n9(4)   
+                                           r13n0     r14n0-r13n0  r1n9(4)   
+ fc00:1:8:9::/64     IP6 internal  150     r14n9     r14n0-r14n9  r1n9(4)   
+                                           r13n0     r14n0-r13n0  r1n9(4)   
+ fc00:9000:0:9::/64  IP6 internal  150     r14n9     r14n0-r14n9  r1n9(4)   
+                                           r13n0     r14n0-r13n0  r1n9(4)   
+ r3n5                TE-IS         160     r14n1     r14n0-r14n1  r4n5(4)   
+                                           r14n9     r14n0-r14n9  r3n4(4)   
+                                           r13n0     r14n0-r13n0  r3n6(4)   
+ r2n4                TE-IS         160     r14n1     r14n0-r14n1  r3n4(4)   
+                                           r13n0     r14n0-r13n0  r2n3(4)   
+ r1n3                TE-IS         160     r14n1     r14n0-r14n1  r2n3(4)   
+                                           r13n0     r14n0-r13n0  r1n2(4)   
+ r0n2                TE-IS         160     r14n1     r14n0-r14n1  r1n2(4)   
+                                           r13n0     r14n0-r13n0  r0n1(4)   
+ r2n6                TE-IS         160     r14n9     r14n0-r14n9  r3n6(4)   
+                                           r13n0     r14n0-r13n0  r2n7(4)   
+ r1n7                TE-IS         160     r14n9     r14n0-r14n9  r2n7(4)   
+                                           r13n0     r14n0-r13n0  r1n8(4)   
+ r0n8                TE-IS         160     r14n9     r14n0-r14n9  r1n8(4)   
+                                           r13n0     r14n0-r13n0  r0n9(4)   
+ fc00:4:5::1/128     IP6 internal  160     r14n1     r14n0-r14n1  r4n5(4)   
+                                           r14n9     r14n0-r14n9  r4n5(4)   
+                                           r13n0     r14n0-r13n0  r4n5(4)   
+ fc00:9000:3:5::/64  IP6 internal  160     r14n1     r14n0-r14n1  r4n5(4)   
+                                           r14n9     r14n0-r14n9  r4n5(4)   
+                                           r13n0     r14n0-r13n0  r4n5(4)   
+ fc00:3:4::1/128     IP6 internal  160     r14n1     r14n0-r14n1  r3n4(4)   
+                                           r13n0     r14n0-r13n0  r3n4(4)   
+ fc00:3:4:5::/64     IP6 internal  160     r14n1     r14n0-r14n1  r3n4(4)   
+                                           r13n0     r14n0-r13n0  r3n4(4)   
+ fc00:9000:2:4::/64  IP6 internal  160     r14n1     r14n0-r14n1  r3n4(4)   
+                                           r13n0     r14n0-r13n0  r3n4(4)   
+ fc00:2:3::1/128     IP6 internal  160     r14n1     r14n0-r14n1  r2n3(4)   
+                                           r13n0     r14n0-r13n0  r2n3(4)   
+ fc00:2:3:4::/64     IP6 internal  160     r14n1     r14n0-r14n1  r2n3(4)   
+                                           r13n0     r14n0-r13n0  r2n3(4)   
+ fc00:9000:1:3::/64  IP6 internal  160     r14n1     r14n0-r14n1  r2n3(4)   
+                                           r13n0     r14n0-r13n0  r2n3(4)   
+ fc00:1:2::1/128     IP6 internal  160     r14n1     r14n0-r14n1  r1n2(4)   
+                                           r13n0     r14n0-r13n0  r1n2(4)   
+ fc00:1:2:3::/64     IP6 internal  160     r14n1     r14n0-r14n1  r1n2(4)   
+                                           r13n0     r14n0-r13n0  r1n2(4)   
+ fc00:9000:0:2::/64  IP6 internal  160     r14n1     r14n0-r14n1  r1n2(4)   
+                                           r13n0     r14n0-r13n0  r1n2(4)   
+ fc00:0:1::1/128     IP6 internal  160     r14n1     r14n0-r14n1  r0n1(4)   
+                                           r13n0     r14n0-r13n0  r0n1(4)   
+ fc00:0:1:2::/64     IP6 internal  160     r14n1     r14n0-r14n1  r0n1(4)   
+                                           r13n0     r14n0-r13n0  r0n1(4)   
+ fc00:0:0:1::/64     IP6 internal  160     r14n1     r14n0-r14n1  r0n1(4)   
+                                           r13n0     r14n0-r13n0  r0n1(4)   
+ fc00:3:6::1/128     IP6 internal  160     r14n9     r14n0-r14n9  r3n6(4)   
+                                           r13n0     r14n0-r13n0  r3n6(4)   
+ fc00:3:5:6::/64     IP6 internal  160     r14n9     r14n0-r14n9  r3n6(4)   
+                                           r13n0     r14n0-r13n0  r3n6(4)   
+ fc00:9000:2:6::/64  IP6 internal  160     r14n9     r14n0-r14n9  r3n6(4)   
+                                           r13n0     r14n0-r13n0  r3n6(4)   
+ fc00:2:7::1/128     IP6 internal  160     r14n9     r14n0-r14n9  r2n7(4)   
+                                           r13n0     r14n0-r13n0  r2n7(4)   
+ fc00:2:6:7::/64     IP6 internal  160     r14n9     r14n0-r14n9  r2n7(4)   
+                                           r13n0     r14n0-r13n0  r2n7(4)   
+ fc00:9000:1:7::/64  IP6 internal  160     r14n9     r14n0-r14n9  r2n7(4)   
+                                           r13n0     r14n0-r13n0  r2n7(4)   
+ fc00:1:8::1/128     IP6 internal  160     r14n9     r14n0-r14n9  r1n8(4)   
+                                           r13n0     r14n0-r13n0  r1n8(4)   
+ fc00:1:7:8::/64     IP6 internal  160     r14n9     r14n0-r14n9  r1n8(4)   
+                                           r13n0     r14n0-r13n0  r1n8(4)   
+ fc00:9000:0:8::/64  IP6 internal  160     r14n9     r14n0-r14n9  r1n8(4)   
+                                           r13n0     r14n0-r13n0  r1n8(4)   
+ fc00:0:9::1/128     IP6 internal  160     r14n9     r14n0-r14n9  r0n9(4)   
+                                           r13n0     r14n0-r13n0  r0n9(4)   
+ fc00:0:9::/64       IP6 internal  160     r14n9     r14n0-r14n9  r0n9(4)   
+                                           r13n0     r14n0-r13n0  r0n9(4)   
+ fc00:0:8:9::/64     IP6 internal  160     r14n9     r14n0-r14n9  r0n9(4)   
+                                           r13n0     r14n0-r13n0  r0n9(4)   
+ r2n5                TE-IS         170     r14n1     r14n0-r14n1  r3n5(4)   
+                                           r14n9     r14n0-r14n9  r2n4(4)   
+                                           r13n0     r14n0-r13n0  r2n6(4)   
+ r1n4                TE-IS         170     r14n1     r14n0-r14n1  r2n4(4)   
+                                           r13n0     r14n0-r13n0  r1n3(4)   
+ r0n3                TE-IS         170     r14n1     r14n0-r14n1  r1n3(4)   
+                                           r13n0     r14n0-r13n0  r0n2(4)   
+ r1n6                TE-IS         170     r14n9     r14n0-r14n9  r2n6(4)   
+                                           r13n0     r14n0-r13n0  r1n7(4)   
+ r0n7                TE-IS         170     r14n9     r14n0-r14n9  r1n7(4)   
+                                           r13n0     r14n0-r13n0  r0n8(4)   
+ fc00:3:5::1/128     IP6 internal  170     r14n1     r14n0-r14n1  r3n5(4)   
+                                           r14n9     r14n0-r14n9  r3n5(4)   
+                                           r13n0     r14n0-r13n0  r3n5(4)   
+ fc00:9000:2:5::/64  IP6 internal  170     r14n1     r14n0-r14n1  r3n5(4)   
+                                           r14n9     r14n0-r14n9  r3n5(4)   
+                                           r13n0     r14n0-r13n0  r3n5(4)   
+ fc00:2:4::1/128     IP6 internal  170     r14n1     r14n0-r14n1  r2n4(4)   
+                                           r13n0     r14n0-r13n0  r2n4(4)   
+ fc00:2:4:5::/64     IP6 internal  170     r14n1     r14n0-r14n1  r2n4(4)   
+                                           r13n0     r14n0-r13n0  r2n4(4)   
+ fc00:9000:1:4::/64  IP6 internal  170     r14n1     r14n0-r14n1  r2n4(4)   
+                                           r13n0     r14n0-r13n0  r2n4(4)   
+ fc00:1:3::1/128     IP6 internal  170     r14n1     r14n0-r14n1  r1n3(4)   
+                                           r13n0     r14n0-r13n0  r1n3(4)   
+ fc00:1:3:4::/64     IP6 internal  170     r14n1     r14n0-r14n1  r1n3(4)   
+                                           r13n0     r14n0-r13n0  r1n3(4)   
+ fc00:9000:0:3::/64  IP6 internal  170     r14n1     r14n0-r14n1  r1n3(4)   
+                                           r13n0     r14n0-r13n0  r1n3(4)   
+ fc00:0:2::1/128     IP6 internal  170     r14n1     r14n0-r14n1  r0n2(4)   
+                                           r13n0     r14n0-r13n0  r0n2(4)   
+ fc00:0:2:3::/64     IP6 internal  170     r14n1     r14n0-r14n1  r0n2(4)   
+                                           r13n0     r14n0-r13n0  r0n2(4)   
+ fc00:2:6::1/128     IP6 internal  170     r14n9     r14n0-r14n9  r2n6(4)   
+                                           r13n0     r14n0-r13n0  r2n6(4)   
+ fc00:2:5:6::/64     IP6 internal  170     r14n9     r14n0-r14n9  r2n6(4)   
+                                           r13n0     r14n0-r13n0  r2n6(4)   
+ fc00:9000:1:6::/64  IP6 internal  170     r14n9     r14n0-r14n9  r2n6(4)   
+                                           r13n0     r14n0-r13n0  r2n6(4)   
+ fc00:1:7::1/128     IP6 internal  170     r14n9     r14n0-r14n9  r1n7(4)   
+                                           r13n0     r14n0-r13n0  r1n7(4)   
+ fc00:1:6:7::/64     IP6 internal  170     r14n9     r14n0-r14n9  r1n7(4)   
+                                           r13n0     r14n0-r13n0  r1n7(4)   
+ fc00:9000:0:7::/64  IP6 internal  170     r14n9     r14n0-r14n9  r1n7(4)   
+                                           r13n0     r14n0-r13n0  r1n7(4)   
+ fc00:0:8::1/128     IP6 internal  170     r14n9     r14n0-r14n9  r0n8(4)   
+                                           r13n0     r14n0-r13n0  r0n8(4)   
+ fc00:0:7:8::/64     IP6 internal  170     r14n9     r14n0-r14n9  r0n8(4)   
+                                           r13n0     r14n0-r13n0  r0n8(4)   
+ r1n5                TE-IS         180     r14n1     r14n0-r14n1  r2n5(4)   
+                                           r14n9     r14n0-r14n9  r1n4(4)   
+                                           r13n0     r14n0-r13n0  r1n6(4)   
+ r0n4                TE-IS         180     r14n1     r14n0-r14n1  r1n4(4)   
+                                           r13n0     r14n0-r13n0  r0n3(4)   
+ r0n6                TE-IS         180     r14n9     r14n0-r14n9  r1n6(4)   
+                                           r13n0     r14n0-r13n0  r0n7(4)   
+ fc00:2:5::1/128     IP6 internal  180     r14n1     r14n0-r14n1  r2n5(4)   
+                                           r14n9     r14n0-r14n9  r2n5(4)   
+                                           r13n0     r14n0-r13n0  r2n5(4)   
+ fc00:9000:1:5::/64  IP6 internal  180     r14n1     r14n0-r14n1  r2n5(4)   
+                                           r14n9     r14n0-r14n9  r2n5(4)   
+                                           r13n0     r14n0-r13n0  r2n5(4)   
+ fc00:1:4::1/128     IP6 internal  180     r14n1     r14n0-r14n1  r1n4(4)   
+                                           r13n0     r14n0-r13n0  r1n4(4)   
+ fc00:1:4:5::/64     IP6 internal  180     r14n1     r14n0-r14n1  r1n4(4)   
+                                           r13n0     r14n0-r13n0  r1n4(4)   
+ fc00:9000:0:4::/64  IP6 internal  180     r14n1     r14n0-r14n1  r1n4(4)   
+                                           r13n0     r14n0-r13n0  r1n4(4)   
+ fc00:0:3::1/128     IP6 internal  180     r14n1     r14n0-r14n1  r0n3(4)   
+                                           r13n0     r14n0-r13n0  r0n3(4)   
+ fc00:0:3:4::/64     IP6 internal  180     r14n1     r14n0-r14n1  r0n3(4)   
+                                           r13n0     r14n0-r13n0  r0n3(4)   
+ fc00:1:6::1/128     IP6 internal  180     r14n9     r14n0-r14n9  r1n6(4)   
+                                           r13n0     r14n0-r13n0  r1n6(4)   
+ fc00:1:5:6::/64     IP6 internal  180     r14n9     r14n0-r14n9  r1n6(4)   
+                                           r13n0     r14n0-r13n0  r1n6(4)   
+ fc00:9000:0:6::/64  IP6 internal  180     r14n9     r14n0-r14n9  r1n6(4)   
+                                           r13n0     r14n0-r13n0  r1n6(4)   
+ fc00:0:7::1/128     IP6 internal  180     r14n9     r14n0-r14n9  r0n7(4)   
+                                           r13n0     r14n0-r13n0  r0n7(4)   
+ fc00:0:6:7::/64     IP6 internal  180     r14n9     r14n0-r14n9  r0n7(4)   
+                                           r13n0     r14n0-r13n0  r0n7(4)   
+ r0n5                TE-IS         190     r14n1     r14n0-r14n1  r1n5(4)   
+                                           r14n9     r14n0-r14n9  r0n4(4)   
+                                           r13n0     r14n0-r13n0  r0n6(4)   
+ fc00:1:5::1/128     IP6 internal  190     r14n1     r14n0-r14n1  r1n5(4)   
+                                           r14n9     r14n0-r14n9  r1n5(4)   
+                                           r13n0     r14n0-r13n0  r1n5(4)   
+ fc00:9000:0:5::/64  IP6 internal  190     r14n1     r14n0-r14n1  r1n5(4)   
+                                           r14n9     r14n0-r14n9  r1n5(4)   
+                                           r13n0     r14n0-r13n0  r1n5(4)   
+ fc00:0:4::1/128     IP6 internal  190     r14n1     r14n0-r14n1  r0n4(4)   
+                                           r13n0     r14n0-r13n0  r0n4(4)   
+ fc00:0:4:5::/64     IP6 internal  190     r14n1     r14n0-r14n1  r0n4(4)   
+                                           r13n0     r14n0-r13n0  r0n4(4)   
+ fc00:0:6::1/128     IP6 internal  190     r14n9     r14n0-r14n9  r0n6(4)   
+                                           r13n0     r14n0-r13n0  r0n6(4)   
+ fc00:0:5:6::/64     IP6 internal  190     r14n9     r14n0-r14n9  r0n6(4)   
+                                           r13n0     r14n0-r13n0  r0n6(4)   
+ fc00:0:5::1/128     IP6 internal  200     r14n1     r14n0-r14n1  r0n5(4)   
+                                           r14n9     r14n0-r14n9  r0n5(4)   
+                                           r13n0     r14n0-r13n0  r0n5(4)   
+
+
+IS-IS L1 IPv6 routing table:
+
+ Prefix              Metric  Interface    Nexthop                    Label(s)  
+ ------------------------------------------------------------------------------
+ fc00:0:0:1::/64     160     r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:0:1::1/128     160     r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:0:1:2::/64     160     r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:0:2::1/128     170     r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:0:2:3::/64     170     r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:0:3::1/128     180     r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:0:3:4::/64     180     r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:0:4::1/128     190     r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:0:4:5::/64     190     r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:0:5::1/128     200     r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:0:5:6::/64     190     r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:0:6::1/128     190     r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:0:6:7::/64     180     r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:0:7::1/128     180     r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:0:7:8::/64     170     r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:0:8::1/128     170     r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:0:8:9::/64     160     r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:0:9::/64       160     r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:0:9::1/128     160     r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:1::1/128       140     r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:1:0:1::/64     140     r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:1:1::1/128     150     r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:1:1:2::/64     150     r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:1:2::1/128     160     r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:1:2:3::/64     160     r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:1:3::1/128     170     r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:1:3:4::/64     170     r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:1:4::1/128     180     r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:1:4:5::/64     180     r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:1:5::1/128     190     r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:1:5:6::/64     180     r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:1:6::1/128     180     r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:1:6:7::/64     170     r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:1:7::1/128     170     r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:1:7:8::/64     160     r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:1:8::1/128     160     r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:1:8:9::/64     150     r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:1:9::/64       140     r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:1:9::1/128     150     r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:2::1/128       130     r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:2:0:1::/64     130     r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:2:1::1/128     140     r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:2:1:2::/64     140     r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:2:2::1/128     150     r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:2:2:3::/64     150     r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:2:3::1/128     160     r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:2:3:4::/64     160     r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:2:4::1/128     170     r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:2:4:5::/64     170     r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:2:5::1/128     180     r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:2:5:6::/64     170     r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:2:6::1/128     170     r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:2:6:7::/64     160     r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:2:7::1/128     160     r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:2:7:8::/64     150     r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:2:8::1/128     150     r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:2:8:9::/64     140     r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:2:9::/64       130     r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:2:9::1/128     140     r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:3::1/128       120     r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:3:0:1::/64     120     r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:3:1::1/128     130     r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:3:1:2::/64     130     r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:3:2::1/128     140     r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:3:2:3::/64     140     r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:3:3::1/128     150     r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:3:3:4::/64     150     r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:3:4::1/128     160     r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:3:4:5::/64     160     r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:3:5::1/128     170     r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:3:5:6::/64     160     r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:3:6::1/128     160     r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:3:6:7::/64     150     r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:3:7::1/128     150     r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:3:7:8::/64     140     r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:3:8::1/128     140     r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:3:8:9::/64     130     r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:3:9::/64       120     r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:3:9::1/128     130     r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:4::1/128       110     r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:4:0:1::/64     110     r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:4:1::1/128     120     r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:4:1:2::/64     120     r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:4:2::1/128     130     r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:4:2:3::/64     130     r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:4:3::1/128     140     r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:4:3:4::/64     140     r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:4:4::1/128     150     r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:4:4:5::/64     150     r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:4:5::1/128     160     r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:4:5:6::/64     150     r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:4:6::1/128     150     r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:4:6:7::/64     140     r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:4:7::1/128     140     r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:4:7:8::/64     130     r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:4:8::1/128     130     r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:4:8:9::/64     120     r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:4:9::/64       110     r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:4:9::1/128     120     r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:5::1/128       100     r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:5:0:1::/64     100     r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:5:1::1/128     110     r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:5:1:2::/64     110     r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:5:2::1/128     120     r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:5:2:3::/64     120     r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:5:3::1/128     130     r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:5:3:4::/64     130     r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:5:4::1/128     140     r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:5:4:5::/64     140     r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:5:5::1/128     150     r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:5:5:6::/64     140     r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:5:6::1/128     140     r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:5:6:7::/64     130     r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:5:7::1/128     130     r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:5:7:8::/64     120     r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:5:8::1/128     120     r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:5:8:9::/64     110     r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:5:9::/64       100     r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:5:9::1/128     110     r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:6::1/128       90      r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:6:0:1::/64     90      r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:6:1::1/128     100     r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:6:1:2::/64     100     r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:6:2::1/128     110     r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:6:2:3::/64     110     r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:6:3::1/128     120     r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:6:3:4::/64     120     r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:6:4::1/128     130     r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:6:4:5::/64     130     r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:6:5::1/128     140     r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:6:5:6::/64     130     r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:6:6::1/128     130     r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:6:6:7::/64     120     r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:6:7::1/128     120     r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:6:7:8::/64     110     r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:6:8::1/128     110     r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:6:8:9::/64     100     r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:6:9::/64       90      r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:6:9::1/128     100     r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:7::1/128       80      r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:7:0:1::/64     80      r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:7:1::1/128     90      r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:7:1:2::/64     90      r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:7:2::1/128     100     r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:7:2:3::/64     100     r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:7:3::1/128     110     r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:7:3:4::/64     110     r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:7:4::1/128     120     r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:7:4:5::/64     120     r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:7:5::1/128     130     r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:7:5:6::/64     120     r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:7:6::1/128     120     r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:7:6:7::/64     110     r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:7:7::1/128     110     r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:7:7:8::/64     100     r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:7:8::1/128     100     r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:7:8:9::/64     90      r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:7:9::/64       80      r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:7:9::1/128     90      r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:8::1/128       70      r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:8:0:1::/64     70      r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:8:1::1/128     80      r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:8:1:2::/64     80      r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:8:2::1/128     90      r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:8:2:3::/64     90      r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:8:3::1/128     100     r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:8:3:4::/64     100     r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:8:4::1/128     110     r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:8:4:5::/64     110     r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:8:5::1/128     120     r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:8:5:6::/64     110     r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:8:6::1/128     110     r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:8:6:7::/64     100     r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:8:7::1/128     100     r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:8:7:8::/64     90      r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:8:8::1/128     90      r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:8:8:9::/64     80      r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:8:9::/64       70      r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:8:9::1/128     80      r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9::1/128       60      r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9:0:1::/64     60      r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9:1::1/128     70      r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9:1:2::/64     70      r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9:2::1/128     80      r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9:2:3::/64     80      r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9:3::1/128     90      r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9:3:4::/64     90      r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9:4::1/128     100     r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9:4:5::/64     100     r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9:5::1/128     110     r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9:5:6::/64     100     r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9:6::1/128     100     r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9:6:7::/64     90      r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9:7::1/128     90      r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9:7:8::/64     80      r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9:8::1/128     80      r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9:8:9::/64     70      r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9:9::/64       60      r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9:9::1/128     70      r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:a::1/128       50      r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:a:0:1::/64     50      r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:a:1::1/128     60      r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:a:1:2::/64     60      r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:a:2::1/128     70      r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:a:2:3::/64     70      r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:a:3::1/128     80      r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:a:3:4::/64     80      r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:a:4::1/128     90      r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:a:4:5::/64     90      r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:a:5::1/128     100     r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:a:5:6::/64     90      r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:a:6::1/128     90      r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:a:6:7::/64     80      r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:a:7::1/128     80      r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:a:7:8::/64     70      r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:a:8::1/128     70      r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:a:8:9::/64     60      r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:a:9::/64       50      r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:a:9::1/128     60      r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:b::1/128       40      r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:b:0:1::/64     40      r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:b:1::1/128     50      r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:b:1:2::/64     50      r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:b:2::1/128     60      r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:b:2:3::/64     60      r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:b:3::1/128     70      r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:b:3:4::/64     70      r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:b:4::1/128     80      r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:b:4:5::/64     80      r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:b:5::1/128     90      r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:b:5:6::/64     80      r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:b:6::1/128     80      r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:b:6:7::/64     70      r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:b:7::1/128     70      r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:b:7:8::/64     60      r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:b:8::1/128     60      r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:b:8:9::/64     50      r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:b:9::/64       40      r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:b:9::1/128     50      r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:c::1/128       30      r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:c:0:1::/64     30      r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:c:1::1/128     40      r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:c:1:2::/64     40      r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:c:2::1/128     50      r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:c:2:3::/64     50      r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:c:3::1/128     60      r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:c:3:4::/64     60      r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:c:4::1/128     70      r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:c:4:5::/64     70      r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:c:5::1/128     80      r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:c:5:6::/64     70      r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:c:6::1/128     70      r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:c:6:7::/64     60      r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:c:7::1/128     60      r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:c:7:8::/64     50      r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:c:8::1/128     50      r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:c:8:9::/64     40      r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:c:9::/64       30      r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:c:9::1/128     40      r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:d::1/128       20      r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:d:0:1::/64     20      r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:d:1::1/128     30      r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:d:1:2::/64     30      r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:d:2::1/128     40      r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:d:2:3::/64     40      r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:d:3::1/128     50      r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:d:3:4::/64     50      r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:d:4::1/128     60      r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:d:4:5::/64     60      r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:d:5::1/128     70      r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:d:5:6::/64     60      r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:d:6::1/128     60      r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:d:6:7::/64     50      r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:d:7::1/128     50      r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:d:7:8::/64     40      r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:d:8::1/128     40      r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:d:8:9::/64     30      r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:d:9::/64       20      r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:d:9::1/128     30      r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:e::1/128       0       -            -                          -         
+ fc00:e:0:1::/64     0       -            -                          -         
+ fc00:e:1::1/128     20      r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+ fc00:e:1:2::/64     20      r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+ fc00:e:2::1/128     30      r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+ fc00:e:2:3::/64     30      r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+ fc00:e:3::1/128     40      r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+ fc00:e:3:4::/64     40      r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+ fc00:e:4::1/128     50      r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+ fc00:e:4:5::/64     50      r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+ fc00:e:5::1/128     60      r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+ fc00:e:5:6::/64     50      r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+ fc00:e:6::1/128     50      r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+ fc00:e:6:7::/64     40      r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+ fc00:e:7::1/128     40      r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+ fc00:e:7:8::/64     30      r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+ fc00:e:8::1/128     30      r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+ fc00:e:8:9::/64     20      r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+ fc00:e:9::/64       0       -            -                          -         
+ fc00:e:9::1/128     20      r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+ fc00:9000::/64      140     r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9000:0:1::/64  150     r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9000:0:2::/64  160     r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9000:0:3::/64  170     r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9000:0:4::/64  180     r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9000:0:5::/64  190     r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9000:0:6::/64  180     r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9000:0:7::/64  170     r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9000:0:8::/64  160     r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9000:0:9::/64  150     r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9000:1::/64    130     r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9000:1:1::/64  140     r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9000:1:2::/64  150     r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9000:1:3::/64  160     r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9000:1:4::/64  170     r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9000:1:5::/64  180     r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9000:1:6::/64  170     r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9000:1:7::/64  160     r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9000:1:8::/64  150     r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9000:1:9::/64  140     r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9000:2::/64    120     r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9000:2:1::/64  130     r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9000:2:2::/64  140     r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9000:2:3::/64  150     r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9000:2:4::/64  160     r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9000:2:5::/64  170     r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9000:2:6::/64  160     r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9000:2:7::/64  150     r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9000:2:8::/64  140     r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9000:2:9::/64  130     r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9000:3::/64    110     r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9000:3:1::/64  120     r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9000:3:2::/64  130     r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9000:3:3::/64  140     r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9000:3:4::/64  150     r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9000:3:5::/64  160     r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9000:3:6::/64  150     r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9000:3:7::/64  140     r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9000:3:8::/64  130     r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9000:3:9::/64  120     r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9000:4::/64    100     r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9000:4:1::/64  110     r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9000:4:2::/64  120     r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9000:4:3::/64  130     r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9000:4:4::/64  140     r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9000:4:5::/64  150     r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9000:4:6::/64  140     r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9000:4:7::/64  130     r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9000:4:8::/64  120     r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9000:4:9::/64  110     r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9000:5::/64    90      r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9000:5:1::/64  100     r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9000:5:2::/64  110     r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9000:5:3::/64  120     r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9000:5:4::/64  130     r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9000:5:5::/64  140     r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9000:5:6::/64  130     r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9000:5:7::/64  120     r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9000:5:8::/64  110     r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9000:5:9::/64  100     r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9000:6::/64    80      r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9000:6:1::/64  90      r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9000:6:2::/64  100     r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9000:6:3::/64  110     r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9000:6:4::/64  120     r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9000:6:5::/64  130     r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9000:6:6::/64  120     r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9000:6:7::/64  110     r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9000:6:8::/64  100     r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9000:6:9::/64  90      r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9000:7::/64    70      r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9000:7:1::/64  80      r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9000:7:2::/64  90      r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9000:7:3::/64  100     r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9000:7:4::/64  110     r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9000:7:5::/64  120     r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9000:7:6::/64  110     r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9000:7:7::/64  100     r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9000:7:8::/64  90      r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9000:7:9::/64  80      r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9000:8::/64    60      r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9000:8:1::/64  70      r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9000:8:2::/64  80      r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9000:8:3::/64  90      r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9000:8:4::/64  100     r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9000:8:5::/64  110     r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9000:8:6::/64  100     r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9000:8:7::/64  90      r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9000:8:8::/64  80      r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9000:8:9::/64  70      r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9000:9::/64    50      r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9000:9:1::/64  60      r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9000:9:2::/64  70      r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9000:9:3::/64  80      r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9000:9:4::/64  90      r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9000:9:5::/64  100     r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9000:9:6::/64  90      r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9000:9:7::/64  80      r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9000:9:8::/64  70      r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9000:9:9::/64  60      r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9000:a::/64    40      r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9000:a:1::/64  50      r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9000:a:2::/64  60      r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9000:a:3::/64  70      r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9000:a:4::/64  80      r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9000:a:5::/64  90      r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9000:a:6::/64  80      r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9000:a:7::/64  70      r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9000:a:8::/64  60      r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9000:a:9::/64  50      r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9000:b::/64    30      r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9000:b:1::/64  40      r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9000:b:2::/64  50      r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9000:b:3::/64  60      r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9000:b:4::/64  70      r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9000:b:5::/64  80      r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9000:b:6::/64  70      r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9000:b:7::/64  60      r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9000:b:8::/64  50      r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9000:b:9::/64  40      r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9000:c::/64    20      r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9000:c:1::/64  30      r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9000:c:2::/64  40      r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9000:c:3::/64  50      r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9000:c:4::/64  60      r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9000:c:5::/64  70      r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9000:c:6::/64  60      r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9000:c:7::/64  50      r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9000:c:8::/64  40      r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9000:c:9::/64  30      r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+                             r14n0-r13n0  fe80::6434:78ff:fe9c:868a  -         
+ fc00:9000:d::/64    0       -            -                          -         
+ fc00:9000:d:1::/64  20      r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+ fc00:9000:d:2::/64  30      r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+ fc00:9000:d:3::/64  40      r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+ fc00:9000:d:4::/64  50      r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+ fc00:9000:d:5::/64  60      r14n0-r14n1  fe80::e8ba:6ff:fe7b:dc72   -         
+                             r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+ fc00:9000:d:6::/64  50      r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+ fc00:9000:d:7::/64  40      r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+ fc00:9000:d:8::/64  30      r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+ fc00:9000:d:9::/64  20      r14n0-r14n9  fe80::c07b:baff:fe96:4fb6  -         
+ fc00:9000:e::/64    0       -            -                          -         
+
+IS-IS paths to level-2 routers that speak IPv6
+ Vertex             Type          Metric  Next-Hop  Interface    Parent    
+ --------------------------------------------------------------------------
+ r14n0                                                                     
+ fc00:e::1/128      IP6 internal  0                              r14n0(4)  
+ fc00:e:0:1::/64    IP6 internal  0                              r14n0(4)  
+ fc00:e:9::/64      IP6 internal  0                              r14n0(4)  
+ fc00:9000:d::/64   IP6 internal  0                              r14n0(4)  
+ fc00:9000:e::/64   IP6 internal  0                              r14n0(4)  
+ fc00::/43          IP6 internal  0                              r14n0(4)  
+ fc00:1::/43        IP6 internal  0                              r14n0(4)  
+ fc00:2::/43        IP6 internal  0                              r14n0(4)  
+ fc00:3::/43        IP6 internal  0                              r14n0(4)  
+ fc00:4::/43        IP6 internal  0                              r14n0(4)  
+ fc00:5::/43        IP6 internal  0                              r14n0(4)  
+ fc00:6::/43        IP6 internal  0                              r14n0(4)  
+ fc00:7::/43        IP6 internal  0                              r14n0(4)  
+ fc00:8::/43        IP6 internal  0                              r14n0(4)  
+ fc00:9::/43        IP6 internal  0                              r14n0(4)  
+ fc00:a::/43        IP6 internal  0                              r14n0(4)  
+ fc00:b::/43        IP6 internal  0                              r14n0(4)  
+ fc00:c::/43        IP6 internal  0                              r14n0(4)  
+ fc00:d::/43        IP6 internal  0                              r14n0(4)  
+ fc00:e::/43        IP6 internal  0                              r14n0(4)  
+ r15n0              TE-IS         10      r15n0     r14n0-r15n0  r14n0(4)  
+ fc00:f::/43        IP6 internal  10      r15n0     r14n0-r15n0  r15n0(4)  
+ fc00:10::/43       IP6 internal  10      r15n0     r14n0-r15n0  r15n0(4)  
+ fc00:11::/43       IP6 internal  10      r15n0     r14n0-r15n0  r15n0(4)  
+ fc00:12::/43       IP6 internal  10      r15n0     r14n0-r15n0  r15n0(4)  
+ fc00:13::/43       IP6 internal  10      r15n0     r14n0-r15n0  r15n0(4)  
+ fc00:14::/43       IP6 internal  10      r15n0     r14n0-r15n0  r15n0(4)  
+ fc00:15::/43       IP6 internal  10      r15n0     r14n0-r15n0  r15n0(4)  
+ fc00:16::/43       IP6 internal  10      r15n0     r14n0-r15n0  r15n0(4)  
+ fc00:17::/43       IP6 internal  10      r15n0     r14n0-r15n0  r15n0(4)  
+ fc00:18::/43       IP6 internal  10      r15n0     r14n0-r15n0  r15n0(4)  
+ fc00:19::/43       IP6 internal  10      r15n0     r14n0-r15n0  r15n0(4)  
+ fc00:1a::/43       IP6 internal  10      r15n0     r14n0-r15n0  r15n0(4)  
+ fc00:1b::/43       IP6 internal  10      r15n0     r14n0-r15n0  r15n0(4)  
+ fc00:1c::/43       IP6 internal  10      r15n0     r14n0-r15n0  r15n0(4)  
+ fc00:1d::/43       IP6 internal  10      r15n0     r14n0-r15n0  r15n0(4)  
+ r16n0              TE-IS         20      r15n0     r14n0-r15n0  r15n0(4)  
+ fc00:f::1/128      IP6 internal  20      r15n0     r14n0-r15n0  r15n0(4)  
+ fc00:f:0:1::/64    IP6 internal  20      r15n0     r14n0-r15n0  r15n0(4)  
+ fc00:f:9::/64      IP6 internal  20      r15n0     r14n0-r15n0  r15n0(4)  
+ fc00:9000:f::/64   IP6 internal  20      r15n0     r14n0-r15n0  r15n0(4)  
+ r17n0              TE-IS         30      r15n0     r14n0-r15n0  r16n0(4)  
+ fc00:10::1/128     IP6 internal  30      r15n0     r14n0-r15n0  r16n0(4)  
+ fc00:9000:10::/64  IP6 internal  30      r15n0     r14n0-r15n0  r16n0(4)  
+ r18n0              TE-IS         40      r15n0     r14n0-r15n0  r17n0(4)  
+ fc00:11::1/128     IP6 internal  40      r15n0     r14n0-r15n0  r17n0(4)  
+ fc00:9000:11::/64  IP6 internal  40      r15n0     r14n0-r15n0  r17n0(4)  
+ r19n0              TE-IS         50      r15n0     r14n0-r15n0  r18n0(4)  
+ fc00:12::1/128     IP6 internal  50      r15n0     r14n0-r15n0  r18n0(4)  
+ fc00:9000:12::/64  IP6 internal  50      r15n0     r14n0-r15n0  r18n0(4)  
+ r20n0              TE-IS         60      r15n0     r14n0-r15n0  r19n0(4)  
+ fc00:13::1/128     IP6 internal  60      r15n0     r14n0-r15n0  r19n0(4)  
+ fc00:9000:13::/64  IP6 internal  60      r15n0     r14n0-r15n0  r19n0(4)  
+ r21n0              TE-IS         70      r15n0     r14n0-r15n0  r20n0(4)  
+ fc00:14::1/128     IP6 internal  70      r15n0     r14n0-r15n0  r20n0(4)  
+ fc00:9000:14::/64  IP6 internal  70      r15n0     r14n0-r15n0  r20n0(4)  
+ r22n0              TE-IS         80      r15n0     r14n0-r15n0  r21n0(4)  
+ fc00:15::1/128     IP6 internal  80      r15n0     r14n0-r15n0  r21n0(4)  
+ fc00:9000:15::/64  IP6 internal  80      r15n0     r14n0-r15n0  r21n0(4)  
+ r23n0              TE-IS         90      r15n0     r14n0-r15n0  r22n0(4)  
+ fc00:16::1/128     IP6 internal  90      r15n0     r14n0-r15n0  r22n0(4)  
+ fc00:9000:16::/64  IP6 internal  90      r15n0     r14n0-r15n0  r22n0(4)  
+ r24n0              TE-IS         100     r15n0     r14n0-r15n0  r23n0(4)  
+ fc00:17::1/128     IP6 internal  100     r15n0     r14n0-r15n0  r23n0(4)  
+ fc00:9000:17::/64  IP6 internal  100     r15n0     r14n0-r15n0  r23n0(4)  
+ r25n0              TE-IS         110     r15n0     r14n0-r15n0  r24n0(4)  
+ fc00:18::1/128     IP6 internal  110     r15n0     r14n0-r15n0  r24n0(4)  
+ fc00:9000:18::/64  IP6 internal  110     r15n0     r14n0-r15n0  r24n0(4)  
+ r26n0              TE-IS         120     r15n0     r14n0-r15n0  r25n0(4)  
+ fc00:19::1/128     IP6 internal  120     r15n0     r14n0-r15n0  r25n0(4)  
+ fc00:9000:19::/64  IP6 internal  120     r15n0     r14n0-r15n0  r25n0(4)  
+ r27n0              TE-IS         130     r15n0     r14n0-r15n0  r26n0(4)  
+ fc00:1a::1/128     IP6 internal  130     r15n0     r14n0-r15n0  r26n0(4)  
+ fc00:9000:1a::/64  IP6 internal  130     r15n0     r14n0-r15n0  r26n0(4)  
+ r28n0              TE-IS         140     r15n0     r14n0-r15n0  r27n0(4)  
+ fc00:1b::1/128     IP6 internal  140     r15n0     r14n0-r15n0  r27n0(4)  
+ fc00:9000:1b::/64  IP6 internal  140     r15n0     r14n0-r15n0  r27n0(4)  
+ r29n0              TE-IS         150     r15n0     r14n0-r15n0  r28n0(4)  
+ fc00:1c::1/128     IP6 internal  150     r15n0     r14n0-r15n0  r28n0(4)  
+ fc00:9000:1c::/64  IP6 internal  150     r15n0     r14n0-r15n0  r28n0(4)  
+ r30n0              TE-IS         160     r15n0     r14n0-r15n0  r29n0(4)  
+ fc00:1d::1/128     IP6 internal  160     r15n0     r14n0-r15n0  r29n0(4)  
+ fc00:1d:0:1::/64   IP6 internal  160     r15n0     r14n0-r15n0  r29n0(4)  
+ fc00:1d:9::/64     IP6 internal  160     r15n0     r14n0-r15n0  r29n0(4)  
+ fc00:9000:1d::/64  IP6 internal  160     r15n0     r14n0-r15n0  r29n0(4)  
+ fc00:1e::/43       IP6 internal  160     r15n0     r14n0-r15n0  r30n0(4)  
+ fc00:1f::/43       IP6 internal  160     r15n0     r14n0-r15n0  r30n0(4)  
+ fc00:20::/43       IP6 internal  160     r15n0     r14n0-r15n0  r30n0(4)  
+ fc00:21::/43       IP6 internal  160     r15n0     r14n0-r15n0  r30n0(4)  
+ fc00:22::/43       IP6 internal  160     r15n0     r14n0-r15n0  r30n0(4)  
+ fc00:23::/43       IP6 internal  160     r15n0     r14n0-r15n0  r30n0(4)  
+ fc00:24::/43       IP6 internal  160     r15n0     r14n0-r15n0  r30n0(4)  
+ fc00:25::/43       IP6 internal  160     r15n0     r14n0-r15n0  r30n0(4)  
+ fc00:26::/43       IP6 internal  160     r15n0     r14n0-r15n0  r30n0(4)  
+ fc00:27::/43       IP6 internal  160     r15n0     r14n0-r15n0  r30n0(4)  
+ fc00:28::/43       IP6 internal  160     r15n0     r14n0-r15n0  r30n0(4)  
+ fc00:29::/43       IP6 internal  160     r15n0     r14n0-r15n0  r30n0(4)  
+ fc00:2a::/43       IP6 internal  160     r15n0     r14n0-r15n0  r30n0(4)  
+ fc00:2b::/43       IP6 internal  160     r15n0     r14n0-r15n0  r30n0(4)  
+ fc00:2c::/43       IP6 internal  160     r15n0     r14n0-r15n0  r30n0(4)  
+ r31n0              TE-IS         170     r15n0     r14n0-r15n0  r30n0(4)  
+ fc00:1e::1/128     IP6 internal  170     r15n0     r14n0-r15n0  r30n0(4)  
+ fc00:1e:0:1::/64   IP6 internal  170     r15n0     r14n0-r15n0  r30n0(4)  
+ fc00:1e:9::/64     IP6 internal  170     r15n0     r14n0-r15n0  r30n0(4)  
+ fc00:9000:1e::/64  IP6 internal  170     r15n0     r14n0-r15n0  r30n0(4)  
+ r32n0              TE-IS         180     r15n0     r14n0-r15n0  r31n0(4)  
+ fc00:1f::1/128     IP6 internal  180     r15n0     r14n0-r15n0  r31n0(4)  
+ fc00:9000:1f::/64  IP6 internal  180     r15n0     r14n0-r15n0  r31n0(4)  
+ r33n0              TE-IS         190     r15n0     r14n0-r15n0  r32n0(4)  
+ fc00:20::1/128     IP6 internal  190     r15n0     r14n0-r15n0  r32n0(4)  
+ fc00:9000:20::/64  IP6 internal  190     r15n0     r14n0-r15n0  r32n0(4)  
+ r34n0              TE-IS         200     r15n0     r14n0-r15n0  r33n0(4)  
+ fc00:21::1/128     IP6 internal  200     r15n0     r14n0-r15n0  r33n0(4)  
+ fc00:9000:21::/64  IP6 internal  200     r15n0     r14n0-r15n0  r33n0(4)  
+ r35n0              TE-IS         210     r15n0     r14n0-r15n0  r34n0(4)  
+ fc00:22::1/128     IP6 internal  210     r15n0     r14n0-r15n0  r34n0(4)  
+ fc00:9000:22::/64  IP6 internal  210     r15n0     r14n0-r15n0  r34n0(4)  
+ r36n0              TE-IS         220     r15n0     r14n0-r15n0  r35n0(4)  
+ fc00:23::1/128     IP6 internal  220     r15n0     r14n0-r15n0  r35n0(4)  
+ fc00:9000:23::/64  IP6 internal  220     r15n0     r14n0-r15n0  r35n0(4)  
+ r37n0              TE-IS         230     r15n0     r14n0-r15n0  r36n0(4)  
+ fc00:24::1/128     IP6 internal  230     r15n0     r14n0-r15n0  r36n0(4)  
+ fc00:9000:24::/64  IP6 internal  230     r15n0     r14n0-r15n0  r36n0(4)  
+ r38n0              TE-IS         240     r15n0     r14n0-r15n0  r37n0(4)  
+ fc00:25::1/128     IP6 internal  240     r15n0     r14n0-r15n0  r37n0(4)  
+ fc00:9000:25::/64  IP6 internal  240     r15n0     r14n0-r15n0  r37n0(4)  
+ r39n0              TE-IS         250     r15n0     r14n0-r15n0  r38n0(4)  
+ fc00:26::1/128     IP6 internal  250     r15n0     r14n0-r15n0  r38n0(4)  
+ fc00:9000:26::/64  IP6 internal  250     r15n0     r14n0-r15n0  r38n0(4)  
+ r40n0              TE-IS         260     r15n0     r14n0-r15n0  r39n0(4)  
+ fc00:27::1/128     IP6 internal  260     r15n0     r14n0-r15n0  r39n0(4)  
+ fc00:9000:27::/64  IP6 internal  260     r15n0     r14n0-r15n0  r39n0(4)  
+ r41n0              TE-IS         270     r15n0     r14n0-r15n0  r40n0(4)  
+ fc00:28::1/128     IP6 internal  270     r15n0     r14n0-r15n0  r40n0(4)  
+ fc00:9000:28::/64  IP6 internal  270     r15n0     r14n0-r15n0  r40n0(4)  
+ r42n0              TE-IS         280     r15n0     r14n0-r15n0  r41n0(4)  
+ fc00:29::1/128     IP6 internal  280     r15n0     r14n0-r15n0  r41n0(4)  
+ fc00:9000:29::/64  IP6 internal  280     r15n0     r14n0-r15n0  r41n0(4)  
+ r43n0              TE-IS         290     r15n0     r14n0-r15n0  r42n0(4)  
+ fc00:2a::1/128     IP6 internal  290     r15n0     r14n0-r15n0  r42n0(4)  
+ fc00:9000:2a::/64  IP6 internal  290     r15n0     r14n0-r15n0  r42n0(4)  
+ r44n0              TE-IS         300     r15n0     r14n0-r15n0  r43n0(4)  
+ fc00:2b::1/128     IP6 internal  300     r15n0     r14n0-r15n0  r43n0(4)  
+ fc00:9000:2b::/64  IP6 internal  300     r15n0     r14n0-r15n0  r43n0(4)  
+ r45n0              TE-IS         310     r15n0     r14n0-r15n0  r44n0(4)  
+ fc00:2c::1/128     IP6 internal  310     r15n0     r14n0-r15n0  r44n0(4)  
+ fc00:2c:0:1::/64   IP6 internal  310     r15n0     r14n0-r15n0  r44n0(4)  
+ fc00:2c:9::/64     IP6 internal  310     r15n0     r14n0-r15n0  r44n0(4)  
+ fc00:9000:2c::/64  IP6 internal  310     r15n0     r14n0-r15n0  r44n0(4)  
+ fc00:2d::/43       IP6 internal  310     r15n0     r14n0-r15n0  r45n0(4)  
+ fc00:2e::/43       IP6 internal  310     r15n0     r14n0-r15n0  r45n0(4)  
+ fc00:2f::/43       IP6 internal  310     r15n0     r14n0-r15n0  r45n0(4)  
+ fc00:30::/43       IP6 internal  310     r15n0     r14n0-r15n0  r45n0(4)  
+ fc00:31::/43       IP6 internal  310     r15n0     r14n0-r15n0  r45n0(4)  
+ fc00:32::/43       IP6 internal  310     r15n0     r14n0-r15n0  r45n0(4)  
+ fc00:33::/43       IP6 internal  310     r15n0     r14n0-r15n0  r45n0(4)  
+ fc00:34::/43       IP6 internal  310     r15n0     r14n0-r15n0  r45n0(4)  
+ fc00:35::/43       IP6 internal  310     r15n0     r14n0-r15n0  r45n0(4)  
+ fc00:36::/43       IP6 internal  310     r15n0     r14n0-r15n0  r45n0(4)  
+ fc00:37::/43       IP6 internal  310     r15n0     r14n0-r15n0  r45n0(4)  
+ fc00:38::/43       IP6 internal  310     r15n0     r14n0-r15n0  r45n0(4)  
+ fc00:39::/43       IP6 internal  310     r15n0     r14n0-r15n0  r45n0(4)  
+ fc00:3a::/43       IP6 internal  310     r15n0     r14n0-r15n0  r45n0(4)  
+ fc00:3b::/43       IP6 internal  310     r15n0     r14n0-r15n0  r45n0(4)  
+ fc00:2d::1/128     IP6 internal  320     r15n0     r14n0-r15n0  r45n0(4)  
+ fc00:2d:0:1::/64   IP6 internal  320     r15n0     r14n0-r15n0  r45n0(4)  
+ fc00:2d:9::/64     IP6 internal  320     r15n0     r14n0-r15n0  r45n0(4)  
+ fc00:9000:2d::/64  IP6 internal  320     r15n0     r14n0-r15n0  r45n0(4)  
+
+
+IS-IS L2 IPv6 routing table:
+
+ Prefix             Metric  Interface    Nexthop                    Label(s)  
+ -----------------------------------------------------------------------------
+ fc00::/43          0       -            -                          -         
+ fc00:1::/43        0       -            -                          -         
+ fc00:2::/43        0       -            -                          -         
+ fc00:3::/43        0       -            -                          -         
+ fc00:4::/43        0       -            -                          -         
+ fc00:5::/43        0       -            -                          -         
+ fc00:6::/43        0       -            -                          -         
+ fc00:7::/43        0       -            -                          -         
+ fc00:8::/43        0       -            -                          -         
+ fc00:9::/43        0       -            -                          -         
+ fc00:a::/43        0       -            -                          -         
+ fc00:b::/43        0       -            -                          -         
+ fc00:c::/43        0       -            -                          -         
+ fc00:d::/43        0       -            -                          -         
+ fc00:e::/43        0       -            -                          -         
+ fc00:e::1/128      0       -            -                          -         
+ fc00:e:0:1::/64    0       -            -                          -         
+ fc00:e:9::/64      0       -            -                          -         
+ fc00:f::/43        10      r14n0-r15n0  fe80::fcf8:2cff:fe25:7416  -         
+ fc00:f::1/128      20      r14n0-r15n0  fe80::fcf8:2cff:fe25:7416  -         
+ fc00:f:0:1::/64    20      r14n0-r15n0  fe80::fcf8:2cff:fe25:7416  -         
+ fc00:f:9::/64      20      r14n0-r15n0  fe80::fcf8:2cff:fe25:7416  -         
+ fc00:10::/43       10      r14n0-r15n0  fe80::fcf8:2cff:fe25:7416  -         
+ fc00:10::1/128     30      r14n0-r15n0  fe80::fcf8:2cff:fe25:7416  -         
+ fc00:11::/43       10      r14n0-r15n0  fe80::fcf8:2cff:fe25:7416  -         
+ fc00:11::1/128     40      r14n0-r15n0  fe80::fcf8:2cff:fe25:7416  -         
+ fc00:12::/43       10      r14n0-r15n0  fe80::fcf8:2cff:fe25:7416  -         
+ fc00:12::1/128     50      r14n0-r15n0  fe80::fcf8:2cff:fe25:7416  -         
+ fc00:13::/43       10      r14n0-r15n0  fe80::fcf8:2cff:fe25:7416  -         
+ fc00:13::1/128     60      r14n0-r15n0  fe80::fcf8:2cff:fe25:7416  -         
+ fc00:14::/43       10      r14n0-r15n0  fe80::fcf8:2cff:fe25:7416  -         
+ fc00:14::1/128     70      r14n0-r15n0  fe80::fcf8:2cff:fe25:7416  -         
+ fc00:15::/43       10      r14n0-r15n0  fe80::fcf8:2cff:fe25:7416  -         
+ fc00:15::1/128     80      r14n0-r15n0  fe80::fcf8:2cff:fe25:7416  -         
+ fc00:16::/43       10      r14n0-r15n0  fe80::fcf8:2cff:fe25:7416  -         
+ fc00:16::1/128     90      r14n0-r15n0  fe80::fcf8:2cff:fe25:7416  -         
+ fc00:17::/43       10      r14n0-r15n0  fe80::fcf8:2cff:fe25:7416  -         
+ fc00:17::1/128     100     r14n0-r15n0  fe80::fcf8:2cff:fe25:7416  -         
+ fc00:18::/43       10      r14n0-r15n0  fe80::fcf8:2cff:fe25:7416  -         
+ fc00:18::1/128     110     r14n0-r15n0  fe80::fcf8:2cff:fe25:7416  -         
+ fc00:19::/43       10      r14n0-r15n0  fe80::fcf8:2cff:fe25:7416  -         
+ fc00:19::1/128     120     r14n0-r15n0  fe80::fcf8:2cff:fe25:7416  -         
+ fc00:1a::/43       10      r14n0-r15n0  fe80::fcf8:2cff:fe25:7416  -         
+ fc00:1a::1/128     130     r14n0-r15n0  fe80::fcf8:2cff:fe25:7416  -         
+ fc00:1b::/43       10      r14n0-r15n0  fe80::fcf8:2cff:fe25:7416  -         
+ fc00:1b::1/128     140     r14n0-r15n0  fe80::fcf8:2cff:fe25:7416  -         
+ fc00:1c::/43       10      r14n0-r15n0  fe80::fcf8:2cff:fe25:7416  -         
+ fc00:1c::1/128     150     r14n0-r15n0  fe80::fcf8:2cff:fe25:7416  -         
+ fc00:1d::/43       10      r14n0-r15n0  fe80::fcf8:2cff:fe25:7416  -         
+ fc00:1d::1/128     160     r14n0-r15n0  fe80::fcf8:2cff:fe25:7416  -         
+ fc00:1d:0:1::/64   160     r14n0-r15n0  fe80::fcf8:2cff:fe25:7416  -         
+ fc00:1d:9::/64     160     r14n0-r15n0  fe80::fcf8:2cff:fe25:7416  -         
+ fc00:1e::/43       160     r14n0-r15n0  fe80::fcf8:2cff:fe25:7416  -         
+ fc00:1e::1/128     170     r14n0-r15n0  fe80::fcf8:2cff:fe25:7416  -         
+ fc00:1e:0:1::/64   170     r14n0-r15n0  fe80::fcf8:2cff:fe25:7416  -         
+ fc00:1e:9::/64     170     r14n0-r15n0  fe80::fcf8:2cff:fe25:7416  -         
+ fc00:1f::/43       160     r14n0-r15n0  fe80::fcf8:2cff:fe25:7416  -         
+ fc00:1f::1/128     180     r14n0-r15n0  fe80::fcf8:2cff:fe25:7416  -         
+ fc00:20::/43       160     r14n0-r15n0  fe80::fcf8:2cff:fe25:7416  -         
+ fc00:20::1/128     190     r14n0-r15n0  fe80::fcf8:2cff:fe25:7416  -         
+ fc00:21::/43       160     r14n0-r15n0  fe80::fcf8:2cff:fe25:7416  -         
+ fc00:21::1/128     200     r14n0-r15n0  fe80::fcf8:2cff:fe25:7416  -         
+ fc00:22::/43       160     r14n0-r15n0  fe80::fcf8:2cff:fe25:7416  -         
+ fc00:22::1/128     210     r14n0-r15n0  fe80::fcf8:2cff:fe25:7416  -         
+ fc00:23::/43       160     r14n0-r15n0  fe80::fcf8:2cff:fe25:7416  -         
+ fc00:23::1/128     220     r14n0-r15n0  fe80::fcf8:2cff:fe25:7416  -         
+ fc00:24::/43       160     r14n0-r15n0  fe80::fcf8:2cff:fe25:7416  -         
+ fc00:24::1/128     230     r14n0-r15n0  fe80::fcf8:2cff:fe25:7416  -         
+ fc00:25::/43       160     r14n0-r15n0  fe80::fcf8:2cff:fe25:7416  -         
+ fc00:25::1/128     240     r14n0-r15n0  fe80::fcf8:2cff:fe25:7416  -         
+ fc00:26::/43       160     r14n0-r15n0  fe80::fcf8:2cff:fe25:7416  -         
+ fc00:26::1/128     250     r14n0-r15n0  fe80::fcf8:2cff:fe25:7416  -         
+ fc00:27::/43       160     r14n0-r15n0  fe80::fcf8:2cff:fe25:7416  -         
+ fc00:27::1/128     260     r14n0-r15n0  fe80::fcf8:2cff:fe25:7416  -         
+ fc00:28::/43       160     r14n0-r15n0  fe80::fcf8:2cff:fe25:7416  -         
+ fc00:28::1/128     270     r14n0-r15n0  fe80::fcf8:2cff:fe25:7416  -         
+ fc00:29::/43       160     r14n0-r15n0  fe80::fcf8:2cff:fe25:7416  -         
+ fc00:29::1/128     280     r14n0-r15n0  fe80::fcf8:2cff:fe25:7416  -         
+ fc00:2a::/43       160     r14n0-r15n0  fe80::fcf8:2cff:fe25:7416  -         
+ fc00:2a::1/128     290     r14n0-r15n0  fe80::fcf8:2cff:fe25:7416  -         
+ fc00:2b::/43       160     r14n0-r15n0  fe80::fcf8:2cff:fe25:7416  -         
+ fc00:2b::1/128     300     r14n0-r15n0  fe80::fcf8:2cff:fe25:7416  -         
+ fc00:2c::/43       160     r14n0-r15n0  fe80::fcf8:2cff:fe25:7416  -         
+ fc00:2c::1/128     310     r14n0-r15n0  fe80::fcf8:2cff:fe25:7416  -         
+ fc00:2c:0:1::/64   310     r14n0-r15n0  fe80::fcf8:2cff:fe25:7416  -         
+ fc00:2c:9::/64     310     r14n0-r15n0  fe80::fcf8:2cff:fe25:7416  -         
+ fc00:2d::/43       310     r14n0-r15n0  fe80::fcf8:2cff:fe25:7416  -         
+ fc00:2d::1/128     320     r14n0-r15n0  fe80::fcf8:2cff:fe25:7416  -         
+ fc00:2d:0:1::/64   320     r14n0-r15n0  fe80::fcf8:2cff:fe25:7416  -         
+ fc00:2d:9::/64     320     r14n0-r15n0  fe80::fcf8:2cff:fe25:7416  -         
+ fc00:2e::/43       310     r14n0-r15n0  fe80::fcf8:2cff:fe25:7416  -         
+ fc00:2f::/43       310     r14n0-r15n0  fe80::fcf8:2cff:fe25:7416  -         
+ fc00:30::/43       310     r14n0-r15n0  fe80::fcf8:2cff:fe25:7416  -         
+ fc00:31::/43       310     r14n0-r15n0  fe80::fcf8:2cff:fe25:7416  -         
+ fc00:32::/43       310     r14n0-r15n0  fe80::fcf8:2cff:fe25:7416  -         
+ fc00:33::/43       310     r14n0-r15n0  fe80::fcf8:2cff:fe25:7416  -         
+ fc00:34::/43       310     r14n0-r15n0  fe80::fcf8:2cff:fe25:7416  -         
+ fc00:35::/43       310     r14n0-r15n0  fe80::fcf8:2cff:fe25:7416  -         
+ fc00:36::/43       310     r14n0-r15n0  fe80::fcf8:2cff:fe25:7416  -         
+ fc00:37::/43       310     r14n0-r15n0  fe80::fcf8:2cff:fe25:7416  -         
+ fc00:38::/43       310     r14n0-r15n0  fe80::fcf8:2cff:fe25:7416  -         
+ fc00:39::/43       310     r14n0-r15n0  fe80::fcf8:2cff:fe25:7416  -         
+ fc00:3a::/43       310     r14n0-r15n0  fe80::fcf8:2cff:fe25:7416  -         
+ fc00:3b::/43       310     r14n0-r15n0  fe80::fcf8:2cff:fe25:7416  -         
+ fc00:9000:d::/64   0       -            -                          -         
+ fc00:9000:e::/64   0       -            -                          -         
+ fc00:9000:f::/64   20      r14n0-r15n0  fe80::fcf8:2cff:fe25:7416  -         
+ fc00:9000:10::/64  30      r14n0-r15n0  fe80::fcf8:2cff:fe25:7416  -         
+ fc00:9000:11::/64  40      r14n0-r15n0  fe80::fcf8:2cff:fe25:7416  -         
+ fc00:9000:12::/64  50      r14n0-r15n0  fe80::fcf8:2cff:fe25:7416  -         
+ fc00:9000:13::/64  60      r14n0-r15n0  fe80::fcf8:2cff:fe25:7416  -         
+ fc00:9000:14::/64  70      r14n0-r15n0  fe80::fcf8:2cff:fe25:7416  -         
+ fc00:9000:15::/64  80      r14n0-r15n0  fe80::fcf8:2cff:fe25:7416  -         
+ fc00:9000:16::/64  90      r14n0-r15n0  fe80::fcf8:2cff:fe25:7416  -         
+ fc00:9000:17::/64  100     r14n0-r15n0  fe80::fcf8:2cff:fe25:7416  -         
+ fc00:9000:18::/64  110     r14n0-r15n0  fe80::fcf8:2cff:fe25:7416  -         
+ fc00:9000:19::/64  120     r14n0-r15n0  fe80::fcf8:2cff:fe25:7416  -         
+ fc00:9000:1a::/64  130     r14n0-r15n0  fe80::fcf8:2cff:fe25:7416  -         
+ fc00:9000:1b::/64  140     r14n0-r15n0  fe80::fcf8:2cff:fe25:7416  -         
+ fc00:9000:1c::/64  150     r14n0-r15n0  fe80::fcf8:2cff:fe25:7416  -         
+ fc00:9000:1d::/64  160     r14n0-r15n0  fe80::fcf8:2cff:fe25:7416  -         
+ fc00:9000:1e::/64  170     r14n0-r15n0  fe80::fcf8:2cff:fe25:7416  -         
+ fc00:9000:1f::/64  180     r14n0-r15n0  fe80::fcf8:2cff:fe25:7416  -         
+ fc00:9000:20::/64  190     r14n0-r15n0  fe80::fcf8:2cff:fe25:7416  -         
+ fc00:9000:21::/64  200     r14n0-r15n0  fe80::fcf8:2cff:fe25:7416  -         
+ fc00:9000:22::/64  210     r14n0-r15n0  fe80::fcf8:2cff:fe25:7416  -         
+ fc00:9000:23::/64  220     r14n0-r15n0  fe80::fcf8:2cff:fe25:7416  -         
+ fc00:9000:24::/64  230     r14n0-r15n0  fe80::fcf8:2cff:fe25:7416  -         
+ fc00:9000:25::/64  240     r14n0-r15n0  fe80::fcf8:2cff:fe25:7416  -         
+ fc00:9000:26::/64  250     r14n0-r15n0  fe80::fcf8:2cff:fe25:7416  -         
+ fc00:9000:27::/64  260     r14n0-r15n0  fe80::fcf8:2cff:fe25:7416  -         
+ fc00:9000:28::/64  270     r14n0-r15n0  fe80::fcf8:2cff:fe25:7416  -         
+ fc00:9000:29::/64  280     r14n0-r15n0  fe80::fcf8:2cff:fe25:7416  -         
+ fc00:9000:2a::/64  290     r14n0-r15n0  fe80::fcf8:2cff:fe25:7416  -         
+ fc00:9000:2b::/64  300     r14n0-r15n0  fe80::fcf8:2cff:fe25:7416  -         
+ fc00:9000:2c::/64  310     r14n0-r15n0  fe80::fcf8:2cff:fe25:7416  -         
+ fc00:9000:2d::/64  320     r14n0-r15n0  fe80::fcf8:2cff:fe25:7416  -         
+

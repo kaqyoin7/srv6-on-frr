@@ -1,0 +1,593 @@
+Codes: K - kernel route, C - connected, L - local, S - static,
+       R - RIPng, O - OSPFv3, I - IS-IS, B - BGP, N - NHRP,
+       T - Table, v - VNC, V - VNC-Direct, A - Babel, F - PBR,
+       f - OpenFabric, t - Table-Direct,
+       > - selected route, * - FIB route, q - queued, r - rejected, b - backup
+       t - trapped, o - offload failure
+
+IPv6 unicast VRF default:
+I>* fc00::/43 [115/160] via fe80::7454:daff:fede:b3d9, r30n0-r29n0, weight 1, 12:22:09
+I>* fc00:1::/43 [115/160] via fe80::7454:daff:fede:b3d9, r30n0-r29n0, weight 1, 12:22:09
+I>* fc00:2::/43 [115/160] via fe80::7454:daff:fede:b3d9, r30n0-r29n0, weight 1, 12:22:09
+I>* fc00:3::/43 [115/160] via fe80::7454:daff:fede:b3d9, r30n0-r29n0, weight 1, 12:22:09
+I>* fc00:4::/43 [115/160] via fe80::7454:daff:fede:b3d9, r30n0-r29n0, weight 1, 12:22:09
+I>* fc00:5::/43 [115/160] via fe80::7454:daff:fede:b3d9, r30n0-r29n0, weight 1, 12:22:09
+I>* fc00:6::/43 [115/160] via fe80::7454:daff:fede:b3d9, r30n0-r29n0, weight 1, 12:22:09
+I>* fc00:7::/43 [115/160] via fe80::7454:daff:fede:b3d9, r30n0-r29n0, weight 1, 12:22:09
+I>* fc00:8::/43 [115/160] via fe80::7454:daff:fede:b3d9, r30n0-r29n0, weight 1, 12:22:09
+I>* fc00:9::/43 [115/160] via fe80::7454:daff:fede:b3d9, r30n0-r29n0, weight 1, 12:22:09
+I>* fc00:a::/43 [115/160] via fe80::7454:daff:fede:b3d9, r30n0-r29n0, weight 1, 12:22:09
+I>* fc00:b::/43 [115/160] via fe80::7454:daff:fede:b3d9, r30n0-r29n0, weight 1, 12:22:09
+I>* fc00:c::/43 [115/160] via fe80::7454:daff:fede:b3d9, r30n0-r29n0, weight 1, 12:22:09
+I>* fc00:d::/43 [115/160] via fe80::7454:daff:fede:b3d9, r30n0-r29n0, weight 1, 12:22:09
+I>* fc00:e::/43 [115/160] via fe80::7454:daff:fede:b3d9, r30n0-r29n0, weight 1, 12:22:09
+I>* fc00:e::1/128 [115/170] via fe80::7454:daff:fede:b3d9, r30n0-r29n0, weight 1, 12:22:09
+I>* fc00:e:0:1::/64 [115/170] via fe80::7454:daff:fede:b3d9, r30n0-r29n0, weight 1, 12:22:09
+I>* fc00:e:9::/64 [115/170] via fe80::7454:daff:fede:b3d9, r30n0-r29n0, weight 1, 12:22:09
+I>* fc00:f::/43 [115/10] via fe80::7454:daff:fede:b3d9, r30n0-r29n0, weight 1, 12:22:09
+I>* fc00:f::1/128 [115/160] via fe80::7454:daff:fede:b3d9, r30n0-r29n0, weight 1, 12:22:09
+I>* fc00:f:0:1::/64 [115/160] via fe80::7454:daff:fede:b3d9, r30n0-r29n0, weight 1, 12:22:09
+I>* fc00:f:9::/64 [115/160] via fe80::7454:daff:fede:b3d9, r30n0-r29n0, weight 1, 12:22:09
+I>* fc00:10::/43 [115/10] via fe80::7454:daff:fede:b3d9, r30n0-r29n0, weight 1, 12:22:09
+I>* fc00:10::1/128 [115/150] via fe80::7454:daff:fede:b3d9, r30n0-r29n0, weight 1, 12:22:09
+I>* fc00:11::/43 [115/10] via fe80::7454:daff:fede:b3d9, r30n0-r29n0, weight 1, 12:22:09
+I>* fc00:11::1/128 [115/140] via fe80::7454:daff:fede:b3d9, r30n0-r29n0, weight 1, 12:22:09
+I>* fc00:12::/43 [115/10] via fe80::7454:daff:fede:b3d9, r30n0-r29n0, weight 1, 12:22:09
+I>* fc00:12::1/128 [115/130] via fe80::7454:daff:fede:b3d9, r30n0-r29n0, weight 1, 12:22:09
+I>* fc00:13::/43 [115/10] via fe80::7454:daff:fede:b3d9, r30n0-r29n0, weight 1, 12:22:09
+I>* fc00:13::1/128 [115/120] via fe80::7454:daff:fede:b3d9, r30n0-r29n0, weight 1, 12:22:09
+I>* fc00:14::/43 [115/10] via fe80::7454:daff:fede:b3d9, r30n0-r29n0, weight 1, 12:22:09
+I>* fc00:14::1/128 [115/110] via fe80::7454:daff:fede:b3d9, r30n0-r29n0, weight 1, 12:22:09
+I>* fc00:15::/43 [115/10] via fe80::7454:daff:fede:b3d9, r30n0-r29n0, weight 1, 12:22:09
+I>* fc00:15::1/128 [115/100] via fe80::7454:daff:fede:b3d9, r30n0-r29n0, weight 1, 12:22:09
+I>* fc00:16::/43 [115/10] via fe80::7454:daff:fede:b3d9, r30n0-r29n0, weight 1, 12:22:09
+I>* fc00:16::1/128 [115/90] via fe80::7454:daff:fede:b3d9, r30n0-r29n0, weight 1, 12:22:09
+I>* fc00:17::/43 [115/10] via fe80::7454:daff:fede:b3d9, r30n0-r29n0, weight 1, 12:22:09
+I>* fc00:17::1/128 [115/80] via fe80::7454:daff:fede:b3d9, r30n0-r29n0, weight 1, 12:22:09
+I>* fc00:18::/43 [115/10] via fe80::7454:daff:fede:b3d9, r30n0-r29n0, weight 1, 12:22:09
+I>* fc00:18::1/128 [115/70] via fe80::7454:daff:fede:b3d9, r30n0-r29n0, weight 1, 12:22:09
+I>* fc00:19::/43 [115/10] via fe80::7454:daff:fede:b3d9, r30n0-r29n0, weight 1, 12:22:09
+I>* fc00:19::1/128 [115/60] via fe80::7454:daff:fede:b3d9, r30n0-r29n0, weight 1, 12:22:09
+I>* fc00:1a::/43 [115/10] via fe80::7454:daff:fede:b3d9, r30n0-r29n0, weight 1, 12:22:09
+I>* fc00:1a::1/128 [115/50] via fe80::7454:daff:fede:b3d9, r30n0-r29n0, weight 1, 12:22:09
+I>* fc00:1b::/43 [115/10] via fe80::7454:daff:fede:b3d9, r30n0-r29n0, weight 1, 12:22:09
+I>* fc00:1b::1/128 [115/40] via fe80::7454:daff:fede:b3d9, r30n0-r29n0, weight 1, 12:22:09
+I>* fc00:1c::/43 [115/10] via fe80::7454:daff:fede:b3d9, r30n0-r29n0, weight 1, 12:22:09
+I>* fc00:1c::1/128 [115/30] via fe80::7454:daff:fede:b3d9, r30n0-r29n0, weight 1, 12:22:09
+I>* fc00:1d::/43 [115/10] via fe80::7454:daff:fede:b3d9, r30n0-r29n0, weight 1, 12:22:09
+I>* fc00:1d::1/128 [115/20] via fe80::7454:daff:fede:b3d9, r30n0-r29n0, weight 1, 12:22:09
+I>* fc00:1d:0:1::/64 [115/20] via fe80::7454:daff:fede:b3d9, r30n0-r29n0, weight 1, 12:22:09
+I>* fc00:1d:9::/64 [115/20] via fe80::7454:daff:fede:b3d9, r30n0-r29n0, weight 1, 12:22:09
+S>* fc00:1e::/43 [1/0] unreachable (blackhole), weight 1, 12:26:15
+L * fc00:1e::1/128 is directly connected, lo, weight 1, 12:26:16
+C>* fc00:1e::1/128 is directly connected, lo, weight 1, 12:26:16
+C>* fc00:1e:0:1::/64 is directly connected, r30n0-r30n1, weight 1, 12:23:50
+L>* fc00:1e:0:1::1/128 is directly connected, r30n0-r30n1, weight 1, 12:23:50
+I>* fc00:1e:1::1/128 [115/20] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:23:20
+I>* fc00:1e:1:2::/64 [115/20] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:23:20
+I>* fc00:1e:2::1/128 [115/30] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:23:20
+I>* fc00:1e:2:3::/64 [115/30] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:23:20
+I>* fc00:1e:3::1/128 [115/40] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:23:20
+I>* fc00:1e:3:4::/64 [115/40] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:23:20
+I>* fc00:1e:4::1/128 [115/50] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:23:20
+I>* fc00:1e:4:5::/64 [115/50] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:23:20
+I>* fc00:1e:5::1/128 [115/60] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:23:20
+  *                           via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:23:20
+I>* fc00:1e:5:6::/64 [115/50] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:23:20
+I>* fc00:1e:6::1/128 [115/50] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:23:20
+I>* fc00:1e:6:7::/64 [115/40] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:23:20
+I>* fc00:1e:7::1/128 [115/40] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:23:20
+I>* fc00:1e:7:8::/64 [115/30] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:23:20
+I>* fc00:1e:8::1/128 [115/30] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:23:20
+I>* fc00:1e:8:9::/64 [115/20] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:23:20
+C>* fc00:1e:9::/64 is directly connected, r30n0-r30n9, weight 1, 12:23:49
+I>* fc00:1e:9::1/128 [115/20] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:23:20
+L>* fc00:1e:9::2/128 is directly connected, r30n0-r30n9, weight 1, 12:23:49
+S>* fc00:1f::/43 [1/0] unreachable (blackhole), weight 1, 12:26:15
+I>* fc00:1f::1/128 [115/20] via fe80::6454:8fff:fe9c:6ce7, r30n0-r31n0, weight 1, 12:22:09
+I>* fc00:1f:0:1::/64 [115/30] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:22:04
+I>* fc00:1f:1::1/128 [115/30] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:22:04
+I>* fc00:1f:1:2::/64 [115/30] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:22:04
+I>* fc00:1f:2::1/128 [115/40] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:22:05
+I>* fc00:1f:2:3::/64 [115/40] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:22:05
+I>* fc00:1f:3::1/128 [115/50] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:22:05
+I>* fc00:1f:3:4::/64 [115/50] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:22:05
+I>* fc00:1f:4::1/128 [115/60] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:22:05
+I>* fc00:1f:4:5::/64 [115/60] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:22:05
+I>* fc00:1f:5::1/128 [115/70] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:22:06
+  *                           via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:22:06
+I>* fc00:1f:5:6::/64 [115/60] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:22:05
+I>* fc00:1f:6::1/128 [115/60] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:22:05
+I>* fc00:1f:6:7::/64 [115/50] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:22:05
+I>* fc00:1f:7::1/128 [115/50] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:22:05
+I>* fc00:1f:7:8::/64 [115/40] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:22:05
+I>* fc00:1f:8::1/128 [115/40] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:22:05
+I>* fc00:1f:8:9::/64 [115/30] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:22:00
+I>* fc00:1f:9::/64 [115/30] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:22:00
+I>* fc00:1f:9::1/128 [115/30] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:22:00
+S>* fc00:20::/43 [1/0] unreachable (blackhole), weight 1, 12:26:15
+I>* fc00:20::1/128 [115/30] via fe80::6454:8fff:fe9c:6ce7, r30n0-r31n0, weight 1, 12:22:01
+I>* fc00:20:0:1::/64 [115/40] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:22:00
+I>* fc00:20:1::1/128 [115/40] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:22:00
+I>* fc00:20:1:2::/64 [115/40] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:22:00
+I>* fc00:20:2::1/128 [115/50] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:22:00
+I>* fc00:20:2:3::/64 [115/50] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:22:00
+I>* fc00:20:3::1/128 [115/60] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:22:05
+I>* fc00:20:3:4::/64 [115/60] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:22:05
+I>* fc00:20:4::1/128 [115/70] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:22:05
+I>* fc00:20:4:5::/64 [115/70] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:22:05
+I>* fc00:20:5::1/128 [115/80] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:22:05
+  *                           via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:22:05
+I>* fc00:20:5:6::/64 [115/70] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:22:05
+I>* fc00:20:6::1/128 [115/70] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:22:05
+I>* fc00:20:6:7::/64 [115/60] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:22:05
+I>* fc00:20:7::1/128 [115/60] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:22:05
+I>* fc00:20:7:8::/64 [115/50] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:22:05
+I>* fc00:20:8::1/128 [115/50] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:22:05
+I>* fc00:20:8:9::/64 [115/40] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:22:00
+I>* fc00:20:9::/64 [115/40] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:22:00
+I>* fc00:20:9::1/128 [115/40] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:22:00
+S>* fc00:21::/43 [1/0] unreachable (blackhole), weight 1, 12:26:15
+I>* fc00:21::1/128 [115/40] via fe80::6454:8fff:fe9c:6ce7, r30n0-r31n0, weight 1, 12:22:00
+I>* fc00:21:0:1::/64 [115/50] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:55
+I>* fc00:21:1::1/128 [115/50] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:55
+I>* fc00:21:1:2::/64 [115/50] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:55
+I>* fc00:21:2::1/128 [115/60] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:22:00
+I>* fc00:21:2:3::/64 [115/60] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:22:00
+I>* fc00:21:3::1/128 [115/70] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:22:01
+I>* fc00:21:3:4::/64 [115/70] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:22:01
+I>* fc00:21:4::1/128 [115/80] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:22:01
+I>* fc00:21:4:5::/64 [115/80] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:22:01
+I>* fc00:21:5::1/128 [115/90] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:58
+  *                           via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:58
+I>* fc00:21:5:6::/64 [115/80] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:58
+I>* fc00:21:6::1/128 [115/80] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:58
+I>* fc00:21:6:7::/64 [115/70] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:58
+I>* fc00:21:7::1/128 [115/70] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:58
+I>* fc00:21:7:8::/64 [115/60] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:58
+I>* fc00:21:8::1/128 [115/60] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:58
+I>* fc00:21:8:9::/64 [115/50] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:47
+I>* fc00:21:9::/64 [115/50] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:47
+I>* fc00:21:9::1/128 [115/50] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:47
+S>* fc00:22::/43 [1/0] unreachable (blackhole), weight 1, 12:26:15
+I>* fc00:22::1/128 [115/50] via fe80::6454:8fff:fe9c:6ce7, r30n0-r31n0, weight 1, 12:21:47
+I>* fc00:22:0:1::/64 [115/60] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:49
+I>* fc00:22:1::1/128 [115/60] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:49
+I>* fc00:22:1:2::/64 [115/60] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:49
+I>* fc00:22:2::1/128 [115/70] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:49
+I>* fc00:22:2:3::/64 [115/70] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:49
+I>* fc00:22:3::1/128 [115/80] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:50
+I>* fc00:22:3:4::/64 [115/80] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:50
+I>* fc00:22:4::1/128 [115/90] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:52
+I>* fc00:22:4:5::/64 [115/90] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:52
+I>* fc00:22:5::1/128 [115/100] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:56
+  *                            via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:56
+I>* fc00:22:5:6::/64 [115/90] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:47
+I>* fc00:22:6::1/128 [115/90] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:47
+I>* fc00:22:6:7::/64 [115/80] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:47
+I>* fc00:22:7::1/128 [115/80] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:47
+I>* fc00:22:7:8::/64 [115/70] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:47
+I>* fc00:22:8::1/128 [115/70] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:47
+I>* fc00:22:8:9::/64 [115/60] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:47
+I>* fc00:22:9::/64 [115/60] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:47
+I>* fc00:22:9::1/128 [115/60] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:47
+S>* fc00:23::/43 [1/0] unreachable (blackhole), weight 1, 12:26:15
+I>* fc00:23::1/128 [115/60] via fe80::6454:8fff:fe9c:6ce7, r30n0-r31n0, weight 1, 12:21:46
+I>* fc00:23:0:1::/64 [115/70] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:49
+I>* fc00:23:1::1/128 [115/70] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:49
+I>* fc00:23:1:2::/64 [115/70] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:49
+I>* fc00:23:2::1/128 [115/80] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:49
+I>* fc00:23:2:3::/64 [115/80] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:49
+I>* fc00:23:3::1/128 [115/90] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:50
+I>* fc00:23:3:4::/64 [115/90] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:50
+I>* fc00:23:4::1/128 [115/100] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:51
+I>* fc00:23:4:5::/64 [115/100] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:51
+I>* fc00:23:5::1/128 [115/110] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:47
+  *                            via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:47
+I>* fc00:23:5:6::/64 [115/100] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:47
+I>* fc00:23:6::1/128 [115/100] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:47
+I>* fc00:23:6:7::/64 [115/90] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:47
+I>* fc00:23:7::1/128 [115/90] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:47
+I>* fc00:23:7:8::/64 [115/80] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:40
+I>* fc00:23:8::1/128 [115/80] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:40
+I>* fc00:23:8:9::/64 [115/70] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:40
+I>* fc00:23:9::/64 [115/70] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:40
+I>* fc00:23:9::1/128 [115/70] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:40
+S>* fc00:24::/43 [1/0] unreachable (blackhole), weight 1, 12:26:15
+I>* fc00:24::1/128 [115/70] via fe80::6454:8fff:fe9c:6ce7, r30n0-r31n0, weight 1, 12:21:46
+I>* fc00:24:0:1::/64 [115/80] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:49
+I>* fc00:24:1::1/128 [115/80] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:49
+I>* fc00:24:1:2::/64 [115/80] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:49
+I>* fc00:24:2::1/128 [115/90] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:49
+I>* fc00:24:2:3::/64 [115/90] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:49
+I>* fc00:24:3::1/128 [115/100] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:49
+I>* fc00:24:3:4::/64 [115/100] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:49
+I>* fc00:24:4::1/128 [115/110] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:49
+I>* fc00:24:4:5::/64 [115/110] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:49
+I>* fc00:24:5::1/128 [115/120] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:43
+  *                            via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:43
+I>* fc00:24:5:6::/64 [115/110] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:43
+I>* fc00:24:6::1/128 [115/110] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:43
+I>* fc00:24:6:7::/64 [115/100] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:43
+I>* fc00:24:7::1/128 [115/100] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:43
+I>* fc00:24:7:8::/64 [115/90] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:36
+I>* fc00:24:8::1/128 [115/90] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:36
+I>* fc00:24:8:9::/64 [115/80] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:36
+I>* fc00:24:9::/64 [115/80] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:36
+I>* fc00:24:9::1/128 [115/80] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:36
+S>* fc00:25::/43 [1/0] unreachable (blackhole), weight 1, 12:26:15
+I>* fc00:25::1/128 [115/80] via fe80::6454:8fff:fe9c:6ce7, r30n0-r31n0, weight 1, 12:21:39
+I>* fc00:25:0:1::/64 [115/90] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:40
+I>* fc00:25:1::1/128 [115/90] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:40
+I>* fc00:25:1:2::/64 [115/90] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:40
+I>* fc00:25:2::1/128 [115/100] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:40
+I>* fc00:25:2:3::/64 [115/100] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:40
+I>* fc00:25:3::1/128 [115/110] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:40
+I>* fc00:25:3:4::/64 [115/110] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:40
+I>* fc00:25:4::1/128 [115/120] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:40
+I>* fc00:25:4:5::/64 [115/120] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:40
+I>* fc00:25:5::1/128 [115/130] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:40
+  *                            via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:40
+I>* fc00:25:5:6::/64 [115/120] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:43
+I>* fc00:25:6::1/128 [115/120] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:43
+I>* fc00:25:6:7::/64 [115/110] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:43
+I>* fc00:25:7::1/128 [115/110] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:43
+I>* fc00:25:7:8::/64 [115/100] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:35
+I>* fc00:25:8::1/128 [115/100] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:35
+I>* fc00:25:8:9::/64 [115/90] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:35
+I>* fc00:25:9::/64 [115/90] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:35
+I>* fc00:25:9::1/128 [115/90] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:35
+S>* fc00:26::/43 [1/0] unreachable (blackhole), weight 1, 12:26:15
+I>* fc00:26::1/128 [115/90] via fe80::6454:8fff:fe9c:6ce7, r30n0-r31n0, weight 1, 12:21:25
+I>* fc00:26:0:1::/64 [115/100] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:31
+I>* fc00:26:1::1/128 [115/100] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:31
+I>* fc00:26:1:2::/64 [115/100] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:31
+I>* fc00:26:2::1/128 [115/110] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:31
+I>* fc00:26:2:3::/64 [115/110] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:31
+I>* fc00:26:3::1/128 [115/120] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:31
+I>* fc00:26:3:4::/64 [115/120] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:31
+I>* fc00:26:4::1/128 [115/130] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:31
+I>* fc00:26:4:5::/64 [115/130] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:31
+I>* fc00:26:5::1/128 [115/140] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:31
+  *                            via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:31
+I>* fc00:26:5:6::/64 [115/130] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:31
+I>* fc00:26:6::1/128 [115/130] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:31
+I>* fc00:26:6:7::/64 [115/120] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:31
+I>* fc00:26:7::1/128 [115/120] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:31
+I>* fc00:26:7:8::/64 [115/110] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:31
+I>* fc00:26:8::1/128 [115/110] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:31
+I>* fc00:26:8:9::/64 [115/100] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:31
+I>* fc00:26:9::/64 [115/100] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:31
+I>* fc00:26:9::1/128 [115/100] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:31
+S>* fc00:27::/43 [1/0] unreachable (blackhole), weight 1, 12:26:15
+I>* fc00:27::1/128 [115/100] via fe80::6454:8fff:fe9c:6ce7, r30n0-r31n0, weight 1, 12:21:25
+I>* fc00:27:0:1::/64 [115/110] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:26
+I>* fc00:27:1::1/128 [115/110] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:26
+I>* fc00:27:1:2::/64 [115/110] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:26
+I>* fc00:27:2::1/128 [115/120] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:26
+I>* fc00:27:2:3::/64 [115/120] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:26
+I>* fc00:27:3::1/128 [115/130] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:26
+I>* fc00:27:3:4::/64 [115/130] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:26
+I>* fc00:27:4::1/128 [115/140] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:27
+I>* fc00:27:4:5::/64 [115/140] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:27
+I>* fc00:27:5::1/128 [115/150] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:27
+  *                            via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:27
+I>* fc00:27:5:6::/64 [115/140] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:27
+I>* fc00:27:6::1/128 [115/140] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:27
+I>* fc00:27:6:7::/64 [115/130] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:21
+I>* fc00:27:7::1/128 [115/130] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:21
+I>* fc00:27:7:8::/64 [115/120] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:21
+I>* fc00:27:8::1/128 [115/120] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:21
+I>* fc00:27:8:9::/64 [115/110] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:20
+I>* fc00:27:9::/64 [115/110] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:20
+I>* fc00:27:9::1/128 [115/110] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:20
+S>* fc00:28::/43 [1/0] unreachable (blackhole), weight 1, 12:26:15
+I>* fc00:28::1/128 [115/110] via fe80::6454:8fff:fe9c:6ce7, r30n0-r31n0, weight 1, 12:21:23
+I>* fc00:28:0:1::/64 [115/120] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:20
+I>* fc00:28:1::1/128 [115/120] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:20
+I>* fc00:28:1:2::/64 [115/120] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:20
+I>* fc00:28:2::1/128 [115/130] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:20
+I>* fc00:28:2:3::/64 [115/130] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:20
+I>* fc00:28:3::1/128 [115/140] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:24
+I>* fc00:28:3:4::/64 [115/140] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:24
+I>* fc00:28:4::1/128 [115/150] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:24
+I>* fc00:28:4:5::/64 [115/150] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:24
+I>* fc00:28:5::1/128 [115/160] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:20
+  *                            via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:20
+I>* fc00:28:5:6::/64 [115/150] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:20
+I>* fc00:28:6::1/128 [115/150] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:20
+I>* fc00:28:6:7::/64 [115/140] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:20
+I>* fc00:28:7::1/128 [115/140] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:20
+I>* fc00:28:7:8::/64 [115/130] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:20
+I>* fc00:28:8::1/128 [115/130] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:20
+I>* fc00:28:8:9::/64 [115/120] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:04
+I>* fc00:28:9::/64 [115/120] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:04
+I>* fc00:28:9::1/128 [115/120] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:04
+S>* fc00:29::/43 [1/0] unreachable (blackhole), weight 1, 12:26:15
+I>* fc00:29::1/128 [115/120] via fe80::6454:8fff:fe9c:6ce7, r30n0-r31n0, weight 1, 12:21:16
+I>* fc00:29:0:1::/64 [115/130] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:06
+I>* fc00:29:1::1/128 [115/130] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:06
+I>* fc00:29:1:2::/64 [115/130] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:06
+I>* fc00:29:2::1/128 [115/140] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:15
+I>* fc00:29:2:3::/64 [115/140] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:15
+I>* fc00:29:3::1/128 [115/150] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:15
+I>* fc00:29:3:4::/64 [115/150] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:15
+I>* fc00:29:4::1/128 [115/160] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:15
+I>* fc00:29:4:5::/64 [115/160] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:15
+I>* fc00:29:5::1/128 [115/170] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:15
+  *                            via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:15
+I>* fc00:29:5:6::/64 [115/160] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:10
+I>* fc00:29:6::1/128 [115/160] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:10
+I>* fc00:29:6:7::/64 [115/150] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:10
+I>* fc00:29:7::1/128 [115/150] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:10
+I>* fc00:29:7:8::/64 [115/140] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:08
+I>* fc00:29:8::1/128 [115/140] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:08
+I>* fc00:29:8:9::/64 [115/130] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:04
+I>* fc00:29:9::/64 [115/130] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:04
+I>* fc00:29:9::1/128 [115/130] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:04
+S>* fc00:2a::/43 [1/0] unreachable (blackhole), weight 1, 12:26:15
+I>* fc00:2a::1/128 [115/130] via fe80::6454:8fff:fe9c:6ce7, r30n0-r31n0, weight 1, 12:21:06
+I>* fc00:2a:0:1::/64 [115/140] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:04
+I>* fc00:2a:1::1/128 [115/140] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:04
+I>* fc00:2a:1:2::/64 [115/140] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:04
+I>* fc00:2a:2::1/128 [115/150] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:04
+I>* fc00:2a:2:3::/64 [115/150] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:04
+I>* fc00:2a:3::1/128 [115/160] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:04
+I>* fc00:2a:3:4::/64 [115/160] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:04
+I>* fc00:2a:4::1/128 [115/170] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:04
+I>* fc00:2a:4:5::/64 [115/170] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:04
+I>* fc00:2a:5::1/128 [115/180] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:04
+  *                            via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:04
+I>* fc00:2a:5:6::/64 [115/170] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:08
+I>* fc00:2a:6::1/128 [115/170] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:08
+I>* fc00:2a:6:7::/64 [115/160] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:08
+I>* fc00:2a:7::1/128 [115/160] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:08
+I>* fc00:2a:7:8::/64 [115/150] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:08
+I>* fc00:2a:8::1/128 [115/150] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:08
+I>* fc00:2a:8:9::/64 [115/140] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:04
+I>* fc00:2a:9::/64 [115/140] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:04
+I>* fc00:2a:9::1/128 [115/140] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:04
+S>* fc00:2b::/43 [1/0] unreachable (blackhole), weight 1, 12:26:15
+I>* fc00:2b::1/128 [115/140] via fe80::6454:8fff:fe9c:6ce7, r30n0-r31n0, weight 1, 12:21:06
+I>* fc00:2b:0:1::/64 [115/150] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:04
+I>* fc00:2b:1::1/128 [115/150] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:04
+I>* fc00:2b:1:2::/64 [115/150] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:04
+I>* fc00:2b:2::1/128 [115/160] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:04
+I>* fc00:2b:2:3::/64 [115/160] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:04
+I>* fc00:2b:3::1/128 [115/170] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:04
+I>* fc00:2b:3:4::/64 [115/170] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:04
+I>* fc00:2b:4::1/128 [115/180] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:04
+I>* fc00:2b:4:5::/64 [115/180] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:04
+I>* fc00:2b:5::1/128 [115/190] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:03
+  *                            via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:03
+I>* fc00:2b:5:6::/64 [115/180] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:03
+I>* fc00:2b:6::1/128 [115/180] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:03
+I>* fc00:2b:6:7::/64 [115/170] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:20:49
+I>* fc00:2b:7::1/128 [115/170] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:20:49
+I>* fc00:2b:7:8::/64 [115/160] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:20:48
+I>* fc00:2b:8::1/128 [115/160] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:20:48
+I>* fc00:2b:8:9::/64 [115/150] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:20:48
+I>* fc00:2b:9::/64 [115/150] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:20:48
+I>* fc00:2b:9::1/128 [115/150] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:20:48
+S>* fc00:2c::/43 [1/0] unreachable (blackhole), weight 1, 12:26:15
+I>* fc00:2c::1/128 [115/170] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 00:01:13
+  *                          via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 00:01:13
+I>* fc00:2c:0:1::/64 [115/160] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 00:01:13
+I>* fc00:2c:1::1/128 [115/160] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:20:51
+I>* fc00:2c:1:2::/64 [115/160] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:20:51
+I>* fc00:2c:2::1/128 [115/170] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:20:51
+I>* fc00:2c:2:3::/64 [115/170] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:20:51
+I>* fc00:2c:3::1/128 [115/180] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:20:51
+I>* fc00:2c:3:4::/64 [115/180] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:20:51
+I>* fc00:2c:4::1/128 [115/190] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:20:51
+I>* fc00:2c:4:5::/64 [115/190] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:20:51
+I>* fc00:2c:5::1/128 [115/200] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:20:48
+  *                            via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:20:48
+I>* fc00:2c:5:6::/64 [115/190] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:20:48
+I>* fc00:2c:6::1/128 [115/190] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:20:48
+I>* fc00:2c:6:7::/64 [115/180] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:20:48
+I>* fc00:2c:7::1/128 [115/180] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:20:48
+I>* fc00:2c:7:8::/64 [115/170] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:20:48
+I>* fc00:2c:8::1/128 [115/170] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:20:48
+I>* fc00:2c:8:9::/64 [115/160] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:20:41
+I>* fc00:2c:9::/64 [115/160] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 00:01:13
+I>* fc00:2c:9::1/128 [115/160] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:20:41
+I>* fc00:2d::/43 [115/150] via fe80::6454:8fff:fe9c:6ce7, r30n0-r31n0, weight 1, 12:20:47
+I>* fc00:2d::1/128 [115/160] via fe80::6454:8fff:fe9c:6ce7, r30n0-r31n0, weight 1, 12:20:47
+I>* fc00:2d:0:1::/64 [115/160] via fe80::6454:8fff:fe9c:6ce7, r30n0-r31n0, weight 1, 12:20:47
+I>* fc00:2d:9::/64 [115/160] via fe80::6454:8fff:fe9c:6ce7, r30n0-r31n0, weight 1, 12:20:47
+I>* fc00:2e::/43 [115/150] via fe80::6454:8fff:fe9c:6ce7, r30n0-r31n0, weight 1, 12:20:47
+I>* fc00:2f::/43 [115/150] via fe80::6454:8fff:fe9c:6ce7, r30n0-r31n0, weight 1, 12:20:47
+I>* fc00:30::/43 [115/150] via fe80::6454:8fff:fe9c:6ce7, r30n0-r31n0, weight 1, 12:20:47
+I>* fc00:31::/43 [115/150] via fe80::6454:8fff:fe9c:6ce7, r30n0-r31n0, weight 1, 12:20:47
+I>* fc00:32::/43 [115/150] via fe80::6454:8fff:fe9c:6ce7, r30n0-r31n0, weight 1, 12:20:47
+I>* fc00:33::/43 [115/150] via fe80::6454:8fff:fe9c:6ce7, r30n0-r31n0, weight 1, 12:20:47
+I>* fc00:34::/43 [115/150] via fe80::6454:8fff:fe9c:6ce7, r30n0-r31n0, weight 1, 12:20:47
+I>* fc00:35::/43 [115/150] via fe80::6454:8fff:fe9c:6ce7, r30n0-r31n0, weight 1, 12:20:47
+I>* fc00:36::/43 [115/150] via fe80::6454:8fff:fe9c:6ce7, r30n0-r31n0, weight 1, 12:20:47
+I>* fc00:37::/43 [115/150] via fe80::6454:8fff:fe9c:6ce7, r30n0-r31n0, weight 1, 12:20:47
+I>* fc00:38::/43 [115/150] via fe80::6454:8fff:fe9c:6ce7, r30n0-r31n0, weight 1, 12:20:47
+I>* fc00:39::/43 [115/150] via fe80::6454:8fff:fe9c:6ce7, r30n0-r31n0, weight 1, 12:20:47
+I>* fc00:3a::/43 [115/150] via fe80::6454:8fff:fe9c:6ce7, r30n0-r31n0, weight 1, 12:20:47
+I>* fc00:3b::/43 [115/150] via fe80::6454:8fff:fe9c:6ce7, r30n0-r31n0, weight 1, 12:20:47
+I>* fc00:9000:d::/64 [115/170] via fe80::7454:daff:fede:b3d9, r30n0-r29n0, weight 1, 12:22:09
+I>* fc00:9000:e::/64 [115/160] via fe80::7454:daff:fede:b3d9, r30n0-r29n0, weight 1, 12:22:09
+I>* fc00:9000:f::/64 [115/150] via fe80::7454:daff:fede:b3d9, r30n0-r29n0, weight 1, 12:22:09
+I>* fc00:9000:10::/64 [115/140] via fe80::7454:daff:fede:b3d9, r30n0-r29n0, weight 1, 12:22:09
+I>* fc00:9000:11::/64 [115/130] via fe80::7454:daff:fede:b3d9, r30n0-r29n0, weight 1, 12:22:09
+I>* fc00:9000:12::/64 [115/120] via fe80::7454:daff:fede:b3d9, r30n0-r29n0, weight 1, 12:22:09
+I>* fc00:9000:13::/64 [115/110] via fe80::7454:daff:fede:b3d9, r30n0-r29n0, weight 1, 12:22:09
+I>* fc00:9000:14::/64 [115/100] via fe80::7454:daff:fede:b3d9, r30n0-r29n0, weight 1, 12:22:09
+I>* fc00:9000:15::/64 [115/90] via fe80::7454:daff:fede:b3d9, r30n0-r29n0, weight 1, 12:22:09
+I>* fc00:9000:16::/64 [115/80] via fe80::7454:daff:fede:b3d9, r30n0-r29n0, weight 1, 12:22:09
+I>* fc00:9000:17::/64 [115/70] via fe80::7454:daff:fede:b3d9, r30n0-r29n0, weight 1, 12:22:09
+I>* fc00:9000:18::/64 [115/60] via fe80::7454:daff:fede:b3d9, r30n0-r29n0, weight 1, 12:22:09
+I>* fc00:9000:19::/64 [115/50] via fe80::7454:daff:fede:b3d9, r30n0-r29n0, weight 1, 12:22:09
+I>* fc00:9000:1a::/64 [115/40] via fe80::7454:daff:fede:b3d9, r30n0-r29n0, weight 1, 12:22:09
+I>* fc00:9000:1b::/64 [115/30] via fe80::7454:daff:fede:b3d9, r30n0-r29n0, weight 1, 12:22:09
+I>* fc00:9000:1c::/64 [115/20] via fe80::7454:daff:fede:b3d9, r30n0-r29n0, weight 1, 12:22:09
+C>* fc00:9000:1d::/64 is directly connected, r30n0-r29n0, weight 1, 12:22:35
+L>* fc00:9000:1d::2/128 is directly connected, r30n0-r29n0, weight 1, 12:22:35
+C>* fc00:9000:1e::/64 is directly connected, r30n0-r31n0, weight 1, 12:22:27
+L>* fc00:9000:1e::1/128 is directly connected, r30n0-r31n0, weight 1, 12:22:27
+I>* fc00:9000:1e:1::/64 [115/20] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:22:04
+I>* fc00:9000:1e:2::/64 [115/30] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:22:05
+I>* fc00:9000:1e:3::/64 [115/40] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:22:05
+I>* fc00:9000:1e:4::/64 [115/50] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:22:04
+I>* fc00:9000:1e:5::/64 [115/60] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:22:06
+  *                              via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:22:06
+I>* fc00:9000:1e:6::/64 [115/50] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:22:05
+I>* fc00:9000:1e:7::/64 [115/40] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:58
+I>* fc00:9000:1e:8::/64 [115/30] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:22:05
+I>* fc00:9000:1e:9::/64 [115/20] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:22:00
+I>* fc00:9000:1f::/64 [115/20] via fe80::6454:8fff:fe9c:6ce7, r30n0-r31n0, weight 1, 12:22:01
+I>* fc00:9000:1f:1::/64 [115/30] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:22:00
+I>* fc00:9000:1f:2::/64 [115/40] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:58
+I>* fc00:9000:1f:3::/64 [115/50] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:22:05
+I>* fc00:9000:1f:4::/64 [115/60] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:22:05
+I>* fc00:9000:1f:5::/64 [115/70] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:22:04
+  *                              via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:22:04
+I>* fc00:9000:1f:6::/64 [115/60] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:22:05
+I>* fc00:9000:1f:7::/64 [115/50] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:55
+I>* fc00:9000:1f:8::/64 [115/40] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:22:05
+I>* fc00:9000:1f:9::/64 [115/30] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:22:00
+I>* fc00:9000:20::/64 [115/30] via fe80::6454:8fff:fe9c:6ce7, r30n0-r31n0, weight 1, 12:22:00
+I>* fc00:9000:20:1::/64 [115/40] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:55
+I>* fc00:9000:20:2::/64 [115/50] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:22:00
+I>* fc00:9000:20:3::/64 [115/60] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:22:01
+I>* fc00:9000:20:4::/64 [115/70] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:54
+I>* fc00:9000:20:5::/64 [115/80] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:22:05
+  *                              via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:22:05
+I>* fc00:9000:20:6::/64 [115/70] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:53
+I>* fc00:9000:20:7::/64 [115/60] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:55
+I>* fc00:9000:20:8::/64 [115/50] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:58
+I>* fc00:9000:20:9::/64 [115/40] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:47
+I>* fc00:9000:21::/64 [115/40] via fe80::6454:8fff:fe9c:6ce7, r30n0-r31n0, weight 1, 12:21:47
+I>* fc00:9000:21:1::/64 [115/50] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:49
+I>* fc00:9000:21:2::/64 [115/60] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:49
+I>* fc00:9000:21:3::/64 [115/70] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:50
+I>* fc00:9000:21:4::/64 [115/80] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:52
+I>* fc00:9000:21:5::/64 [115/90] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:56
+  *                              via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:56
+I>* fc00:9000:21:6::/64 [115/80] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:47
+I>* fc00:9000:21:7::/64 [115/70] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:58
+I>* fc00:9000:21:8::/64 [115/60] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:47
+I>* fc00:9000:21:9::/64 [115/50] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:47
+I>* fc00:9000:22::/64 [115/50] via fe80::6454:8fff:fe9c:6ce7, r30n0-r31n0, weight 1, 12:21:46
+I>* fc00:9000:22:1::/64 [115/60] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:49
+I>* fc00:9000:22:2::/64 [115/70] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:49
+I>* fc00:9000:22:3::/64 [115/80] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:50
+I>* fc00:9000:22:4::/64 [115/90] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:51
+I>* fc00:9000:22:5::/64 [115/100] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:43
+  *                               via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:43
+I>* fc00:9000:22:6::/64 [115/90] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:47
+I>* fc00:9000:22:7::/64 [115/80] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:47
+I>* fc00:9000:22:8::/64 [115/70] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:40
+I>* fc00:9000:22:9::/64 [115/60] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:40
+I>* fc00:9000:23::/64 [115/60] via fe80::6454:8fff:fe9c:6ce7, r30n0-r31n0, weight 1, 12:21:46
+I>* fc00:9000:23:1::/64 [115/70] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:49
+I>* fc00:9000:23:2::/64 [115/80] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:43
+I>* fc00:9000:23:3::/64 [115/90] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:48
+I>* fc00:9000:23:4::/64 [115/100] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:44
+I>* fc00:9000:23:5::/64 [115/110] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:40
+  *                               via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:40
+I>* fc00:9000:23:6::/64 [115/100] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:37
+I>* fc00:9000:23:7::/64 [115/90] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:43
+I>* fc00:9000:23:8::/64 [115/80] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:32
+I>* fc00:9000:23:9::/64 [115/70] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:36
+I>* fc00:9000:24::/64 [115/70] via fe80::6454:8fff:fe9c:6ce7, r30n0-r31n0, weight 1, 12:21:39
+I>* fc00:9000:24:1::/64 [115/80] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:40
+I>* fc00:9000:24:2::/64 [115/90] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:39
+I>* fc00:9000:24:3::/64 [115/100] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:38
+I>* fc00:9000:24:4::/64 [115/110] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:35
+I>* fc00:9000:24:5::/64 [115/120] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:27
+  *                               via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:27
+I>* fc00:9000:24:6::/64 [115/110] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:36
+I>* fc00:9000:24:7::/64 [115/100] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:43
+I>* fc00:9000:24:8::/64 [115/90] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:31
+I>* fc00:9000:24:9::/64 [115/80] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:35
+I>* fc00:9000:25::/64 [115/80] via fe80::6454:8fff:fe9c:6ce7, r30n0-r31n0, weight 1, 12:21:25
+I>* fc00:9000:25:1::/64 [115/90] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:31
+I>* fc00:9000:25:2::/64 [115/100] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:27
+I>* fc00:9000:25:3::/64 [115/110] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:26
+I>* fc00:9000:25:4::/64 [115/120] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:27
+I>* fc00:9000:25:5::/64 [115/130] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:28
+  *                               via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:28
+I>* fc00:9000:25:6::/64 [115/120] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:27
+I>* fc00:9000:25:7::/64 [115/110] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:26
+I>* fc00:9000:25:8::/64 [115/100] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:26
+I>* fc00:9000:25:9::/64 [115/90] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:31
+I>* fc00:9000:26::/64 [115/90] via fe80::6454:8fff:fe9c:6ce7, r30n0-r31n0, weight 1, 12:21:25
+I>* fc00:9000:26:1::/64 [115/100] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:26
+I>* fc00:9000:26:2::/64 [115/110] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:19
+I>* fc00:9000:26:3::/64 [115/120] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:26
+I>* fc00:9000:26:4::/64 [115/130] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:27
+I>* fc00:9000:26:5::/64 [115/140] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:26
+  *                               via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:26
+I>* fc00:9000:26:6::/64 [115/130] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:27
+I>* fc00:9000:26:7::/64 [115/120] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:19
+I>* fc00:9000:26:8::/64 [115/110] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:21
+I>* fc00:9000:26:9::/64 [115/100] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:20
+I>* fc00:9000:27::/64 [115/100] via fe80::6454:8fff:fe9c:6ce7, r30n0-r31n0, weight 1, 12:21:23
+I>* fc00:9000:27:1::/64 [115/110] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:20
+I>* fc00:9000:27:2::/64 [115/120] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:09
+I>* fc00:9000:27:3::/64 [115/130] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:24
+I>* fc00:9000:27:4::/64 [115/140] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:18
+I>* fc00:9000:27:5::/64 [115/150] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:16
+  *                               via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:16
+I>* fc00:9000:27:6::/64 [115/140] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:04
+I>* fc00:9000:27:7::/64 [115/130] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:15
+I>* fc00:9000:27:8::/64 [115/120] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:20
+I>* fc00:9000:27:9::/64 [115/110] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:04
+I>* fc00:9000:28::/64 [115/110] via fe80::6454:8fff:fe9c:6ce7, r30n0-r31n0, weight 1, 12:21:16
+I>* fc00:9000:28:1::/64 [115/120] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:06
+I>* fc00:9000:28:2::/64 [115/130] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:15
+I>* fc00:9000:28:3::/64 [115/140] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:09
+I>* fc00:9000:28:4::/64 [115/150] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:04
+I>* fc00:9000:28:5::/64 [115/160] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:15
+  *                               via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:15
+I>* fc00:9000:28:6::/64 [115/150] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:03
+I>* fc00:9000:28:7::/64 [115/140] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:10
+I>* fc00:9000:28:8::/64 [115/130] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:08
+I>* fc00:9000:28:9::/64 [115/120] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:04
+I>* fc00:9000:29::/64 [115/120] via fe80::6454:8fff:fe9c:6ce7, r30n0-r31n0, weight 1, 12:21:06
+I>* fc00:9000:29:1::/64 [115/130] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:04
+I>* fc00:9000:29:2::/64 [115/140] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:04
+I>* fc00:9000:29:3::/64 [115/150] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:04
+I>* fc00:9000:29:4::/64 [115/160] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:04
+I>* fc00:9000:29:5::/64 [115/170] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:20:57
+  *                               via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:20:57
+I>* fc00:9000:29:6::/64 [115/160] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:04
+I>* fc00:9000:29:7::/64 [115/150] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:04
+I>* fc00:9000:29:8::/64 [115/140] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:08
+I>* fc00:9000:29:9::/64 [115/130] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:04
+I>* fc00:9000:2a::/64 [115/130] via fe80::6454:8fff:fe9c:6ce7, r30n0-r31n0, weight 1, 12:21:06
+I>* fc00:9000:2a:1::/64 [115/140] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:04
+I>* fc00:9000:2a:2::/64 [115/150] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:03
+I>* fc00:9000:2a:3::/64 [115/160] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:04
+I>* fc00:9000:2a:4::/64 [115/170] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:20:58
+I>* fc00:9000:2a:5::/64 [115/180] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:21:03
+  *                               via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:03
+I>* fc00:9000:2a:6::/64 [115/170] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:21:03
+I>* fc00:9000:2a:7::/64 [115/160] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:20:49
+I>* fc00:9000:2a:8::/64 [115/150] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:20:45
+I>* fc00:9000:2a:9::/64 [115/140] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:20:48
+I>* fc00:9000:2b::/64 [115/170] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 00:01:13
+  *                             via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 00:01:13
+I>* fc00:9000:2b:1::/64 [115/150] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:20:51
+I>* fc00:9000:2b:2::/64 [115/160] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:20:49
+I>* fc00:9000:2b:3::/64 [115/170] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:20:43
+I>* fc00:9000:2b:4::/64 [115/180] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:20:50
+I>* fc00:9000:2b:5::/64 [115/190] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 12:20:41
+  *                               via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:20:41
+I>* fc00:9000:2b:6::/64 [115/180] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:20:48
+I>* fc00:9000:2b:7::/64 [115/170] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:20:48
+I>* fc00:9000:2b:8::/64 [115/160] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:20:48
+I>* fc00:9000:2b:9::/64 [115/150] via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 12:20:41
+I>* fc00:9000:2c::/64 [115/170] via fe80::b818:b5ff:fe98:59f0, r30n0-r30n1, weight 1, 00:01:13
+  *                             via fe80::f844:98ff:febc:353a, r30n0-r30n9, weight 1, 00:01:13
+I>* fc00:9000:2d::/64 [115/160] via fe80::6454:8fff:fe9c:6ce7, r30n0-r31n0, weight 1, 12:20:43
+C * fe80::/64 is directly connected, r30n0-r31n0, weight 1, 12:22:27
+C * fe80::/64 is directly connected, r30n0-r29n0, weight 1, 12:22:35
+C * fe80::/64 is directly connected, r30n0-r30n9, weight 1, 12:23:47
+C>* fe80::/64 is directly connected, r30n0-r30n1, weight 1, 12:23:48
