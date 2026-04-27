@@ -14,9 +14,6 @@ import sys
 from pathlib import Path
 
 
-SUMMARY_TABLE_BASE = 2000
-
-
 class MultiAreaFRRConfigGenerator:
     def __init__(self, topology_file):
         print(f"Loading topology from {topology_file}...")
@@ -121,19 +118,26 @@ class MultiAreaFRRConfigGenerator:
         return interface_map
 
     def get_area_summary_config(self, node):
-        """Return static summary routes and L2 redistribution for boundary nodes."""
+        """Return summary policy config for boundary backbone nodes."""
         area_id = node["area_id"]
         summary_info = self.area_summaries.get(area_id)
         if node.get("node_role") != "boundary-backbone" or not summary_info:
-            return "", ""
+            return "", "", ""
 
-        table_id = SUMMARY_TABLE_BASE + area_id
         static_routes = []
+        prefix_list = [f"ipv6 prefix-list AREA{area_id}-SUMMARY seq 10 description Area {area_id} summaries"]
+        seq = 20
         for prefix in summary_info["summary_prefixes"]:
-            static_routes.append(f"ipv6 route {prefix} Null0 table {table_id}")
+            static_routes.append(f"ipv6 route {prefix} Null0")
+            prefix_list.append(f"ipv6 prefix-list AREA{area_id}-SUMMARY seq {seq} permit {prefix}")
+            seq += 10
 
-        redistribute = f" redistribute ipv6 table {table_id} level-2\n"
-        return "\n".join(static_routes) + "\n", redistribute
+        route_map = (
+            f"route-map AREA{area_id}-TO-L2 permit 10\n"
+            f" match ipv6 address prefix-list AREA{area_id}-SUMMARY\n"
+        )
+        redistribute = f" redistribute ipv6 static level-2 route-map AREA{area_id}-TO-L2\n"
+        return "\n".join(static_routes) + "\n", "\n".join(prefix_list) + "\n" + route_map + "!\n", redistribute
 
     def generate_frr_conf(self, node):
         """Generate FRR config for a single node."""
@@ -148,7 +152,7 @@ class MultiAreaFRRConfigGenerator:
             is_type = "level-2-only"
         else:
             is_type = "level-1"
-        static_routes, l2_redistribute = self.get_area_summary_config(node)
+        static_routes, summary_policy, l2_redistribute = self.get_area_summary_config(node)
         loopback_circuit = "level-2-only" if is_type == "level-2-only" else "level-1"
 
         config = f"""!
@@ -188,6 +192,8 @@ interface lo
 
         if static_routes:
             config += f"{static_routes}!\n"
+        if summary_policy:
+            config += summary_policy
 
         attached_recv = " attached-bit receive\n" if is_type != "level-2-only" else ""
         attached_send = " attached-bit send\n" if node_role == "boundary-backbone" else ""

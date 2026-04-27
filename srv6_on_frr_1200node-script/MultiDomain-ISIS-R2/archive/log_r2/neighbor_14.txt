@@ -1,0 +1,57 @@
+Area SRv6:
+ r14n1               
+    Interface: r14n0-r14n1, Level: 1, State: Up, Expires in 6s
+    Adjacency flaps: 1, Last: 3h15m26s ago
+    Circuit type: L1, Speaks: IPv6
+    Topologies:
+      ipv6-unicast
+    SNPA: 2020.2020.2020
+    Area Address(es):
+      49.0001
+    IPv6 Address(es):
+      fe80::404b:65ff:fec6:fc78
+    Global IPv6 Address(es):
+      fc00:e:0:1::2
+
+ r14n9               
+    Interface: r14n0-r14n9, Level: 1, State: Up, Expires in 7s
+    Adjacency flaps: 1, Last: 3h15m26s ago
+    Circuit type: L1, Speaks: IPv6
+    Topologies:
+      ipv6-unicast
+    SNPA: 2020.2020.2020
+    Area Address(es):
+      49.0001
+    IPv6 Address(es):
+      fe80::74d7:acff:fee7:7c6
+    Global IPv6 Address(es):
+      fc00:e:9::1
+
+ r13n0               
+    Interface: r14n0-r13n0, Level: 1, State: Up, Expires in 7s
+    Adjacency flaps: 1, Last: 3h14m10s ago
+    Circuit type: L1, Speaks: IPv6
+    Topologies:
+      ipv6-unicast
+    SNPA: 2020.2020.2020
+    Area Address(es):
+      49.0001
+    IPv6 Address(es):
+      fe80::c04b:87ff:fe03:636d
+    Global IPv6 Address(es):
+      fc00:9000:d::1
+
+ r15n0               
+    Interface: r14n0-r15n0, Level: 2, State: Up, Expires in 7s
+    Adjacency flaps: 1, Last: 3h14m11s ago
+    Circuit type: L2, Speaks: IPv6
+    Topologies:
+      ipv6-unicast
+    SNPA: 2020.2020.2020
+    Area Address(es):
+      49.0002
+    IPv6 Address(es):
+      fe80::88ad:f1ff:fece:cf19
+    Global IPv6 Address(es):
+      fc00:9000:e::2
+
